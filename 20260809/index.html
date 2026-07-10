@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow"><!-- テスト中の検索避け。公開時に削除 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>栃木SC ホームゲームLP ｜ 8/9 ツエーゲン金沢戦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --phPreview:url(assets/img/phPreview.webp);
+    --svSs:url(assets/img/svSs.webp);
+    --svS:url(assets/img/svS.webp);
+    --svBack:url(assets/img/svBack.webp);
+    --svHome:url(assets/img/svHome.webp);
+    --svPano:url(assets/img/svPano.webp);
+    --svParty:url(assets/img/svParty.webp);
+    --svTable:url(assets/img/svTable.webp);
+    --heroImg:url(assets/img/heroImg.webp);
+    --j3:url(assets/img/j3.webp);
+    --matchBg:url(assets/img/matchBg.webp);
+    --zoneBg:#F2F3F5;
+    --heroImgPC:url(assets/img/heroImgPC.webp);
+    --pageBgPC:var(--matchBg); /* 仮=黒板調テクスチャ。実画像差し替え or none */
+    --tsc:url(assets/img/tsc.webp);
+    --opp:url(assets/img/opp.webp);
+    --phTimeline:url(assets/img/phTimeline.webp);
+    
+    --yellow:#FFEA00; --blue:#004D9F; --navy:#042242; --white:#FFFFFF;
+    --ink:#042242; --paper:#FFFCE8;
+    --disp:'Anton',sans-serif; --latin:'Poppins',sans-serif; --jp:'Noto Sans JP',sans-serif;
+    --hatch-y:repeating-linear-gradient(135deg,var(--yellow) 0 4px,transparent 4px 9px);
+    --r-card:4px; --r-btn:6px; --line:#E4E8EE;
+    --map:url(assets/img/map.webp);
+    --spPokemon:url(assets/img/spPokemon.webp);
+    --evYosakoi:url(assets/img/evYosakoi.webp);
+    --evNatsu:url(assets/img/evNatsu.webp);
+    --evMizu:url(assets/img/evMizu.webp);
+    --fcSign:url(assets/img/fcSign.webp);
+    --fcWarm:url(assets/img/fcWarm.webp);
+    --fcBus:url(assets/img/fcBus.webp);
+    --fcTour:url(assets/img/fcTour.webp);
+    --fcBg:url(assets/img/fcBg.webp);
+    --gUni:url(assets/img/gUni.webp);
+    --gKey:url(assets/img/gKey.webp);
+    --gPen:url(assets/img/gPen.webp);
+    --gSeal:url(assets/img/gSeal.webp);
+    --gTowel:url(assets/img/gTowel.webp);
+    --goKezu:url(assets/img/goKezu.webp);
+    --goDaji:url(assets/img/goDaji.webp);
+    --goTapi:url(assets/img/goTapi.webp);
+    --goTama:url(assets/img/goTama.webp);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--jp);color:var(--ink);background:#EDEFF2;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.8;padding:40px 16px 60px}
+
+  .device{max-width:680px;margin:0 auto;background:#fff;box-shadow:0 2px 20px rgba(4,34,66,.08);position:relative}
+  .note{max-width:680px;margin:0 auto 10px;font-size:12px;color:#333;text-align:center}
+  img{max-width:100%;display:block}
+
+  .photo-real{position:absolute;inset:0;background-size:cover;background-position:center}
+  .navy-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,34,66,.5),rgba(4,34,66,.82))}
+
+  /* ashirai */
+  .head{padding:15px 20px 10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .head .disp{width:100%;order:-1;font-family:var(--disp);font-weight:400;font-size:31px;line-height:1;letter-spacing:.03em;color:var(--navy);margin-bottom:7px;text-transform:uppercase}
+  .head .hicon{flex:none;width:30px;height:30px;color:var(--navy)}
+  .head .hicon svg{width:30px;height:30px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  
+  .head h2{font-size:22px;font-weight:900;line-height:1.3;color:var(--navy);display:inline-block;position:relative}
+  .head h2 .mk{background:linear-gradient(transparent 60%, var(--yellow) 60% 92%, transparent 92%);padding:0 2px}
+  .brackets{position:relative;display:inline-block;padding:0 16px}
+  .brackets::before,.brackets::after{content:"";position:absolute;top:2px;bottom:2px;width:9px;border-color:var(--navy)}
+  .brackets::before{left:0;border-left:2px solid;border-top:2px solid;border-bottom:2px solid}
+  .brackets::after{right:0;border-right:2px solid;border-top:2px solid;border-bottom:2px solid}
+  .slead{color:#333;font-size:14px;padding:6px 20px 0}
+  .subbrand{font-family:var(--latin);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.1em;margin-left:10px;align-self:baseline;padding-top:8px;white-space:nowrap}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;min-height:592px;background:var(--heroImg) center/cover no-repeat,var(--yellow);display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+  .hero::after{display:none}
+  .hero .pn{display:none;position:absolute;top:20px;left:0;right:0;text-align:center;font-size:11px;color:#555;z-index:2}
+  .hero .jleague{position:absolute;top:14px;right:14px;width:62px;height:auto;aspect-ratio:200/182;z-index:5;background:var(--j3) center/contain no-repeat}
+  .hero .kv{display:none;position:absolute;inset:0;z-index:1;border:2px dashed rgba(4,34,66,.35);background:repeating-linear-gradient(135deg,rgba(4,34,66,.05) 0 10px,transparent 10px 20px)}
+  .hero .kv .fig{width:64%;height:88%;background:linear-gradient(180deg,rgba(4,34,66,.16),rgba(4,34,66,.03));-webkit-mask:radial-gradient(58% 32% at 50% 18%,#000 60%,transparent 62%) top/100% 40% no-repeat,radial-gradient(76% 70% at 50% 120%,#000 60%,transparent 62%) bottom/100% 64% no-repeat}
+  .hero .kv .t{position:absolute;top:8px;left:8px;font-size:10px;font-weight:700;color:var(--navy);background:rgba(255,255,255,.7);padding:2px 7px}
+  .hero .info{position:relative;z-index:4;padding:0 6% 26px}
+  .hero .opener{position:absolute;top:16px;left:6%;z-index:5;line-height:1}
+  .hero .op-en{display:block;font-family:var(--disp);font-size:14px;letter-spacing:.12em;color:var(--navy);margin-bottom:6px}
+  .hero .op-jp{display:inline-block;background:var(--navy);color:var(--yellow);font-family:var(--jp);font-weight:900;font-size:18px;padding:3px 12px;letter-spacing:.02em}
+  .hero .league{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-size:12px;letter-spacing:.08em;color:#fff;opacity:.92;margin-bottom:9px;text-transform:uppercase}
+  .hero .league .sec{background:var(--yellow);color:var(--navy);font-weight:700;padding:1px 7px;letter-spacing:.04em}
+  .hero .hvs{display:block;font-weight:900;font-size:16px;color:#fff;margin-bottom:8px}
+  .hero .hvs b{font-family:var(--jp);font-weight:700;color:#fff;font-size:16px;margin-right:5px;text-transform:lowercase}
+  .hero .hvs .oe{width:28px;height:28px;border-radius:50%;background:rgba(4,34,66,.1);border:1.5px solid var(--navy);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:8px;text-align:center;line-height:1}
+  .hero .date{font-family:var(--disp);font-size:96px;color:#fff;line-height:.82}
+  .hero .date .dow{font-size:.33em;margin-left:.08em}
+  .hero .ko{font-family:var(--disp);font-size:26px;color:#fff}
+  .hero .venue{font-weight:800;font-size:15px;margin-top:6px}
+
+  .hero .sponsors{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:14px}
+  .hero .sp-chip{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;padding:6px 12px;font-weight:800;font-size:13px}
+  .hero .sp-chip .lg{background:var(--yellow);color:var(--navy);padding:2px 7px;font-size:11px;font-family:var(--latin)}
+  .hero .sp-chip .sp-txt{line-height:1.3}
+  .hero .sp-chip .sp-txt .cn{font-size:14.5px;font-weight:900}
+  .hero .sp-chip .sp-txt .sm{font-size:10.5px;letter-spacing:.06em;opacity:.9}
+  .hero .sp-chip.kanmuri{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+
+  /* MATCH CARD */
+  .match{background:var(--matchBg) center/cover no-repeat,#F7F9FC;color:var(--navy);padding:26px 20px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .match .story{position:relative;text-align:center;font-weight:900;color:var(--navy);font-size:15px;letter-spacing:.04em;margin-bottom:18px}
+  .match .story::before,.match .story::after{content:"";display:inline-block;width:22px;height:2px;background:var(--yellow);vertical-align:middle;margin:0 10px}
+  .match .mt-meta{position:relative;text-align:center;margin-bottom:8px}
+  .match .mt-league{font-size:12px;font-weight:700;color:rgba(4,34,66,.6);letter-spacing:.02em}
+  .match .mt-ko{font-family:var(--disp);font-size:22px;color:var(--navy);letter-spacing:.02em;margin-top:4px;line-height:1.1}
+  .match .mt-ven{font-size:13px;font-weight:700;color:var(--navy);margin-top:3px}
+  .match .teams{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+  .match .team{text-align:center}
+  .match .team .em{width:88px;height:88px;margin:0 auto 8px;background:transparent;border:none;border-radius:0;background-size:contain;background-repeat:no-repeat;background-position:center}
+  .match .team .nm{font-weight:700;font-size:14px}
+  .match .team .role{font-family:var(--latin);font-size:10px;font-weight:700;color:rgba(4,34,66,.5);letter-spacing:.1em;margin-top:2px}
+  .match .vs{font-family:var(--disp);font-size:30px;color:var(--navy)}
+
+  /* QUICK NAV */
+  .qnav{background:var(--navy);position:sticky;top:0;z-index:40;border-bottom:3px solid var(--yellow)}
+  section[id],div[id="ticket"]{scroll-margin-top:72px}
+  html{scroll-behavior:smooth}
+  .qnav ul{list-style:none;display:flex}
+  .qnav li{flex:1}
+  .qnav a{display:flex;flex-direction:column;align-items:center;gap:5px;padding:11px 2px;text-decoration:none;color:#fff;font-size:11px;font-weight:700;border-bottom:3px solid transparent;margin-bottom:-3px}
+  .qnav a:hover,.qnav a:focus{color:var(--yellow);border-bottom-color:var(--yellow)}
+  .qnav svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  /* section base */
+  section{position:relative}
+  .sec{padding:0 20px}
+  .band-sec{padding:17px 0}
+  .band-yellow{background:var(--yellow)}
+  .band-white{background:#fff}
+  .band-soft{background:#F7F9FC}
+  .band-paper{background:var(--paper)}
+  /* 別ゾーン（来場情報の外：グッズ・ファンクラブ）※--zoneBg で色を一括変更 */
+  .zone-divider{background:var(--zoneBg);text-align:center;padding:21px 20px 6px;margin-top:11px}
+  .zone-divider span{display:flex;align-items:center;justify-content:center;gap:14px;max-width:100%;color:var(--navy);font-size:clamp(17px,5.2vw,20px);font-weight:900;letter-spacing:.03em;white-space:nowrap}
+  .zone-divider span::before,.zone-divider span::after{content:"";flex:0 1 34px;min-width:12px;height:1px;background:var(--navy);opacity:.32}
+  .band-sec.zone{background:var(--zoneBg)}
+  .fc-cta{margin:13px 0 0;background:transparent;border:none;border-radius:0;padding:12px 20px 24px;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+  .fc-txt{display:flex;flex-direction:column;gap:3px;align-items:center;text-align:center}
+  .fc-txt b{font-size:16px;font-weight:900;color:var(--navy)}
+  .fc-txt span{font-size:12.5px;color:#555}
+  .fc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--navy);color:#fff;font-weight:900;font-size:15px;padding:14px 40px;border-radius:99px;text-decoration:none;box-shadow:0 4px 14px rgba(4,34,66,.18)}
+  .fc-btn .arw{font-family:var(--disp);font-weight:400;color:var(--yellow)}
+
+  /* 見どころ */
+  .preview{position:relative;overflow:hidden;padding:56px 24px;color:#fff;text-align:center}
+  .preview .q{position:relative;font-size:24px;font-weight:900;line-height:1.55}
+  .preview .q .hl{color:var(--yellow)}
+  .preview .sub{position:relative;margin-top:14px;font-size:14px;color:#dfe7f0}
+  .preview .diag{position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--yellow)}
+
+  /* スペシャル */
+  .special{padding-top:35px}
+  .special .head{position:relative;background:#fff}
+  .sp-card{background:transparent}
+  .sp-stack{display:flex;flex-direction:column;gap:28px}
+  .sp-photo{position:relative;aspect-ratio:16/9;background-size:cover;background-position:center;background-color:#dfe3ea;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;width:100%}
+  .sp-photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(transparent,rgba(4,34,66,.88));pointer-events:none}
+  .sp-photo .ph-tag{position:relative;z-index:2;font-size:11px;font-weight:700;color:#fff;background:rgba(4,34,66,.6);padding:3px 8px;margin:8px}
+  .sp-title-ov{position:relative;z-index:2;margin:0;color:#fff;font-size:22px;font-weight:900;line-height:1.25;padding:0 20px 14px;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+  .sp-photo.np::after{display:none}
+  .sp-photo.np{background-color:#fff}
+  .sp-h{margin:0 0 6px;font-size:19px;font-weight:900;color:var(--navy);line-height:1.3}
+  .sp-body{padding:14px 20px 12px;background:#fff}
+  /* ===== スクロールreveal（控えめ・1回だけ）。クラス付与はJS側＝JS無効環境では何も隠れない ===== */
+  .rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;transition-delay:var(--rvd,0ms)}
+  .rv.rv-in{opacity:1;transform:none}
+  .tl .row.rv{transition-duration:.75s}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+  /* グルメ テーマKV（可変：不要な試合はこの.gk-kvブロックを削除）。②スペシャルイベントと差別化＝横長3:1・左グラデ・黄テーマラベル */
+  .gk-kv{position:relative;width:100%;aspect-ratio:3/1;background:var(--gourmetKV,#dfe3ea) center/cover no-repeat;background-color:#dfe3ea;display:flex;flex-direction:column;justify-content:flex-end;margin:2px 0 12px;overflow:hidden}
+  .gk-kv::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,34,66,.85) 0%,rgba(4,34,66,.35) 58%,rgba(4,34,66,0) 100%);pointer-events:none}
+  .gk-kv .gk-badge{position:absolute;top:8px;right:8px;z-index:2;font-size:10px;font-weight:700;color:#fff;background:rgba(4,34,66,.6);padding:2px 7px}
+  .gk-kv .gk-label{position:relative;z-index:2;color:var(--yellow);font-size:11px;font-weight:800;letter-spacing:.12em;padding:0 20px 3px}
+  .gk-kv .gk-title{position:relative;z-index:2;color:#fff;font-size:21px;font-weight:900;line-height:1.2;padding:0 20px 14px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+  .sp-body .tag{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:800;font-size:11px;padding:3px 10px;margin-bottom:8px}
+  .sp-body h3{font-size:20px;font-weight:900;color:var(--navy);margin-bottom:6px}
+  .sp-body p{font-size:13.5px;color:#333}
+  .sp-lead{font-weight:800;color:var(--navy);font-size:14px;line-height:1.5;margin:0 0 8px}
+  .sp-terms{font-size:12px;color:#444;background:#F6F8FB;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0;line-height:1.75}
+  .sp-terms b{color:var(--navy)}
+  .sp-link{display:inline-block;margin-top:2px;color:var(--blue);font-weight:700;font-size:13px;text-decoration:none}
+  .sec-div{position:relative;height:1px;background:var(--line);margin:26px 20px 8px}
+  .sec-div::before{content:"";position:absolute;left:50%;top:-1.5px;transform:translateX(-50%);width:40px;height:4px;border-radius:2px;background:var(--yellow)}
+
+  /* horizontal rails (event/gourmet/goods) */
+  .rail{display:flex;gap:12px;overflow-x:auto;padding:4px 0 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .rail::-webkit-scrollbar{height:0}
+  .rail::before,.rail::after{content:"";flex:0 0 4%}
+  .rail .card{flex:0 0 84%;scroll-snap-align:center;background:#fff;border:0;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(4,34,66,.12);display:flex;flex-direction:column}
+  .rail .card .ph{flex:none;aspect-ratio:16/11;background:repeating-linear-gradient(135deg,#dfe3ea 0 12px,#eef1f6 12px 24px);display:flex;align-items:center;justify-content:center;color:#8a97a8;font-size:12px;font-weight:700}
+  .rail .card .cb{padding:13px 15px}
+  .rail .card .tag{display:inline-block;font-size:10px;font-weight:800;color:#fff;background:var(--blue);padding:2px 8px;margin-bottom:7px}
+  .rail .card h4{font-size:15px;font-weight:900;color:var(--navy);margin-bottom:4px}
+  .rail .card .meta{font-size:12.5px;color:#333;line-height:1.5;min-height:4.5em;overflow:hidden}
+  .rail .card .meta b{display:inline}
+  .rail .card .meta .shop{display:block;font-size:11.5px;font-weight:700;color:#5A6675}
+  .rail .card .meta .desc{display:block;margin-top:2px}
+  .ev-desc{font-size:12.5px;color:#444;line-height:1.6;margin-top:6px}
+  .fc-desc{font-size:12.5px;color:#3E4E62;line-height:1.65;margin-top:5px}
+  .apnote{font-size:11px;color:#5A6675;line-height:1.8;margin:10px 0 0}
+  .rail .card .meta b{color:var(--navy);font-weight:800}
+  .rail .card .price{font-family:var(--latin);font-weight:800;color:var(--blue);font-size:15px}
+  .rail .card .detail{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .rail .card.open .detail{max-height:300px}
+  .rail .card .detail-in{padding-top:8px;font-size:12.5px;color:#444;line-height:1.6}
+  .rail .card .detail-in .kv{margin-top:6px}
+  .rail .card .detail-in .kv b{color:var(--navy)}
+
+  /* card color themes (text area) */
+  .rail .card .cb{background:#fff;color:var(--navy);flex:1 1 auto}
+  .rail .card.c-navy .cb{background:var(--navy);color:#fff}
+  .rail .card.c-navy h4{color:#fff}
+  .rail .card.c-navy .meta{color:#dfe7f0}
+  .rail .card.c-navy .meta b{color:#fff}
+  .rail .card.c-navy .price{color:var(--yellow)}
+  .rail .card.c-navy .more-btn{color:#fff;border-top-color:rgba(255,255,255,.3)}
+  .rail .card.c-navy .more-btn::after{color:var(--yellow)}
+  .rail .card.c-navy .detail-in{color:#dfe7f0}
+  .rail .card.c-navy .detail-in .kv b{color:#fff}
+  .rail .card.c-yellow .cb{background:var(--yellow);color:var(--navy)}
+  .rail .card.c-yellow .price{color:var(--blue)}
+  .rail .card.c-yellow .more-btn{border-top-color:rgba(4,34,66,.3)}
+  .rail .card.c-blue .cb{background:var(--blue);color:#fff}
+  .rail .card.c-blue h4{color:#fff}
+  .rail .card.c-blue .meta{color:#dbe7f5}
+  .rail .card.c-blue .price{color:var(--yellow)}
+  .rail .card.c-blue .more-btn{color:#fff;border-top-color:rgba(255,255,255,.3)}
+  .rail .card.c-blue .more-btn::after{color:var(--yellow)}
+  .rail .card.c-blue .detail-in{color:#dbe7f5}
+  .rail .card.c-blue .detail-in .kv b{color:#fff}
+  .more-btn{margin-top:8px;font-family:var(--jp);font-size:12px;font-weight:800;color:var(--navy);background:none;border:0;border-top:1px dashed rgba(4,34,66,.25);padding:8px 0 0;width:100%;text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+  .more-btn::after{content:"＋";font-family:var(--latin);color:var(--blue)}
+  .card.open .more-btn::after{content:"−"}
+  /* ===== ①トーン是正：カード背景ベタ塗り廃止 → 白ベース＋イエロー差し色 ===== */
+  .rail .card{border:1px solid #E7EAF0}
+  .rail .card .cb,
+  .rail .card.c-navy .cb,.rail .card.c-yellow .cb,.rail .card.c-blue .cb{background:#fff;color:var(--navy)}
+  .rail .card.c-navy h4,.rail .card.c-blue h4{color:var(--navy)}
+  .rail .card.c-navy .meta,.rail .card.c-blue .meta{color:#333}
+  .rail .card.c-navy .meta b,.rail .card.c-blue .meta b{color:var(--navy)}
+  .rail .card .price,
+  .rail .card.c-navy .price,.rail .card.c-yellow .price,.rail .card.c-blue .price{color:var(--navy)}
+  .rail .card.c-navy .more-btn,.rail .card.c-blue .more-btn{color:var(--navy);border-top-color:rgba(4,34,66,.25)}
+  .rail .card.c-navy .more-btn::after,.rail .card.c-blue .more-btn::after{color:var(--blue)}
+  .rail .card.c-navy .detail-in,.rail .card.c-blue .detail-in{color:#333}
+  .rail .card.c-navy .detail-in .kv b,.rail .card.c-blue .detail-in .kv b{color:var(--navy)}
+  /* イエロー差し色：見出しは黄下線／カードは"黄チップ"で手法を分離。位置は固定要素=価格に自動付与（運用で考えない） */
+  .rail .card .price{display:inline;background:none;color:var(--navy);border-radius:0;padding:0;font-size:14px;font-weight:800;margin:0}
+  .rail .card.c-navy .price,.rail .card.c-yellow .price,.rail .card.c-blue .price{background:none;color:var(--navy)}
+  /* イベントの先着数値は黄をやめてネイビー太字（黄はカード内で価格1箇所に集約） */
+  .rail .card .meta > b:first-child{display:inline;background:none;color:var(--navy);font-weight:800;border:none;padding:0;font-size:12.5px}
+  .dots{display:flex;gap:7px;justify-content:center;padding:0 0 4px}
+  .dots i{width:7px;height:7px;border-radius:50%;background:rgba(4,34,66,.25);display:block;cursor:pointer;transition:all .2s}
+  .dots i.on{background:var(--navy);width:20px;border-radius:99px}
+
+  /* timeline */
+  .tl-sec{position:relative;overflow:hidden;background:#F7F9FC}
+  .tl-sec .bg{position:absolute;inset:0;opacity:.14;background-size:cover;background-position:center}
+  .tl{position:relative;padding:14px 20px 17px}
+  .tl .row{position:relative;display:grid;grid-template-columns:70px 1fr;gap:12px;padding:0 0 22px;padding-left:40px}
+  .tl .row::before{content:"";position:absolute;left:13px;top:30px;bottom:-2px;width:2px;background:#C4CDD8}
+  .tl .row:last-child::before{display:none}
+  .tl .icon{position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;z-index:1}
+  .tl .icon svg{width:16px;height:16px;stroke:var(--blue);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .tl .row.key .icon{background:var(--yellow);border-color:var(--navy)}
+  .tl .row.key .icon svg{stroke:var(--navy)}
+  .tl .time{font-family:var(--latin);font-weight:800;font-size:17px;color:var(--navy);line-height:1.1}
+  .tl .dot{position:absolute;left:8px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--navy);border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+  .tl .c{padding-top:1px}
+  .tl .c h4{font-size:15px;font-weight:900;color:var(--navy);margin-bottom:3px}
+  .tl .c p{font-size:13px;color:#444}
+  /* access */
+  .access-tabs{display:flex;gap:8px;margin-bottom:14px;padding:0 20px}
+  .access-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;font-family:var(--jp);font-size:12px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 6px;cursor:pointer}
+  .access-tab svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .access-tab.on{background:var(--navy);color:#fff}
+  .access-panel{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff;margin:0 20px}
+  .apts{list-style:none;font-size:14px;color:#333}
+  .apts li{padding:8px 0;border-bottom:1px dashed rgba(4,34,66,.2)}
+  .apts li:last-child{border:0}
+  .apts li b{color:var(--navy)}
+  .mymap{margin-top:12px;aspect-ratio:16/8;background:repeating-linear-gradient(135deg,#dfe3ea 0 12px,#eef1f6 12px 24px);display:flex;align-items:center;justify-content:center;color:#7a8698;font-size:12px;font-weight:700;text-align:center;padding:0 20px}
+  .amap{position:relative;margin:16px 20px 0;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+  .amap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .amapnote{font-size:12px;color:#5A6472;margin:8px 20px 0;line-height:1.6}
+  .venue-map{margin:0;aspect-ratio:1500/1102;background-image:var(--map);background-size:cover;background-position:center;border:none;border-radius:0}
+  .alinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .alinks a{font-size:13px;font-weight:700;color:var(--navy);text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:9px 16px;background:#fff;display:inline-flex;align-items:center;gap:4px}
+  .alinks a::after{content:"›";color:var(--blue);font-weight:800}
+  .pk-sale{display:inline-block;margin-top:5px;font-size:12px;font-weight:800;color:var(--navy);background:#FFF3B0;border-radius:5px;padding:2px 8px}
+  .shuttle-time{margin-top:12px;background:var(--paper);padding:14px 16px}
+  .shuttle-time .stl{font-weight:900;color:var(--navy);font-size:14px;margin-bottom:8px}
+  .shuttle-time .var{font-size:11px;font-weight:700;color:var(--navy);background:var(--yellow);padding:2px 8px;margin-left:6px}
+  .shuttle-time .strow{display:flex;align-items:baseline;gap:8px;font-size:14px;color:#333;padding:4px 0}
+  .shuttle-time .strow span{flex:0 0 34px;font-weight:800;color:var(--blue)}
+  .shuttle-time .strow b{color:var(--navy)}
+
+  /* seat */
+  .seat-tabs{display:flex;gap:8px;margin-bottom:12px;padding:0 20px 4px;overflow-x:auto;scrollbar-width:none}
+  .seat-tabs::-webkit-scrollbar{height:0}
+  .seat-tab{flex:0 0 auto;white-space:nowrap;font-family:var(--jp);font-size:13px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 15px;cursor:pointer}
+  .seat-tab.on{background:var(--navy);color:#fff}
+  /* rounded seat tabs, brand */
+  .seat-info{margin:0 20px 12px;display:flex;flex-direction:column;gap:2px}
+  .seat-name{font-size:19px;font-weight:900;color:var(--navy);display:flex;align-items:center;gap:8px}
+  .seat-name::before{content:"";width:5px;height:20px;background:var(--yellow);border-radius:2px}
+  .seat-one{font-size:13px;color:#555;padding-left:13px}
+  .seat-body{display:flex;flex-direction:column;gap:10px;padding:0 20px}
+  .seat-map{position:relative;aspect-ratio:16/9;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .seat-map .pitch{position:absolute;top:38%;left:24%;width:52%;height:24%;background:#cfe3d2;border:2px solid #9cc2a2;display:flex;align-items:center;justify-content:center}
+  .seat-map .pitch span{font-family:var(--latin);font-weight:800;font-size:11px;color:#6f9576;letter-spacing:.1em}
+  .seat-map .maplabel{position:absolute;bottom:6px;left:8px;font-size:10px;color:#8a97a8}
+  .seat-view{position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#dfe3ea 0 12px,#eef1f6 12px 24px);border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center}
+  .seat-view .label{font-size:12px;font-weight:700;color:#7a8698;text-align:center;padding:0 12px}
+
+  /* ticket / CTA */
+  .cta-sec{position:relative;overflow:hidden;color:#fff;text-align:center;padding:22px 24px}
+  .cta-sec .in{position:relative}
+  .cta-sec h3{font-size:24px;font-weight:900;margin-bottom:6px}
+  .cta-sec p{font-size:14px;color:#dfe7f0;margin-bottom:20px}
+  .cta-sec .buy{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--navy);font-weight:900;font-size:17px;padding:15px 34px;text-decoration:none;position:relative;border-radius:99px;box-shadow:0 6px 18px rgba(4,34,66,.3)}
+  .cta-sec .buy::after{content:"›";position:absolute;right:14px;bottom:50%;transform:translateY(50%);font-family:var(--disp);color:var(--navy);display:none}
+  .cta-sec .note{position:relative;font-size:11px;color:#b9c6d6;margin-top:14px}
+  .tk-sale{display:flex;flex-direction:column;gap:2px;align-items:center;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:8px;padding:9px 14px;margin:0 auto 16px;max-width:520px}
+  .tk-sale-h{font-size:14px;font-weight:900;letter-spacing:.04em;color:var(--yellow)}
+  .tk-sale-d{font-size:16px;font-weight:900;color:#fff}
+  .tk-method{position:relative;font-size:12px;color:#e7eef6;margin-top:10px}
+  .tk-method b{color:#fff}
+  .ptbl-card{background:#fff;color:var(--navy);border-radius:10px;padding:14px 14px 12px;margin:0 auto 20px;max-width:520px;text-align:left;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  .ptbl-card .pt-h{font-size:13px;font-weight:900;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+  .ptbl-card .pt-h::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--yellow)}
+  .ptbl{width:100%;border-collapse:collapse;font-size:13px}
+  .ptbl th,.ptbl td{padding:7px 6px;border-bottom:1px solid #E4E8EE}
+  .ptbl thead th{font-weight:800;color:#5A6472;font-size:11px;text-align:left}
+  .ptbl td:first-child{font-weight:700}
+  .ptbl .num{text-align:right;font-variant-numeric:tabular-nums}
+  .ptbl tbody tr:last-child td{border-bottom:none}
+  .pt-note{font-size:11px;color:#5A6472;margin-top:10px;line-height:1.7}
+  .pt-note a{color:#a9cdf2;font-weight:700;text-decoration:underline}
+  .pt-h{color:#fff;text-align:left}
+  .ptbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:6px 0 0}
+  .ptbl{width:100%;min-width:340px;border-collapse:collapse;font-size:12.5px;color:#fff}
+  .ptbl th,.ptbl td{padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.18);text-align:center;white-space:nowrap}
+  .ptbl thead th{color:#cfe0f0;font-weight:700}
+  .ptbl thead th[rowspan],.ptbl tbody td:first-child{text-align:left;font-weight:700;padding-left:0}
+  .ptbl .g{border-left:1px solid rgba(255,255,255,.18)}
+  .ptbl tbody tr:last-child td{border-bottom:none}
+  .pt-flex{background:var(--yellow);color:var(--navy)}
+  .pt-note{color:#b9c6d6;text-align:left}
+  .pt-flex{font-size:11.5px;color:var(--navy);background:#FFF3B0;border-radius:6px;padding:5px 10px;margin-bottom:11px;display:inline-block;font-weight:700}
+  .ptbl .g{border-left:1px solid #E4E8EE}
+  .ptbl thead th{text-align:center}
+  .guide{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px 18px;margin:18px 20px 0}
+  .guide .gt{font-weight:900;color:var(--navy);font-size:15px}
+  .guide .gs{font-size:12px;color:#333}
+  .guide a{flex:none;background:#fff;color:var(--navy);font-weight:700;font-size:13px;padding:9px 16px;text-decoration:none;border:1px solid var(--line);border-radius:99px;display:inline-flex;align-items:center;gap:4px}
+  .guide a::after{content:"›";color:var(--blue);font-weight:800}
+
+  footer{background:var(--navy);color:#9db4cc;text-align:center;padding:14px 20px 16px;font-size:11px}
+  footer .em{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-family:var(--latin);font-weight:800;font-size:10px;color:#fff}
+
+  .sticky-cta{position:sticky;bottom:0;z-index:50;background:var(--navy);padding:9px 14px;display:flex;gap:10px;align-items:center;justify-content:center;border-top:3px solid var(--yellow)}
+  .sticky-cta .lbl{color:#fff;font-size:12px;font-weight:700}
+  .sticky-cta a{background:var(--yellow);color:var(--navy);font-weight:900;font-size:14px;padding:11px 24px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border-radius:99px}
+  .sticky-cta a .arw{font-family:var(--disp);font-weight:400}
+
+  .cap{max-width:680px;margin:14px auto 0;font-size:12px;color:#333;background:#fff;border:1px solid #999;padding:12px 14px}
+  .cap b{color:var(--navy)}
+
+  /* キャッシュレス注意帯 */
+  .cashless{background:#FFFCE8;border-top:1.5px solid var(--navy);border-bottom:1.5px solid var(--navy);padding:18px 20px;margin:33px 0 35px}
+  .cashless .cl-head{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:900;color:var(--navy)}
+  .cashless .cl-head svg{width:22px;height:22px;stroke:var(--navy);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .cashless p{font-size:13px;color:#333;margin:8px 0 10px;line-height:1.7}
+  .cashless .cl-link{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:800;color:var(--blue);text-decoration:none}
+  .cashless .cl-link .arw{font-weight:400}
+
+  /* ===== 座席図（sk-スコープ）===== */
+
+  /* セレクター：モバイルは1列・横スクロール（グループ名は各群の上） */
+  .sk-selnote{font-size:11px;color:var(--muted);margin:8px 20px 6px}
+  .sk-sel-wrap{position:relative;margin-bottom:12px}
+  .sk-sel-wrap::after{content:"";position:absolute;top:0;right:0;bottom:8px;width:26px;background:linear-gradient(90deg,rgba(255,255,255,0),#fff);pointer-events:none}
+  .sk-seat-select{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:16px;align-items:flex-start;padding:2px 24px 8px 20px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .sk-seat-select::-webkit-scrollbar{display:none}
+  .sk-sg{flex:none;display:flex;flex-direction:column;gap:6px}
+  .sk-sg-label{font-size:10.5px;font-weight:800;color:var(--muted);letter-spacing:.03em;padding-left:3px;white-space:nowrap}
+  .sk-sg-btns{display:flex;gap:7px}
+  .sk-seat-btn{flex:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:#fff;color:var(--navy);
+    font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:99px;cursor:pointer;transition:.15s}
+  .sk-seat-btn .dot{width:11px;height:11px;border-radius:50%;flex:none}
+  .sk-seat-btn .dot.two{background:linear-gradient(90deg,#10437E 0 50%,#7FC3E8 50% 100%)}
+  .sk-seat-btn .dot.wdot{background:#111;color:#FFEA00;font-size:8px;line-height:1;display:inline-flex;align-items:center;justify-content:center;width:12px;height:12px}
+  .sk-seat-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .sk-seat-btn.wheel.active{background:#111;border-color:#111}
+
+  /* 全体図 */
+  .sk-seat-map{background:transparent;border:none;border-radius:0;padding:0;margin-bottom:6px}
+  .sk-seat-map svg{width:100%;height:auto;display:block}
+  .sk-mapnote{font-size:11px;color:var(--muted,#5A6675);padding:0 20px;margin:2px 0 10px}
+  .sk-seg{stroke:#fff;stroke-width:1.4;opacity:.42;transition:opacity .18s,filter .18s;cursor:pointer}
+  .sk-seg.on{opacity:1;filter:drop-shadow(0 0 4px rgba(4,34,66,.35))}
+  .sk-seg.disabled{opacity:.5;cursor:default}
+  .sk-wmark{opacity:.3;transition:opacity .18s;cursor:pointer}
+  .sk-wmark.on{opacity:1}
+  .sk-maplabel{font-size:9px;fill:var(--muted);font-weight:700;text-anchor:middle;font-family:'Noto Sans JP',sans-serif}
+  .sk-dirlabel{font-size:9.5px;font-weight:800;fill:#fff;text-anchor:middle;font-family:'Noto Sans JP',sans-serif;
+    paint-order:stroke;stroke:#042242;stroke-width:2.4px;stroke-linejoin:round}
+  .sk-zonelabel{font-size:8px;font-weight:800;fill:#5A6675;text-anchor:middle;font-family:'Noto Sans JP',sans-serif;
+    paint-order:stroke;stroke:#fff;stroke-width:2.4px;stroke-linejoin:round}
+  .sk-caption{font-size:10.5px;color:var(--muted);text-align:center;margin:2px 0 0}
+  .sk-levels{font-size:10.5px;color:var(--muted);text-align:center;margin:6px 0 0;display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .sk-levels b{color:var(--ink);font-weight:800}
+  .sk-levels .ar{color:#AEB4BD}
+  .sk-gatenote{font-size:10.5px;color:var(--muted);text-align:center;margin:5px 0 0;display:flex;gap:5px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .sk-gatenote .gb{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--navy);color:#fff;font-size:10px;font-weight:800}
+  .sk-gatetxt{font-size:8.5px;font-weight:800;fill:#042242;text-anchor:middle;font-family:'Noto Sans JP',sans-serif;paint-order:stroke;stroke:#fff;stroke-width:2px;stroke-linejoin:round}
+  .sk-mapinfo{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+
+  /* 風景＋特徴 */
+  .sk-seat-view{margin-top:12px}
+  .sk-sv-title{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:900;margin-bottom:4px}
+  .sk-sv-title .dot{width:12px;height:12px;border-radius:50%;flex:none}
+  .sk-sv-photos{display:grid;gap:8px;margin:9px 0}
+  .sk-sv-photos.two{grid-template-columns:1fr 1fr}
+  .sk-ph{position:relative;aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#e3e7ee 0 12px,#eef1f6 12px 24px);
+    border-radius:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#8a97a8;font-size:12px;font-weight:700;text-align:center;padding:8px;gap:4px}
+  .sk-sv-photos.two .sk-ph{position:relative;aspect-ratio:3/2;border-radius:8px;overflow:hidden;background:#EEF1F5}
+  .sk-ph-duo{aspect-ratio:2274/850}
+  .sk-ph .sk-lbl{position:absolute;bottom:8px;background:rgba(4,34,66,.82);color:#fff;font-size:11px;font-weight:800;padding:2px 10px;border-radius:99px;z-index:2}
+  .sk-ph .sk-lbl-l{left:8px}
+  .sk-ph .sk-lbl-r{right:8px}
+  .sk-ph .sk-cam{width:26px;height:26px;stroke:#8a97a8;stroke-width:1.8;fill:none}
+  .sk-ph .sk-tmp{position:absolute;top:8px;left:8px;background:rgba(4,34,66,.75);color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:99px}
+  .sk-sv-desc{font-size:13.5px;color:#333;margin-top:6px;padding:0 20px}
+
+
+  @media (max-width:600px){
+    body{background:#fff;padding:0}
+    .device{max-width:none;box-shadow:none;margin:0}
+    .note,.cap{display:none}
+  }
+  /* === PC対応（A：中央寄せ640px・スマホ重視／ヒーローのみ横長化） === */
+  @media (min-width:601px){
+    /* 左右の余白地帯: 固定背景画像（--pageBgPC に画像を入れれば適用。デモ=黒板調テクスチャ。無地に戻す場合は none） */
+    body{background:var(--pageBgPC,none) center/cover no-repeat fixed,#EDEFF2}
+    /* 座席図: 全体図(左)と観戦風景(右)を横並びに。上揃え */
+    .sk-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;padding:0 20px}
+    .sk-duo .sk-seat-view{margin-top:0}
+    /* ヒーロー：縦長(2:3)→横長バンドに。岩城さんの横長画像=--heroImgPC を使用（未設定時はプレースホルダー） */
+    .hero{min-height:0;aspect-ratio:3/2;background:var(--heroImgPC) center/cover no-repeat,var(--navy)}
+    .hero .info{max-width:52%}
+    /* 横スライドカード（イベント/グルメ/グッズ/CLUB.T）→ PCは2列グリッド一覧に */
+    .rail{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;overflow:visible;scroll-snap-type:none;padding:4px 20px 14px}
+    .rail::before,.rail::after{display:none}
+    .rail .card{flex:auto;scroll-snap-align:none}
+    .dots{display:none}
+  }
+
+  .lb-img{cursor:zoom-in}
+  .img-lb{position:fixed;inset:0;z-index:9999;background:rgba(4,34,66,.92);display:none;align-items:center;justify-content:center;padding:24px}
+  .img-lb.on{display:flex}
+  .img-lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+  .img-lb .lb-x{position:absolute;top:14px;right:16px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:22px;line-height:40px;text-align:center;cursor:pointer}
+  @media(min-width:681px){.sw{display:none}.ptbl{font-size:15px}.ptbl th,.ptbl td{padding:9px 10px}}
+  section[id],#top{scroll-margin-top:58px}
+[data-lz]:not(.lzon){background-image:none!important}</style>
+</head>
+<body>
+
+
+<div class="device" id="lp">
+
+  <!-- HERO -->
+  <div class="hero" id="top"></div>
+    <!-- MATCH CARD -->
+  <div class="match">
+    <div class="mt-meta">
+      <div class="mt-league">2026/27 明治安田J3リーグ 第1節</div>
+      <div class="mt-ko">19:00 KICK OFF</div>
+      <div class="mt-ven">カンセキスタジアムとちぎ</div>
+    </div>
+    <div class="teams">
+      <div class="team"><div class="em" style="background-image:var(--tsc);background-size:contain;background-repeat:no-repeat;background-position:center"></div><div class="nm">栃木SC</div><div class="role">HOME</div></div>
+      <div class="vs">VS</div>
+      <div class="team"><div class="em" style="background-image:var(--opp);background-size:contain;background-repeat:no-repeat;background-position:center"></div><div class="nm">ツエーゲン金沢</div><div class="role">VISITOR</div></div>
+    </div>
+  </div>
+
+  <!-- QUICK NAV -->
+  <nav class="qnav"><ul>
+    <li><a href="#top"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>トップ</a></li>
+    <li><a href="#event"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg>イベント</a></li>
+    <li><a href="#gourmet"><svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11"/><path d="M16 3c-1.5 0-2.5 2-2.5 4.5S14.5 12 16 12v9"/></svg>グルメ</a></li>
+    <li><a href="#seat"><svg viewBox="0 0 24 24"><path d="M6 4h9a3 3 0 0 1 3 3v6H6z"/><path d="M6 13v5h13"/><path d="M18 13v5"/></svg>座席</a></li>
+    <li><a href="#access"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5A2 2 0 0 1 8.4 10h7.2a2 2 0 0 1 1.9 1.4L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/><circle cx="7" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>アクセス</a></li>
+    <li><a href="#ticket"><svg viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1 0 4H5a2 2 0 0 1-2-2 2 2 0 0 0 0-4z"/><path d="M15 6v12" stroke-dasharray="2 2"/></svg>チケット</a></li>
+  </ul></nav>
+
+  <!-- 見どころ -->
+  <div class="preview" style="display:none">
+    <div class="photo-real" style="background-image:var(--phPreview)"></div>
+    <div class="navy-ov"></div>
+    <div class="q">この一戦、<span class="hl">走り負けない</span>。<br>90分、声を枯らそう。</div>
+    <div class="sub">ホーム開幕から負けなしのツエーゲン金沢を、カンセキで迎え撃つ。</div>
+    <div class="diag"></div>
+  </div>
+
+  <!-- スペシャルイベント -->
+  <section class="special band-white">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg></span><span class="disp">SPECIAL EVENT</span><h2><span class="mk">スペシャルイベント</span></h2></div>
+    <div class="sp-stack">
+      <div class="sp-card">
+        <div class="sp-photo np" data-lz style="background-image:var(--spPokemon)"></div>
+        <div class="sp-body"><h3 class="sp-h">“ポケモンＪリーグフェス”開催決定！</h3><p class="sp-lead">EVO BAG（環境配慮型エコバッグ）を先着8,000名様にプレゼント！</p><p>8月9日（日）ツエーゲン金沢戦にて開催。ピカチュウとクラブパートナーポケモン「ゴウカザル」がデザインされたEVO BAGを、入場ゲートで先着8,000名様にプレゼントします。オリジナルグッズ販売やイベントも予定（決まり次第お知らせ）。</p><div class="sp-terms"><div><b>配布数量</b>：先着8,000個</div><div><b>配布対象</b>：観戦チケットをお持ちの方（ビジターゲート入場者を除く）</div><div><b>配布場所</b>：Aゲート・Cゲート（ビジターゲートを除く）</div></div><a class="sp-link" href="https://tochigisc.jp/news/1819" target="_blank" rel="noopener">詳細はこちら ›</a></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="sec-div" aria-hidden="true"></div>
+    <!-- イベント -->
+  <section class="band-sec band-white" id="event">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg></span><span class="disp">EVENT</span><h2><span class="mk">イベント</span></h2></div>
+    
+    <div class="dots"><i class="on"></i><i></i><i></i></div>
+    <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--evNatsu);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>「栃木SC夏祭り」開催！</h4><div class="meta">8/9・8/22・9/5 ／ 16:00〜19:00</div><div class="ev-desc">スタジアムが夏祭り会場に！友達や家族と一緒に、みんなで夏を楽しもう。<br>場所：カンセキスタジアム アプローチデッキ</div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--evMizu);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>「真夏のワクワク水鉄砲合戦」開催！</h4><div class="meta">8/9(日) ／ 16:00〜17:00</div><div class="ev-desc">大人から子どもまで全力で楽しめる水鉄砲バトル！<br>場所：投てき場（カンセキスタジアム隣接）<br>※詳細は後日お知らせいたします。</div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--evYosakoi);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>オープニングパフォーマンス“勢や”</h4><div class="meta">選手入場前 ／ ピッチ</div><div class="ev-desc">YOSAKOIソーランチーム“勢や”がオープニングパフォーマンスをおこないます！<br>※時間・場所は急遽変更になる場合があります。</div></div></div></div>
+  </section>
+
+  <!-- グルメ -->
+  <section class="band-sec band-soft" id="gourmet">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11"/><path d="M16 3c-1.5 0-2.5 2-2.5 4.5S14.5 12 16 12v9"/></svg></span><span class="disp">STADIUM GOURMET</span><h2><span class="mk">グルメ</span></h2><span class="subbrand">BISTRO TOCKEY</span></div>
+    <p class="slead">スタジアムの名物メニュー。<span class="sw">横スワイプで確認。</span></p>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+    <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--goKezu);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>けずりん（フローズンフルーツ）</h4><div class="meta"><span class="shop">けずりん</span><span class="price">¥700</span><span class="desc">苺たっぷりのひんやりフローズンフルーツ。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--goDaji);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ダージーパイ</h4><div class="meta"><span class="shop">O.N.Y</span><span class="price">¥750</span><span class="desc">サクサク食感の特大フライドチキン。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--goTapi);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>タピオカドリンク</h4><div class="meta"><span class="shop">会茶</span><span class="price">¥750</span><span class="desc">もちもちタピオカ入りドリンク。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--goTama);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>玉子焼き</h4><div class="meta"><span class="shop">玉子屋てっちゃん</span><span class="price">¥700</span><span class="desc">ふんわり焼き上げた玉子焼き。</span></div></div></div></div>
+  </section>
+
+
+  <!-- キャッシュレス注意 -->
+  <div class="cashless">
+    <div class="cl-head"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><b>お支払いはキャッシュレスでスムーズに</b></div>
+    <p>スタジアム内は完全キャッシュレス。クレジットカード・スマホ決済・電子マネーがそのまま使えて、お会計もスピーディーです。現金はご利用いただけませんが、当日場内の専用ブースでプリペイドカードをご用意しています。</p>
+    <a href="#" class="cl-link">使える決済方法を見る（観戦ガイド）<span class="arw">›</span></a>
+  </div>
+
+  <!-- タイムライン -->
+  <section class="tl-sec">
+    <div class="bg" data-lz style="background-image:var(--phTimeline)"></div>
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="disp">TIME TABLE</span><h2><span class="mk">当日のタイムライン</span></h2></div>
+    <div class="tl"><div class="row"><span class="dot"></span><div class="time">16:00</div><div class="c"><h4>シャトルバス運行開始（往路）</h4><p>雀宮駅発 → スタジアム行きの始発。早めの来場がおすすめ。</p></div></div><div class="row"><span class="dot"></span><div class="time">16:30</div><div class="c"><h4>優先入場 開始</h4><p>シーズンパスホルダー限定！場内のイベントや売店がスタート！</p></div></div><div class="row"><span class="dot"></span><div class="time">17:00</div><div class="c"><h4>一般入場 開始</h4></div></div><div class="row"><span class="dot"></span><div class="time">18:15</div><div class="c"><h4>ウォーミングアップ開始</h4><p>選手がピッチに登場。ウォーミングアップも必見！</p></div></div><div class="row"><span class="dot"></span><div class="time">18:45</div><div class="c"><h4>選手紹介</h4><p>かっこいい選手紹介映像でスタメンをチェック！</p></div></div><div class="row"><span class="dot"></span><div class="time">19:00</div><div class="c"><h4>KICK OFF</h4><p>いよいよ試合開始！</p></div></div><div class="row"><span class="dot"></span><div class="time">19:50</div><div class="c"><h4>ハーフタイム（15分間）</h4><p>腹ごしらえやトイレ休憩で後半に向けて準備をしよう！</p></div></div><div class="row"><span class="dot"></span><div class="time">20:50</div><div class="c"><h4>試合終了（目安）</h4><p>勝利したら、みんなで喜ぼう！</p></div></div><div class="row"><span class="dot"></span><div class="time">21:00</div><div class="c"><h4>シャトルバス運行開始（復路）</h4><p>スタジアム バス乗り場発 → 雀宮駅行きの始発。最終便は22:30発。</p></div></div></div>
+  </section>
+
+  <!-- 会場マップ -->
+  <section class="band-sec band-white" id="map">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></span><span class="disp">STADIUM MAP</span><h2><span class="mk">会場マップ</span></h2></div>
+    <p class="slead">ゲート・グルメ・グッズ・トイレ・総合案内の位置。</p>
+    <div class="venue-map" data-lz></div>
+  </section>
+
+  <!-- 座席図 -->
+  <section class="band-sec band-soft seat-picker" id="seat">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 4h9a3 3 0 0 1 3 3v6H6z"/><path d="M6 13v5h13"/><path d="M18 13v5"/></svg></span><span class="disp">SEAT MAP</span><h2><span class="mk">座席から選ぶ</span></h2></div>
+    <p class="sk-selnote">セレクターは横スワイプ／全体図はタップでも選べます</p>
+    <div class="sk-sel-wrap">
+      <div class="sk-seat-select" id="selectors"></div>
+    </div>
+
+
+    <div class="sk-duo">
+      <div class="sk-duo-l">
+        <div class="sk-seat-map">
+          <svg id="stadium" viewBox="0 24 400 296" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <p class="sk-mapnote">※ 斜線のエリア（緩衝帯・上層スタンド）は通常販売がないため選択できません</p>
+      </div>
+      <div class="sk-duo-r">
+        <div class="sk-seat-view" id="view"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクセス -->
+  <section class="band-sec band-white access-picker" id="access">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5A2 2 0 0 1 8.4 10h7.2a2 2 0 0 1 1.9 1.4L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/><circle cx="7" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></span><span class="disp">ACCESS</span><h2><span class="mk">アクセス</span></h2></div>
+    
+    <div class="access-tabs">
+      <button class="access-tab" data-acc="car"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5A2 2 0 0 1 8.4 10h7.2a2 2 0 0 1 1.9 1.4L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/><circle cx="7" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>車</button>
+      <button class="access-tab" data-acc="shuttle"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M4 10h16"/><circle cx="8" cy="19" r="1.4"/><circle cx="16" cy="19" r="1.4"/><path d="M6 16v2M18 16v2"/></svg>シャトルバス</button>
+      <button class="access-tab" data-acc="train"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="2"/><path d="M6 11h12"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/><path d="M8 21l2-3M16 21l-2-3"/></svg>電車・徒歩</button>
+    </div>
+    <div class="access-panel" data-panel="car">
+      <ul class="apts"><li><b>東北道 鹿沼IC</b>から約15分（さつきロード経由）</li><li><b>北関東道 壬生IC</b>から約20分／<b>宇都宮上三川IC</b>から約15分</li><li><b>駐車場</b>：南第1・第2（公園南側）／西・南管理用（公園西側）／北第3（公園北側）｜<b>2時間まで無料</b></li>
+      <li><b>精算</b>：現金（千円札・硬貨）／クレジットカード／交通系ほか電子マネー</li>
+      <li><b>北第1・北第2駐車場（予約制）</b>｜スタジアム目の前・栃木SC販売・事前予約で当日スムーズ｜1台 <b>¥2,500</b><br><span class="pk-sale">7/16(木) 12:00〜 CLUB.T会員先行販売</span></li><li><b>akippa 予約制</b>（約500台)｜事前予約で当日スムーズ</li></ul>
+      <p class="apnote">※2千円・5千円・1万円札は使用不可／他イベント開催時は満車の場合あり／近隣商業施設への駐車はご遠慮ください／駐車券を紛失した場合：0120-553-350</p>
+      
+      <div class="alinks"><a href="https://www.jleague-ticket.jp/club/ts/" target="_blank" rel="noopener">北駐車場を予約する ›</a><a href="https://www.akippa.com/tochigisc/" target="_blank" rel="noopener">akippaで予約する ›</a></div>
+    </div>
+    <div class="access-panel" data-panel="shuttle" hidden>
+      <ul class="apts"><li><b>往路</b>：JR雀宮駅 東口のりば → スタジアム（約10分）</li><li><b>復路</b>：スタジアム バスベイ乗り場（アプローチデッキ南側）→ 雀宮駅</li><li><b>運賃</b>：往復500円／片道300円（高校生以下無料・学生証提示）</li></ul>
+      <div class="shuttle-time"><div class="stl">発車時刻 <span class="var">※乗車状況により5分程度前後します</span></div><div class="strow"><span>往路</span><b>15:30 / 16:00 / 16:30 / 17:00 / 17:30 / 18:00 / 18:30 / 19:00（最終）</b></div><div class="strow"><span>復路</span><b>21:00 / 21:15 / 21:30 / 21:45 / 22:00 / 22:15 / 22:30（最終）</b></div></div>
+      <ul class="apts"><li>乗車券は雀宮駅東口のりばで購入（観戦チケットをご提示ください）</li><li>Suica・PASMO・バスカードは利用できません（お支払いは現金のみです）</li><li>乗車券は当日限り有効／観戦目的の方のみご利用いただけます</li></ul>
+      
+    </div>
+    <div class="access-panel" data-panel="train" hidden>
+      <ul class="apts"><li><b>JR雀宮駅</b>｜シャトルバス約10分（おすすめ）</li><li><b>東武 西川田駅</b>｜徒歩約15分</li><li><b>JR宇都宮駅</b>｜路線バス約40分（渋滞で遅延の場合あり）</li></ul>
+    </div>
+    <div class="amap"><iframe src="https://www.google.com/maps/d/embed?mid=1cw5xcFXcTiyz82PtG4jNiD15-ehNfCg&amp;ll=36.51450131957215%2C139.85315212416188&amp;z=15" loading="lazy" title="カンセキスタジアムとちぎ アクセスマップ"></iframe></div><p class="amapnote">※ 駐車場・シャトルバス乗降場・駅・徒歩ルートをまとめた地図です。ピンをタップで詳細が見られます。</p>
+    
+  </section>
+
+  <!-- チケット / CTA -->
+  <section class="cta-sec" id="ticket">
+    <div class="photo-real" data-lz style="background-image:var(--fcBg)"></div>
+    <div class="navy-ov"></div>
+    <div class="in">
+      <h3>チケットを購入する</h3>
+      <p>8.9(日) 19:00 KICK OFF ／ ツエーゲン金沢戦</p><div class="tk-sale"><span class="tk-sale-h">チケット販売開始</span><span class="tk-sale-d">7/16（CLUB.T会員先行）・7/18（一般）｜各 12:00〜</span></div><div class="pt-h">チケット料金（1試合）</div><div class="pt-flex">この試合は <b>★★★プライス</b>（開幕戦）</div><div class="ptbl-scroll"><table class="ptbl"><thead><tr><th rowspan="2">席種</th><th colspan="2">前売</th><th colspan="2" class="g">当日</th></tr><tr><th>小中高</th><th>大人</th><th class="g">小中高</th><th>大人</th></tr></thead><tbody><tr><td>メインSS指定席</td><td colspan="2">¥5,700</td><td colspan="2" class="g">¥6,200</td></tr><tr><td>メインS指定席</td><td>¥2,100</td><td>¥4,800</td><td class="g">¥2,600</td><td>¥5,300</td></tr><tr><td>メインS自由席</td><td>¥2,000</td><td>¥4,300</td><td class="g">¥2,500</td><td>¥4,800</td></tr><tr><td>バック自由席</td><td>¥1,800</td><td>¥3,700</td><td class="g">¥2,300</td><td>¥4,200</td></tr><tr><td>ホームゴール裏自由席</td><td>¥1,200</td><td>¥2,700</td><td class="g">¥1,700</td><td>¥3,200</td></tr><tr><td>ビジターゴール裏自由席</td><td>¥1,200</td><td>¥2,700</td><td class="g">¥1,700</td><td>¥3,200</td></tr><tr><td>パノラマシート</td><td>¥2,100</td><td>¥4,800</td><td class="g">¥2,600</td><td>¥5,300</td></tr><tr><td>パーティーシート</td><td colspan="2">¥19,200</td><td colspan="2" class="g">¥21,200</td></tr><tr><td>テーブル席</td><td colspan="2">¥6,500</td><td colspan="2" class="g">¥7,000</td></tr><tr><td>車椅子席</td><td>¥2,100</td><td>¥4,800</td><td class="g">¥2,600</td><td>¥5,300</td></tr></tbody></table></div><div class="pt-note">※ 料金は試合により3段階で変動（フレックスプライス）。開幕戦は最上位の<b>★★★</b>。テーブル・メインSS指定・パーティーは全年齢共通料金。ホーム／ビジターゴール裏は学割（当日¥2,300）あり。<b>CLUB.T会員はさらにお得な会員価格</b>があります。<br><a href="https://www.tochigisc.jp/ticket/" target="_blank" rel="noopener">詳しい料金・購入方法（公式）›</a></div>
+      <a class="buy" href="https://www.jleague-ticket.jp/club/ts/" target="_blank" rel="noopener"><span>Jリーグチケットで購入</span><span class="arw">›</span></a><div class="tk-method">セブン-イレブン店頭でも購入可（チケットぴあ Pコード <b>592-970</b>）</div>
+      <div class="note">※Jリーグチケットの購入にはJリーグIDが必要（前売がお得）。※当日券売場では<b>指定席の販売はありません</b>（指定席は事前購入を）。※駆け込みチケット：前半35分以降、当日券価格の<b>半額</b>で販売。</div>
+    </div>
+  </section>
+  
+
+  <!-- ▼ ここから別ゾーン（来場情報の外） -->
+  <div class="zone-divider"><span>スタジアムでもっと楽しむ</span></div>
+
+  <!-- グッズ（売り場ゾーン） -->
+  <section class="band-sec zone" id="goods">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span><span class="disp">GOODS</span><h2><span class="mk">グッズ</span></h2></div>
+    <p class="slead">スタジアムのオフィシャルショップで販売。<span class="sw">横スワイプで確認。</span></p>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+        <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--gUni);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#000"></div><div class="cb"><span class="tag y">新作</span><h4>レプリカユニフォーム</h4><div class="meta"><span class="shop">2026/27シーズン</span><span class="price">¥17,600</span><span class="desc">2026/27シーズンの新デザイン・レプリカユニフォーム。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--gKey);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>おなまえアクリルキーホルダー</h4><div class="meta"><span class="shop">ガチャ（ランダム）</span><span class="price">¥400</span><span class="desc">選手のおなまえ入りアクリルキーホルダー。ガチャで登場。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--gPen);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>カラーチェンジペンライト</h4><div class="meta"><span class="shop">カラーチェンジ式</span><span class="price">¥2,420</span><span class="desc">色が切り替わる応援用ペンライト。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--gSeal);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ぷっくりクリアシール</h4><div class="meta"><span class="shop">ぷっくり仕様</span><span class="price">¥715</span><span class="desc">トッキーのぷっくりクリアシール。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:var(--gTowel);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>選手名クールタオル</h4><div class="meta"><span class="shop">選手名入り</span><span class="price">¥2,915</span><span class="desc">ひんやり感のある選手名クールタオル。</span></div></div></div></div>
+    </section>
+
+  <!-- ファンクラブ（CLUB.T 誘導） -->
+  <section class="band-sec zone" id="fanclub">
+    <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z"/></svg></span><span class="disp">CLUB.T</span><h2><span class="mk">CLUB.T限定イベント</span></h2></div>
+    <p class="slead">栃木SC公式ファンクラブ「CLUB.T」の会員だけが参加出来るスタジアム限定イベント。もっと近くで栃木SCを。</p>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+    <div class="rail"><div class="card"><div class="ph" data-lz style="background-image:var(--fcSign);background-size:cover;background-position:center"></div><div class="cb"><span class="tag">会員限定</span><h4>選手サイン会</h4><div class="fc-desc">ご自身のお手持ちのグッズに選手の直筆サインが貰えるサイン会に参加できます。参加選手は当日のお楽しみ！</div></div></div><div class="card"><div class="ph" data-lz style="background-image:var(--fcWarm);background-size:cover;background-position:center"></div><div class="cb"><span class="tag">会員限定</span><h4>ウォーミングアップ見学</h4><div class="fc-desc">試合直前のウォーミングアップをピッチレベルで見学いただけます。</div></div></div><div class="card"><div class="ph" data-lz style="background-image:var(--fcBus);background-size:cover;background-position:center"></div><div class="cb"><span class="tag">会員限定</span><h4>選手バスお出迎え</h4><div class="fc-desc">試合会場に入る選手のお出迎えに参加できます。試合前に間近で選手を応援しよう！</div></div></div><div class="card"><div class="ph" data-lz style="background-image:var(--fcTour);background-size:cover;background-position:center"></div><div class="cb"><span class="tag">会員限定</span><h4>スタジアムツアー</h4><div class="fc-desc">日頃立ち入ることができない選手ロッカールームや記者会見場、VIPルーム等を巡るツアーにご参加いただけます。</div></div></div></div>
+    <div class="fc-cta">
+      <div class="fc-txt"><span>これらの会員限定イベントは、CLUB.T会員が対象です。</span></div>
+      <a class="fc-btn" href="https://www.tochigisc.org/2026/27fanclub_pickup2" target="_blank" rel="noopener">CLUB.Tに入会する <span class="arw">›</span></a>
+    </div>
+  </section>
+
+  <footer><div class="em" style="background-image:var(--tsc);background-size:contain;background-repeat:no-repeat;background-position:center;background-color:transparent;border:none"></div>© TOCHIGI SC</footer>
+
+  <div class="sticky-cta"><span class="lbl">8.9(日) ツエーゲン金沢戦</span><a href="#ticket">チケットを見る <span class="arw">›</span></a></div>
+
+</div>
+
+
+
+<script>
+  // card accordion (もっと見る)
+  document.querySelectorAll('.more-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const card=btn.closest('.card');
+      card.classList.toggle('open');
+      btn.firstChild && (btn.childNodes[0].nodeValue = card.classList.contains('open') ? '閉じる' : 'くわしく');
+    });
+  });
+
+  // carousel dots
+  document.querySelectorAll('.rail').forEach(rail=>{
+    const dotsWrap=rail.previousElementSibling && rail.previousElementSibling.classList.contains('dots')?rail.previousElementSibling:null;
+    if(!dotsWrap) return;
+    const cards=[...rail.querySelectorAll('.card')], dots=[...dotsWrap.querySelectorAll('i')];
+    dots.forEach((d,i)=>d.addEventListener('click',()=>{const c=cards[i];if(c)rail.scrollTo({left:c.offsetLeft-(rail.clientWidth-c.clientWidth)/2,behavior:'smooth'});}));
+    let raf; rail.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const center=rail.scrollLeft+rail.clientWidth/2;let best=0,bd=Infinity;cards.forEach((c,i)=>{const cc=c.offsetLeft+c.clientWidth/2,dd=Math.abs(cc-center);if(dd<bd){bd=dd;best=i;}});dots.forEach((d,i)=>d.classList.toggle('on',i===best));});},{passive:true});
+  });
+  // access tabs
+  document.querySelectorAll('.access-picker').forEach(pk=>{
+    const tabs=[...pk.querySelectorAll('.access-tab')], panels=[...pk.querySelectorAll('.access-panel')];
+    tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('on'));t.classList.add('on');const k=t.dataset.acc;panels.forEach(p=>p.hidden=p.dataset.panel!==k);}));
+    if(tabs[0])tabs[0].click();
+  });
+  // seat picker
+
+
+/* ===== 座席図 ===== */
+(function(){
+
+
+/* =========================================================================
+   カンセキスタジアム実座席図に基づく模式図（3層構成：ピッチ／1層目／2層目）
+   向き（SVG座標系：0°=右, 90°=下, 180°=左, 270°=上）
+     メイン=下 / バック=上 / ホームゴール裏=右 / ビジターゴール裏=左（下寄り）
+   実図割り当て
+     SS(ピンク)104-107 / S指定(紺)166,101-103,108-111 / S自由(水色)112-115,162-165
+     テーブル=S指定の中・後方(110-111裏) / パーティー=S自由の中・後方(112-114裏)
+     バック(緑)129-149 / ホームゴール裏(琥珀)116-128 / ビジターゴール裏(スレート)155-161
+     パノラマ(黄・2層目)204-206 / 緩衝帯(斜線)150-154 / 2層目選択不可(濃灰)200/300系
+     車椅子=1層目のすぐ後ろ・通路側(164,166,101,109,110)
+   ========================================================================= */
+
+const C = {
+  ss:'#C7167F', sNav:'#10437E', sBlu:'#7FC3E8', back:'#2E9E5B',
+  home:'#FFEA00', visitor:'#8B98A8', pano:'#FFD500', party:'#EF9A3D', table:'#7A4A6B',
+  wheel:'#111111', deadUpper:'#B4BAC2'
+};
+
+// LP 席種（runs: {a0,a1,fill,ring}）
+const SEATS = [
+  {id:'ss', name:'メインSS指定席', group:'メインスタンド', color:C.ss,
+   runs:[{a0:81,a1:99,fill:C.ss,ring:'lower'}],
+   desc:'ハーフウェイライン正面の中央エリア。ピッチ全体が最も見やすい特等席です。'},
+  {id:'s', name:'メインS席', group:'メインスタンド', color:C.sNav, twin:true, twodot:true,
+   runs:[
+     {a0:45,a1:63, step:49.5,notch:'end',  fill:C.sBlu}, // 自由 112-115（一体・後方切り欠き=パーティー）
+     {a0:63,a1:81, step:72,  notch:'start',midR:'lowerCutT',fill:C.sNav}, // 指定 108-111（一体・後方切り欠き=テーブル・深め）
+     {a0:99,a1:117,fill:C.sNav,ring:'lower'},            // 指定 101-103,166
+     {a0:117,a1:135,fill:C.sBlu,ring:'lower'}            // 自由 162-165
+   ],
+   desc:'メインスタンドの中央〜サイド。ゴール前の攻防を見るならココ！ホーム寄り・ビジター寄りで見え方が変わります（指定席・自由席あり）。'},
+  {id:'back', name:'バック自由席', group:'サイド・バックスタンド', color:C.back,
+   runs:[{a0:210,a1:315,fill:C.back,ring:'lower'}],
+   desc:'ピッチを反対側から一望出来る開放感溢れる定番の人気エリアです！'},
+  {id:'home', name:'ホームゴール裏自由席', group:'サイド・バックスタンド', color:C.home,
+   runs:[{a0:315,a1:405,fill:C.home,ring:'lower'}],
+   desc:'サポーターの応援と一体になれる、栃木SCの応援の中心です！'},
+  {id:'visitor', name:'ビジターゴール裏自由席', group:'サイド・バックスタンド', color:C.visitor,
+   runs:[{a0:135,a1:178,fill:C.visitor,ring:'lower'}],
+   desc:'ビジターチームの応援エリアです。'},
+  {id:'panorama', name:'パノラマシート', group:'メインスタンド', color:C.pano,
+   runs:[{a0:76,a1:104,fill:C.pano,ring:'upper'}],
+   desc:'メインスタンド中央の上段（2層目）。ピッチ全体を高い位置から見渡せる見晴らし席です。'},
+  {id:'party', name:'パーティーシート', group:'特別席', color:C.party,
+   runs:[{a0:49.5,a1:63,fill:C.party,ring:'rear'}],
+   desc:'メインS席ホーム側に位置する限定6席の特別シート。グループ観戦にもってこいの特別席です！（1シート6名まで利用可能）'},
+  {id:'table', name:'テーブル席', group:'特別席', color:C.table,
+   runs:[{a0:63,a1:72,fill:C.table,ring:'rearT'}],
+   desc:'メインS席ホーム側のテーブル付きの特別席。飲食しながらゆったり観戦できます。（限定60席）'},
+  {id:'wheel', name:'車椅子席', group:'バリアフリー', color:C.wheel, markers:true,
+   desc:'メインスタンドの1層目のすぐ後ろ・通路側（164・166・101・109・110エリア付近）の車椅子観戦スペース。同伴者席あり。'},
+];
+
+// 非選択（緩衝帯＋2層目選択不可）
+const DEAD = [
+  {a0:178,a1:210,fill:'url(#buffer)',ring:'lower', zone:'緩衝帯'}, // 緩衝帯 150-154
+  {a0:104,a1:436,fill:'url(#buffer)',ring:'upper'}                // 2層目 通常販売なし（斜線＝未使用）
+];
+
+const GROUPS = ['メインスタンド','サイド・バックスタンド','特別席','バリアフリー'];
+
+// ---- ジオメトリ（3層＋層間ギャップ）----
+const CX=200, CY=172;
+const R = {                 // [rxIn, ryIn, rxOut, ryOut]
+  lower:[83,54.5,150,110],  // 1層目（席）
+  lowerCut:[83,54.5,141,102], // 後方切り欠き（パーティー手前）
+  lowerCutT:[83,54.5,132,94], // 後方切り欠き（テーブル手前：奥行き2倍）
+  rear :[141,102,150,110],  // パーティーシート（後方・浅め）
+  rearT:[132,94,150,110],   // テーブル席（後方・奥行き2倍）
+  upper:[158,116,188,142]   // 2層目（1層目との隙間＝前回の2倍）
+};
+const WR=[154,113];         // 車椅子：1層目のすぐ後ろ（隙間中心）
+const rad=d=>d*Math.PI/180;
+const rnd=n=>Math.round(n*100)/100;
+function segPath(a0,a1,ring){
+  const [rxi,ryi,rxo,ryo]=R[ring];
+  const large=(a1-a0)>180?1:0;
+  const pO=a=>[rnd(CX+rxo*Math.cos(rad(a))),rnd(CY+ryo*Math.sin(rad(a)))];
+  const pI=a=>[rnd(CX+rxi*Math.cos(rad(a))),rnd(CY+ryi*Math.sin(rad(a)))];
+  const [ox0,oy0]=pO(a0),[ox1,oy1]=pO(a1),[ix1,iy1]=pI(a1),[ix0,iy0]=pI(a0);
+  return `M${ox0} ${oy0} A${rxo} ${ryo} 0 ${large} 1 ${ox1} ${oy1} L${ix1} ${iy1} A${rxi} ${ryi} 0 ${large} 0 ${ix0} ${iy0} Z`;
+}
+// 後方に切り欠きを持つ一体パス（notch:'end'=後半を切り欠き / 'start'=前半を切り欠き）
+function notchPath(a0,a1,aStep,cut,midRing){
+  const [rxi,ryi,rxo,ryo]=R.lower;
+  const [,,rxm,rym]=R[midRing||'lowerCut'];
+  const pO=a=>[rnd(CX+rxo*Math.cos(rad(a))),rnd(CY+ryo*Math.sin(rad(a)))];
+  const pM=a=>[rnd(CX+rxm*Math.cos(rad(a))),rnd(CY+rym*Math.sin(rad(a)))];
+  const pI=a=>[rnd(CX+rxi*Math.cos(rad(a))),rnd(CY+ryi*Math.sin(rad(a)))];
+  const [ix1,iy1]=pI(a1),[ix0,iy0]=pI(a0);
+  if(cut==='end'){
+    const [ox0,oy0]=pO(a0),[os,osy]=pO(aStep),[ms,msy]=pM(aStep),[m1,m1y]=pM(a1);
+    return `M${ox0} ${oy0} A${rxo} ${ryo} 0 0 1 ${os} ${osy} L${ms} ${msy} A${rxm} ${rym} 0 0 1 ${m1} ${m1y} L${ix1} ${iy1} A${rxi} ${ryi} 0 0 0 ${ix0} ${iy0} Z`;
+  }else{
+    const [m0,m0y]=pM(a0),[ms,msy]=pM(aStep),[os,osy]=pO(aStep),[o1,o1y]=pO(a1);
+    return `M${m0} ${m0y} A${rxm} ${rym} 0 0 1 ${ms} ${msy} L${os} ${osy} A${rxo} ${ryo} 0 0 1 ${o1} ${o1y} L${ix1} ${iy1} A${rxi} ${ryi} 0 0 0 ${ix0} ${iy0} Z`;
+  }
+}
+function midPoint(a0,a1,ring){
+  const [rxi,ryi,rxo,ryo]=R[ring];
+  const a=(a0+a1)/2, rx=(rxi+rxo)/2, ry=(ryi+ryo)/2;
+  return [rnd(CX+rx*Math.cos(rad(a))), rnd(CY+ry*Math.sin(rad(a)))];
+}
+const svg=document.getElementById('stadium');
+const NS='http://www.w3.org/2000/svg';
+function el(tag,attr){const e=document.createElementNS(NS,tag);for(const k in attr)e.setAttribute(k,attr[k]);return e;}
+
+// 斜線パターン（緩衝帯）
+const defs=el('defs',{});
+const pat=el('pattern',{id:'buffer',width:6,height:6,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'});
+pat.appendChild(el('rect',{width:6,height:6,fill:'#DDE1E7'}));
+pat.appendChild(el('line',{x1:0,y1:0,x2:0,y2:6,stroke:'#A9B0BA','stroke-width':2}));
+defs.appendChild(pat); svg.appendChild(defs);
+
+function seg(a0,a1,fill,ring,seatId,disabled){
+  const attr={d:segPath(a0,a1,ring),fill:fill,class:'sk-seg'+(disabled?' disabled':'')};
+  if(seatId) attr['data-seat']=seatId;
+  const p=el('path',attr);
+  if(seatId) p.addEventListener('click',()=>select(seatId));
+  svg.appendChild(p);
+  return p;
+}
+
+// ピッチレベル：トラック（青オーバル）＋ピッチ（白罫線の内側=緑の長方形）
+svg.appendChild(el('ellipse',{cx:CX,cy:CY,rx:77,ry:49.5,fill:'#2E7CC4',opacity:.92}));
+svg.appendChild(el('rect',{x:CX-54,y:CY-31,width:108,height:62,fill:'#43A047'}));
+svg.appendChild(el('rect',{x:CX-54,y:CY-31,width:108,height:62,fill:'none',stroke:'#fff',opacity:.9,'stroke-width':1.2}));
+svg.appendChild(el('rect',{x:CX-54,y:CY-18,width:17,height:36,fill:'none',stroke:'#fff',opacity:.9,'stroke-width':1.2}));
+svg.appendChild(el('rect',{x:CX+54-17,y:CY-18,width:17,height:36,fill:'none',stroke:'#fff',opacity:.9,'stroke-width':1.2}));
+svg.appendChild(el('line',{x1:CX,y1:CY-31,x2:CX,y2:CY+31,stroke:'#fff',opacity:.9,'stroke-width':1.2}));
+svg.appendChild(el('circle',{cx:CX,cy:CY,r:10,fill:'none',stroke:'#fff',opacity:.9,'stroke-width':1.2}));
+
+// 非選択（緩衝帯・2層目）を先に敷く
+DEAD.forEach(d=>seg(d.a0,d.a1,d.fill,d.ring,null,true));
+
+// 各席種（S を描いた後にテーブル/パーティーを重ね、S の“中・後方”に見せる）
+const segEls={};
+SEATS.forEach(s=>{
+  if(s.markers) return;
+  segEls[s.id]=[];
+  s.runs.forEach(r=>{
+    const d=r.notch?notchPath(r.a0,r.a1,r.step,r.notch,r.midR):segPath(r.a0,r.a1,r.ring);
+    const p=el('path',{d:d,fill:r.fill,class:'sk-seg','data-seat':s.id});
+    p.addEventListener('click',()=>select(s.id));
+    svg.appendChild(p);
+    segEls[s.id].push(p);
+  });
+});
+
+// 車椅子マーカー（1層目のすぐ後ろ・通路側）
+const wAngles=[70,74,101,115,128];
+const wmarks=[];
+wAngles.forEach(a=>{
+  const x=rnd(CX+WR[0]*Math.cos(rad(a))), y=rnd(CY+WR[1]*Math.sin(rad(a)));
+  const g=el('g',{class:'sk-wmark'});
+  g.appendChild(el('circle',{cx:x,cy:y,r:6.6,fill:'#111',stroke:'#fff','stroke-width':1}));
+  const t=el('text',{x:x,y:y+3.1,'text-anchor':'middle','font-size':8.5,fill:'#FFEA00','font-weight':700});
+  t.textContent='♿'; g.appendChild(t);
+  g.addEventListener('click',()=>select('wheel'));
+  svg.appendChild(g); wmarks.push(g);
+});
+
+// 緩衝帯ラベル
+const [bx,by]=midPoint(178,210,'lower');
+const bl=el('text',{x:bx,y:by+2.5,class:'sk-zonelabel'}); bl.textContent='緩衝帯'; svg.appendChild(bl);
+
+// 方角ラベル（バック＝上のみ。メイン下はゲートAで示す／ホーム・ビジターのテキストは削除）
+{const t=el('text',{x:CX,y:CY-36,class:'sk-dirlabel'}); t.textContent='バック'; svg.appendChild(t);}
+{const t=el('text',{x:CX,y:CY-79,class:'sk-dirlabel'}); t.textContent='下層スタンド'; svg.appendChild(t);}
+{const t=el('text',{x:CX,y:CY-125,class:'sk-dirlabel'}); t.textContent='上層スタンド'; svg.appendChild(t);}
+{const t=el('text',{x:CX,y:CY+42,class:'sk-dirlabel'}); t.textContent='メイン'; svg.appendChild(t);}
+
+// 入場ゲート（A=メイン下 / C=ホーム右 / G=ビジター左）※「ゲート」表記も付与
+[['A',CX,CY+113],['C',CX+154,CY],['G',CX-154,CY]].forEach(([g,x,y])=>{
+  const grp=el('g',{});
+  grp.setAttribute('style','filter:drop-shadow(0 1px 1.5px rgba(4,34,66,.35))');
+  grp.appendChild(el('circle',{cx:x,cy:y,r:12,fill:'#fff'}));
+  const t=el('text',{x:x,y:y+4.7,'text-anchor':'middle','font-size':14.5,'font-weight':800,fill:'#042242'});
+  t.textContent=g; grp.appendChild(t);
+  const gt=el('text',{x:x,y:y+22,class:'sk-gatetxt'}); gt.textContent='ゲート'; grp.appendChild(gt);
+  svg.appendChild(grp);
+});
+
+// ---- セレクター（1列・横スクロール／グループ名は各群の上）----
+const selWrap=document.getElementById('selectors');
+GROUPS.forEach(g=>{
+  const cluster=document.createElement('div'); cluster.className='sk-sg';
+  const lab=document.createElement('div'); lab.className='sk-sg-label'; lab.textContent=g; cluster.appendChild(lab);
+  const btns=document.createElement('div'); btns.className='sk-sg-btns';
+  SEATS.filter(s=>s.group===g).forEach(s=>{
+    const b=document.createElement('button');
+    b.className='sk-seat-btn'+(s.id==='wheel'?' wheel':''); b.dataset.seat=s.id;
+    const dotCls='dot'+(s.twodot?' two':'')+(s.id==='wheel'?' wdot':'');
+    const dotStyle=s.twodot?'':`style="background:${s.color}"`;
+    b.innerHTML= s.id==='wheel' ? `<span class="${dotCls}">♿</span>${s.name}` : `<span class="${dotCls}" ${dotStyle}></span>${s.name}`;
+    b.addEventListener('click',()=>select(s.id));
+    btns.appendChild(b);
+  });
+  cluster.appendChild(btns);
+  selWrap.appendChild(cluster);
+});
+
+// ---- 選択処理 ----
+const view=document.getElementById('view');
+function select(id){
+  const s=SEATS.find(x=>x.id===id);
+  document.querySelectorAll('.sk-seat-btn').forEach(b=>b.classList.toggle('active',b.dataset.seat===id));
+  const ab=document.querySelector(`.sk-seat-btn[data-seat="${id}"]`); if(ab && skReady) ab.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  document.querySelectorAll('.sk-seg').forEach(p=>{if(!p.classList.contains('disabled'))p.classList.remove('on');});
+  wmarks.forEach(w=>w.classList.remove('on'));
+  if(s.markers){ wmarks.forEach(w=>w.classList.add('on')); }
+  else { (segEls[id]||[]).forEach(p=>p.classList.add('on')); }
+
+  const dotStyle=s.twodot
+    ? 'background:linear-gradient(90deg,#10437E 0 50%,#7FC3E8 50% 100%)'
+    : `background:${s.color}`;
+  const idx=SEATS.indexOf(s);
+  const SV={ss:'--svSs',s:'--svS',back:'--svBack',home:'--svHome',panorama:'--svPano',party:'--svParty',table:'--svTable'};
+  const svv=SV[s.id];
+  const isDuo = s.id==='s';
+  const lbls = isDuo ? '<span class="sk-lbl sk-lbl-l">ビジター側</span><span class="sk-lbl sk-lbl-r">ホーム側</span>' : '';
+  const phcls = isDuo ? 'sk-ph sk-ph-duo' : 'sk-ph';
+  const photos = svv
+    ? `<div class="sk-sv-photos"><div class="${phcls}" style="background:var(${svv}) center/cover no-repeat">${lbls}</div></div>`
+    : `<div class="sk-sv-photos"><div class="sk-ph sk-ph-none"><span class="sk-tmp">準備中</span></div></div>`;
+  view.innerHTML=`
+    ${photos}
+    <div class="sk-sv-desc">${s.desc}</div>`;
+}
+function cam(){return '<svg class="sk-cam" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg>';}
+
+let skReady=false;
+select('ss'); // 初期表示（スクロールなし）
+skReady=true;
+
+
+})();
+</script>
+<script>(function(){
+try{
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var STAG=80,MAXSTEP=3;/* 時差80ms・最大4段(0..3) */
+  /* 単発フェード対象（ヒーローは除外＝ファーストビュー） */
+  var singles=document.querySelectorAll('.match,.qnav-wrap,.preview,.head,.slead,.gk-kv,.sp-card,.cashless,.zone-divider,.fc-cta');
+  singles.forEach(function(el){el.classList.add('rv');});
+  var io=new IntersectionObserver(function(ents){
+    ents.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target;
+      if(el.classList.contains('rv')){el.classList.add('rv-in');io.unobserve(el);return;}
+      /* rail: 見えたら中のカードを時差で一括表示（横に隠れたカード対策） */
+      if(el.classList.contains('rail')){
+        var cards=el.querySelectorAll('.card');
+        cards.forEach(function(c,i){
+          c.style.setProperty('--rvd',(Math.min(i,MAXSTEP)*STAG)+'ms');
+          c.classList.add('rv');
+          requestAnimationFrame(function(){requestAnimationFrame(function(){c.classList.add('rv-in');});});
+        });
+        io.unobserve(el);
+      }
+
+    });
+  },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+  singles.forEach(function(el){io.observe(el);});
+  document.querySelectorAll('.rail').forEach(function(r){io.observe(r);});
+  /* タイムライン: rowを個別監視。スクロールで入った行がその場で出る。同時に入った行はバッチ内で80ms時差 */
+  var tlRows=document.querySelectorAll('.tl .row');
+  tlRows.forEach(function(r){r.classList.add('rv');});
+  var tlNext=0;/* 直列化: 行の表示開始を最低180ms間隔に（コールバック分割に依存しない） */
+  var tlIO=new IntersectionObserver(function(ents){
+    ents.filter(function(e){return e.isIntersecting;})
+        .sort(function(a,b){return a.boundingClientRect.top-b.boundingClientRect.top;})
+        .forEach(function(e){
+          var now=performance.now();
+          var start=Math.max(now,tlNext);
+          tlNext=start+180;
+          e.target.style.setProperty('--rvd',Math.round(start-now)+'ms');
+          e.target.classList.add('rv-in');
+          tlIO.unobserve(e.target);
+        });
+  },{rootMargin:'0px 0px -8% 0px',threshold:0.15});
+  tlRows.forEach(function(r){tlIO.observe(r);});
+}catch(err){/* revealは飾り。失敗しても表示を害さない */}
+})();</script>
+
+<div class="img-lb" id="imgLb"><span class="lb-x">×</span><img alt=""></div>
+<script>(function(){
+  var lb=document.getElementById('imgLb'), im=lb.querySelector('img');
+  function urlOf(el){var b=getComputedStyle(el).backgroundImage;var m=b.match(/url\((["']?)(.*?)\1\)/);return m?m[2]:null;}
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('.lb-img');
+    if(t){var u=urlOf(t); if(u){im.src=u; lb.classList.add('on');} return;}
+    if(e.target===lb || e.target.classList.contains('lb-x')){ lb.classList.remove('on'); im.src=''; }
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){lb.classList.remove('on');im.src='';}});
+})();</script>
+
+<script>(function(){
+  function go(e){
+    var href=this.getAttribute('href')||'';
+    if(href.charAt(0)!=='#') return;
+    var el=document.getElementById(href.slice(1));
+    if(!el) return;
+    e.preventDefault();
+    var nav=document.querySelector('.qnav');
+    var off=(nav?nav.offsetHeight:0);
+    var y=el.getBoundingClientRect().top + (window.pageYOffset||document.documentElement.scrollTop) - off + 1;
+    try{ window.scrollTo({top:y, behavior:'smooth'}); }catch(_){ window.scrollTo(0,y); }
+    if(history&&history.replaceState) history.replaceState(null,'',href);
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', go);
+    a.addEventListener('touchend', function(ev){ /* iOS保険 */ }, {passive:true});
+  });
+})();</script>
+<script>(function(){var els=[].slice.call(document.querySelectorAll('[data-lz]'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('lzon')});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('lzon');io.unobserve(x.target);}});},{rootMargin:'300px 0px'});els.forEach(function(e){io.observe(e)});})();</script></body>
+</html>
