@@ -2,9 +2,21 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="robots" content="noindex,nofollow"><!-- テスト中の検索避け。公開時に削除 -->
+<!-- Google アナリティクス（GA4: G-LEQRZNTS0L）。公開ページ（github.io）でのみ計測 -->
+<script>
+if(location.hostname.endsWith('github.io')){
+  var _ga=document.createElement('script');_ga.async=true;_ga.src='https://www.googletagmanager.com/gtag/js?id=G-LEQRZNTS0L';
+  document.head.appendChild(_ga);
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-LEQRZNTS0L');
+}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>栃木SC ホームゲームLP ｜ 8/9 ツエーゲン金沢戦</title>
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/appleTouchIcon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -482,7 +494,29 @@
   .img-lb .lb-x{position:absolute;top:14px;right:16px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:22px;line-height:40px;text-align:center;cursor:pointer}
   @media(min-width:681px){.sw{display:none}.ptbl{font-size:15px}.ptbl th,.ptbl td{padding:9px 10px}}
   section[id],#top{scroll-margin-top:58px}
-[data-lz]:not(.lzon){background-image:none!important}</style>
+[data-lz]:not(.lzon){background-image:none!important}
+  /* スクロール現在地ハイライト */
+  .qnav a.on{color:var(--yellow);border-bottom-color:var(--yellow)}
+  .qnav{transition:transform .25s ease}
+  .qnav.qhide{transform:translateY(-100%)}
+  /* ページ上部へ戻るボタン */
+  .fab{position:fixed;right:14px;bottom:82px;z-index:60;display:none;align-items:center;justify-content:center;width:46px;height:46px;border-radius:8px;background:rgba(255,255,255,.72);border:1px solid rgba(4,34,66,.16);color:var(--navy);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(4,34,66,.12)}
+  .fab.show{display:flex}
+  .fab svg{width:22px;height:22px;fill:currentColor;display:block}
+  @media(min-width:681px){.fab{right:calc(50% - 340px + 14px)}}
+  /* 下部固定バー(4ボタン版) */
+  .sticky-cta a{white-space:nowrap;min-width:0}
+  .sticky-cta .sc-guide{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);font-size:clamp(11px,3.4vw,13px);padding:12px 4px}
+  .sticky-cta a.sc-nav{flex:.8 1 0;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);font-size:clamp(10.5px,3.2vw,12.5px);padding:12px 2px}
+  .sticky-cta .sc-ticket{flex:1.25 1 0;font-size:clamp(11.5px,3.6vw,14px)}
+  @media(max-width:420px){.sticky-cta{gap:6px;padding:8px 8px}}
+  /* もっと見る(ニュースリリース誘導) */
+  .sec-news{text-align:center;margin:18px 20px 4px}
+  .sec-news .sn-lead{font-size:13px;font-weight:800;color:var(--navy);margin:0 0 8px}
+  .sec-news a{display:inline-flex;align-items:center;gap:7px;font-weight:900;font-size:14px;color:var(--navy);text-decoration:none;background:#fff;border:2px solid var(--navy);border-radius:999px;padding:12px 26px}
+  .sec-news a .arw{font-family:var(--disp);font-weight:400}
+
+  </style>
 </head>
 <body>
 
@@ -507,9 +541,9 @@
 
   <!-- QUICK NAV -->
   <nav class="qnav"><ul>
-    <li><a href="#top"><svg viewBox="0 0 24 24"><path d="M12 3.2 19.4 11h-4v8.8H8.6V11h-4z"/></svg>トップ</a></li>
     <li><a href="#event"><svg viewBox="0 0 24 24"><path d="M5 2.5h2.1v19H5z"/><path d="M7.1 4.2h10.7l-2.7 3.9 2.7 3.9H7.1z"/></svg>イベント</a></li>
     <li><a href="#gourmet"><svg viewBox="0 0 24 24"><path d="M4 10.4C4 7.3 7.6 5.4 12 5.4s8 1.9 8 5z"/><rect x="4" y="11.9" width="16" height="2.7" rx="1.35"/><path d="M4 16.1h16v.5a3.2 3.2 0 0 1-3.2 3.2H7.2A3.2 3.2 0 0 1 4 16.6z"/></svg>グルメ</a></li>
+    <li><a href="#map"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.8 12A10.2 6.6 0 1 0 22.2 12A10.2 6.6 0 1 0 1.8 12ZM5.6 12A6.4 3.8 0 1 0 18.4 12A6.4 3.8 0 1 0 5.6 12Z"/><rect x="9.2" y="10.7" width="5.6" height="2.6" rx="0.5"/></svg>会場図</a></li>
     <li><a href="#seat"><svg viewBox="0 0 24 24"><path d="M6.8 2.8h7.4a3.2 3.2 0 0 1 3.2 3.2v7H6.8z"/><path d="M4 13.9h16c.75 0 1.35.6 1.35 1.35S20.75 16.6 20 16.6h-.75v4.4h-2.5v-4.4H7.25v4.4h-2.5v-4.4H4c-.75 0-1.35-.6-1.35-1.35S3.25 13.9 4 13.9z"/></svg>座席</a></li>
     <li><a href="#access"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.5 2.5h11A2.5 2.5 0 0 1 20 5v10a2.5 2.5 0 0 1-2.5 2.5h-.3l1.3 3h-2.3l-1.3-3H9.1l-1.3 3H5.5l1.3-3h-.3A2.5 2.5 0 0 1 4 15V5a2.5 2.5 0 0 1 2.5-2.5zM6.2 5.6v4.6h11.6V5.6z"/></svg>アクセス</a></li>
     <li><a href="#ticket"><svg viewBox="0 0 24 24"><path d="M3 7.6A2.6 2.6 0 0 1 5.6 5h12.8A2.6 2.6 0 0 1 21 7.6v1.3a3.2 3.2 0 0 0 0 6.2v1.3a2.6 2.6 0 0 1-2.6 2.6H5.6A2.6 2.6 0 0 1 3 16.4v-1.3a3.2 3.2 0 0 0 0-6.2z"/><path d="M15.3 6.2v11.6" fill="none" stroke="#10233f" stroke-width="1.7" stroke-dasharray="2.2 2.2"/></svg>チケット</a></li>
@@ -541,6 +575,7 @@
     <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11"/><path d="M16 3c-1.5 0-2.5 2-2.5 4.5S14.5 12 16 12v9"/></svg></span><span class="disp">STADIUM GOURMET</span><h2><span class="mk">グルメ</span></h2><span class="subbrand">BISTRO TOCKEY</span></div>
     <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
     <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goKezu.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>けずりん（フローズンフルーツ）</h4><div class="meta"><span class="shop">けずりん</span><span class="price">¥700</span><span class="desc">苺たっぷりのひんやりフローズンフルーツ。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goDaji.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ダージーパイ</h4><div class="meta"><span class="shop">O.N.Y</span><span class="price">¥750</span><span class="desc">サクサク食感の特大フライドチキン。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goTapi.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>タピオカドリンク</h4><div class="meta"><span class="shop">会茶</span><span class="price">¥750</span><span class="desc">もちもちタピオカ入りドリンク。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goTama.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>玉子焼き</h4><div class="meta"><span class="shop">玉子屋てっちゃん</span><span class="price">¥700</span><span class="desc">ふんわり焼き上げた玉子焼き。</span></div></div></div></div>
+  <div class="sec-news"><p class="sn-lead">当日のグルメ情報満載！</p><a href="gourmet.html">グルメ情報をもっと見る <span class="arw">›</span></a></div>
   </section>
 
 
@@ -637,7 +672,8 @@
     <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
         <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gUni.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#000"></div><div class="cb"><span class="tag y">NEW</span><h4>レプリカユニフォーム</h4><div class="meta"><span class="shop">2026/27シーズン</span><span class="price">¥17,600</span><span class="desc">2026/27シーズンの新デザイン・レプリカユニフォーム。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gKey.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>おなまえアクリルキーホルダー</h4><div class="meta"><span class="shop">ガチャ（ランダム）</span><span class="price">¥400</span><span class="desc">選手のおなまえ入りアクリルキーホルダー。ガチャで登場。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gPen.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>カラーチェンジペンライト</h4><div class="meta"><span class="shop">カラーチェンジ式</span><span class="price">¥2,420</span><span class="desc">色が切り替わる応援用ペンライト。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gSeal.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>ぷっくりクリアシール</h4><div class="meta"><span class="shop">ぷっくり仕様</span><span class="price">¥715</span><span class="desc">トッキーのぷっくりクリアシール。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gTowel.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>選手名クールタオル</h4><div class="meta"><span class="shop">選手名入り</span><span class="price">¥2,915</span><span class="desc">ひんやり感のある選手名クールタオル。</span></div></div></div></div>
 
-    </section>
+    <div class="sec-news"><p class="sn-lead">新商品続々登場！</p><a href="goods.html">グッズ情報をもっと見る <span class="arw">›</span></a></div>
+  </section>
 
   <!-- ファンクラブ（CLUB.T 誘導） -->
   <section class="band-sec zone" id="fanclub">
@@ -653,7 +689,8 @@
 
   <footer><a class="official" href="https://www.tochigisc.jp/" target="_blank" rel="noopener"><div class="em" style="background-image:var(--tsc);background-size:contain;background-repeat:no-repeat;background-position:center;background-color:transparent;border:none"></div><span>クラブサイトTOPへ <span class="arw">›</span></span></a><div>© TOCHIGI SC</div></footer>
 
-  <div class="sticky-cta"><a class="sc-home" href="https://www.tochigisc.jp/" target="_blank" rel="noopener" aria-label="栃木SC トップページ"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></a><a href="https://tochigisc-official.github.io/stadium-guide/?venue=kanseki" class="sc-guide">観戦ガイド <span class="arw">›</span></a><a href="#ticket" class="sc-ticket">チケットを見る <span class="arw">›</span></a></div>
+  <a href="#top" class="fab" id="fab" aria-label="ページ上部へ戻る"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.6" width="14" height="2.2" rx="1.1"/><path d="M12 8.2 5.6 15h4v5.4h4.8V15h4z"/></svg></a>
+  <div class="sticky-cta"><a class="sc-nav" href="https://www.tochigisc.jp/" target="_blank" rel="noopener">公式HP</a><a class="sc-nav" href="https://tochigisc-official.github.io/players_26-27/" target="_blank" rel="noopener">選手紹介</a><a href="https://tochigisc-official.github.io/stadium-guide/?venue=kanseki" class="sc-guide">観戦ガイド</a><a href="https://www.jleague-ticket.jp/club/ts/" target="_blank" rel="noopener" class="sc-ticket">チケット購入</a></div>
 
 </div>
 
@@ -1008,5 +1045,46 @@ try{
     a.addEventListener('touchend', function(ev){ /* iOS保険 */ }, {passive:true});
   });
 })();</script>
-<script>(function(){var els=[].slice.call(document.querySelectorAll('[data-lz]'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('lzon')});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('lzon');io.unobserve(x.target);}});},{rootMargin:'300px 0px'});els.forEach(function(e){io.observe(e)});})();</script></body>
+<script>(function(){var els=[].slice.call(document.querySelectorAll('[data-lz]'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('lzon')});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('lzon');io.unobserve(x.target);}});},{rootMargin:'300px 0px'});els.forEach(function(e){io.observe(e)});})();</script><script>
+(function(){
+  var nav=document.querySelector('.qnav'); if(!nav) return;
+  var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function upd(){
+    var y=window.scrollY+nav.offsetHeight+90, best=-1, bestTop=-1;
+    for(var i=0;i<secs.length;i++){
+      if(secs[i]){var t=secs[i].offsetTop; if(t<=y && t>bestTop){bestTop=t;best=i;}}
+    }
+    links.forEach(function(a,i){a.classList.toggle('on', i===best);});
+  }
+  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+})();
+(function(){
+  var fab=document.getElementById('fab'); if(!fab) return;
+  function upd(){fab.classList.toggle('show', window.scrollY>window.innerHeight);}
+  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+  fab.addEventListener('click',function(ev){ev.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+})();
+(function(){
+  var nav=document.querySelector('.qnav'); if(!nav) return;
+  var last=window.scrollY;
+  addEventListener('scroll',function(){
+    var y=window.scrollY;
+    if(y<10 || y<last-2){ nav.classList.remove('qhide'); }
+    else if(y>last+2 && y>200){ nav.classList.add('qhide'); }
+    last=y;
+  },{passive:true});
+})();
+(function(){
+  function sweep(){
+    var vh=window.innerHeight*0.92;
+    document.querySelectorAll('.rv:not(.rv-in)').forEach(function(el){
+      if(el.getBoundingClientRect().top < vh) el.classList.add('rv-in');
+    });
+  }
+  var tick=false;
+  addEventListener('scroll',function(){ if(!tick){tick=true; setTimeout(function(){tick=false; sweep();},200);} },{passive:true});
+  addEventListener('load',function(){setTimeout(sweep,400);});
+})();
+</script></body>
 </html>
