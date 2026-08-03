@@ -375,11 +375,9 @@ footer .em{width:30px; height:30px; margin:0 auto 6px;
   /* PCの器（グレー地＋680pxの紙＋影）は共通トンマナ層が持つ。
      LP本体と同じ 601px で切り替わる。ここでは何も足さない。 */
 
-/* ヘッダー自動非表示（LPのページ内ナビと同じ挙動: 固定後しばらくは表示→下で隠れ→上で出る） */
-header.hd{transition:transform .4s ease}
-header.hd.qhide{transform:translateY(-100%)}
-.area .maparea{transition:top .4s ease}
-html.hd-hidden .area .maparea{top:0}
+/* ヘッダー下段(ページ内メニュー)だけ自動非表示: 上段のタブ(ホームゲーム/グルメ/グッズ)は常に表示 */
+.hd .jump{transition:max-height .4s ease, opacity .4s ease; overflow:hidden; max-height:80px}
+.hd.qhide .jump{max-height:0; opacity:0}
 </style>
 </head>
 <body>
@@ -785,12 +783,12 @@ var NAV_LOCK_UNTIL = 0;
   addEventListener('scroll',function(){
     var y=window.scrollY;
     if(y<10 || y<last-2){
-      hd.classList.remove('qhide'); document.documentElement.classList.remove('hd-hidden');
+      hd.classList.remove('qhide');
       anchor=y;
     }else if(y>last+2){
       if(hd.getBoundingClientRect().top<=0){
         if(anchor===null) anchor=y;
-        if(y>anchor+GRACE){ hd.classList.add('qhide'); document.documentElement.classList.add('hd-hidden'); }
+        if(y>anchor+GRACE){ hd.classList.add('qhide'); }
       }else{ anchor=null; }
     }
     last=y;
