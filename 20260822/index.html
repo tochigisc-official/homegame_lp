@@ -497,7 +497,7 @@ if(location.hostname.endsWith('github.io')){
 [data-lz]:not(.lzon){background-image:none!important}
   /* スクロール現在地ハイライト */
   .qnav a.on{color:var(--yellow);border-bottom-color:var(--yellow)}
-  .qnav{transition:transform .25s ease}
+  .qnav{transition:transform .4s ease}
   .qnav.qhide{transform:translateY(-100%)}
   /* ページ上部へ戻るボタン */
   .fab{position:fixed;right:14px;bottom:82px;z-index:60;display:none;align-items:center;justify-content:center;width:46px;height:46px;border-radius:8px;background:rgba(255,255,255,.72);border:1px solid rgba(4,34,66,.16);color:var(--navy);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(4,34,66,.12)}
@@ -686,7 +686,7 @@ if(location.hostname.endsWith('github.io')){
     </div>
   </section>
 
-  <footer><a class="official" href="https://www.tochigisc.jp/" target="_blank" rel="noopener"><div class="em" style="background-image:var(--tsc);background-size:contain;background-repeat:no-repeat;background-position:center;background-color:transparent;border:none"></div><span>クラブサイトTOPへ <span class="arw">›</span></span></a><div>© TOCHIGI SC</div></footer>
+  <footer><a class="official" href="https://www.tochigisc.jp/" target="_blank" rel="noopener"><div class="em" style="background-image:var(--tsc);background-size:contain;background-repeat:no-repeat;background-position:center;background-color:transparent;border:none"></div><span>クラブ公式HP</span></a><div>© TOCHIGI SC</div></footer>
 
   <a href="#top" class="fab" id="fab" aria-label="ページ上部へ戻る"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.6" width="14" height="2.2" rx="1.1"/><path d="M12 8.2 5.6 15h4v5.4h4.8V15h4z"/></svg></a>
   <div class="sticky-cta"><a class="sc-nav" href="https://www.tochigisc.jp/" target="_blank" rel="noopener">公式HP</a><a class="sc-nav" href="https://tochigisc-official.github.io/players_26-27/" target="_blank" rel="noopener">選手紹介</a><a href="https://tochigisc-official.github.io/stadium-guide/?venue=kanseki" class="sc-guide">観戦ガイド</a><a href="https://www.jleague-ticket.jp/club/ts/" target="_blank" rel="noopener" class="sc-ticket">チケット購入</a></div>
@@ -1066,11 +1066,21 @@ try{
 })();
 (function(){
   var nav=document.querySelector('.qnav'); if(!nav) return;
-  var last=window.scrollY;
+  var GRACE=260;
+  var last=window.scrollY, anchor=null;
   addEventListener('scroll',function(){
     var y=window.scrollY;
-    if(y<10 || y<last-2){ nav.classList.remove('qhide'); }
-    else if(y>last+2 && y>200){ nav.classList.add('qhide'); }
+    if(y<10 || y<last-2){
+      nav.classList.remove('qhide');
+      anchor=y;
+    }else if(y>last+2){
+      if(nav.getBoundingClientRect().top<=0){
+        if(anchor===null) anchor=y;
+        if(y>anchor+GRACE) nav.classList.add('qhide');
+      }else{
+        anchor=null;
+      }
+    }
     last=y;
   },{passive:true});
 })();
