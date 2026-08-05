@@ -21,7 +21,8 @@
     "date": "2026-08-09",
     "kickoff": "19:00",
     "opponent": "ツエーゲン金沢",
-    "venue": "カンセキスタジアムとちぎ"
+    "venue": "カンセキスタジアムとちぎ",
+    "short": "金沢"
   },
   "shop": {
     "name": "場外 グッズ売店",
@@ -50,7 +51,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_cooltowel_1.webp",
+          "src": "assets/img/goods/cooltowel.webp",
           "role": "main"
         }
       ]
@@ -67,7 +68,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_penlight_1.webp",
+          "src": "assets/img/goods/penlight.webp",
           "role": "main"
         }
       ]
@@ -85,7 +86,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_armcover_1.webp",
+          "src": "assets/img/goods/armcover.webp",
           "role": "main"
         }
       ]
@@ -102,11 +103,11 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_coolerbag_1.webp",
+          "src": "assets/img/goods/coolerbag.webp",
           "role": "main"
         },
         {
-          "src": "assets/img/gd_coolerbag_2.webp",
+          "src": "assets/img/goods/coolerbag_use.webp",
           "role": "use",
           "note": "500mlペットボトルが6本入ります"
         }
@@ -123,7 +124,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_towelmuffler_1.webp",
+          "src": "assets/img/goods/towelmuffler.webp",
           "role": "main"
         }
       ]
@@ -135,7 +136,7 @@
       "desc": "幾重にも重なる「T」のラインで、挑戦を積み重ねながら前進してきた軌跡を表現。その先にはJ2昇格へ向かう力強い上昇の矢印が浮かび上がるデザイン。",
       "images": [
         {
-          "src": "assets/img/gd_uniform_replica_1.webp",
+          "src": "assets/img/goods/uniform_replica.webp",
           "role": "main"
         }
       ]
@@ -147,7 +148,7 @@
       "desc": "選手が実際に着用するモデルと同じ仕様。デザインはレプリカと共通です。",
       "images": [
         {
-          "src": "assets/img/gd_uniform_replica_1.webp",
+          "src": "assets/img/goods/uniform_authentic.webp",
           "role": "main"
         }
       ]
@@ -163,7 +164,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_tee_raglan_1.webp",
+          "src": "assets/img/goods/tee_raglan.webp",
           "role": "main"
         }
       ]
@@ -179,7 +180,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_shirt_linerib_1.webp",
+          "src": "assets/img/goods/shirt_linerib.webp",
           "role": "main"
         }
       ]
@@ -194,12 +195,12 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_cap_newhattan_1.webp",
+          "src": "assets/img/goods/cap_newhattan.webp",
           "role": "lineup",
           "note": "3色展開"
         },
         {
-          "src": "assets/img/gd_cap_newhattan_2.webp",
+          "src": "assets/img/goods/cap_newhattan_detail.webp",
           "role": "detail"
         }
       ]
@@ -214,12 +215,12 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_cap_flatvisor_1.webp",
+          "src": "assets/img/goods/cap_flatvisor.webp",
           "role": "lineup",
           "note": "3色展開"
         },
         {
-          "src": "assets/img/gd_cap_flatvisor_2.webp",
+          "src": "assets/img/goods/cap_flatvisor_detail.webp",
           "role": "detail"
         }
       ]
@@ -235,7 +236,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_acrylic_keyholder_1.webp",
+          "src": "assets/img/goods/acrylic_keyholder.webp",
           "role": "main"
         }
       ]
@@ -249,7 +250,7 @@
       "desc": "全選手展開で、選手名をデザインしたアクリルキーホルダー。推し選手の名前をアピールしたり、コレクションとしても楽しめるガチャ限定アイテムです。",
       "images": [
         {
-          "src": "assets/img/gd_gacha_name_1.webp",
+          "src": "assets/img/goods/gacha_name.webp",
           "role": "main"
         }
       ]
@@ -263,7 +264,7 @@
       "desc": "勝利への願いを込めた、お守り風デザインのアクリルキーホルダーが新登場！全選手展開なので、お気に入りの選手を集めたり、応援のお供としてもぴったりのガチャ限定アイテムです。",
       "images": [
         {
-          "src": "assets/img/gd_gacha_omamori_1.webp",
+          "src": "assets/img/goods/gacha_omamori.webp",
           "role": "main"
         }
       ]
@@ -278,7 +279,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_yearbook_1.webp",
+          "src": "assets/img/goods/yearbook.webp",
           "role": "main"
         }
       ]
@@ -293,7 +294,7 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_calendar_1.webp",
+          "src": "assets/img/goods/calendar.webp",
           "role": "main"
         }
       ]
@@ -308,24 +309,16 @@
       },
       "images": [
         {
-          "src": "assets/img/gd_clearseal_1.webp",
+          "src": "assets/img/goods/clearseal.webp",
           "role": "main"
         }
       ]
     }
   ],
   "_todo": [
-    "オーセンティックユニフォームの写真：レプリカと同じ画像を暫定で使用。専用写真があれば差し替え。",
-    "写真はすべて公式サイトへの直リンク。担当者から元データを預かってWebP化する。"
+    "お守りアクリルキーホルダーは公式サイトのスクリーンショット4種を2×2に合成したもの。撮り下ろしが来たら差し替える。",
+    "オーセンティックユニフォームは専用写真が無いため、選手紹介ページの黒背景写真（五十嵐太陽）を上半身に切って使用。"
   ],
-  "brand": {
-    "name": "TOCKEY SQUARE",
-    "sub": "栃木SC オフィシャルショップ",
-    "logo": "assets/img/tockey_square.svg",
-    "bg": "#F4D14D",
-    "logoW": "240px",
-    "logoMax": "72%"
-  },
   "venueMap": {
     "img": "assets/img/venue_map_b.webp",
     "alt": "カンセキスタジアムとちぎ 会場案内図（グッズ売店・総合案内所・場外グルメエリアの位置）"
@@ -333,5 +326,31 @@
   "_venueMapA": {
     "img": "assets/img/venue_map_0803.webp",
     "alt": "カンセキスタジアムとちぎ 会場案内図（グッズ売場・グルメ・総合案内所の位置）"
+  },
+  "heroImages": [
+    {
+      "src": "assets/img/goods_hero1.webp",
+      "alt": "栃木SC スタジアムグッズ"
+    },
+    {
+      "src": "assets/img/goods_hero2.webp",
+      "alt": "2026/27 レプリカユニフォーム"
+    },
+    {
+      "src": "assets/img/goods_hero3.webp",
+      "alt": "Tochigi SC ロゴのTシャツ"
+    },
+    {
+      "src": "assets/img/goods_hero4.webp",
+      "alt": "トートバッグを持って歩く様子"
+    },
+    {
+      "src": "assets/img/goods_hero5.webp",
+      "alt": "フラットバイザーキャップ"
+    }
+  ],
+  "onlineStore": {
+    "url": "https://www.rakuten.ne.jp/gold/monmiya/tochigi-sc/",
+    "label": "オフィシャルオンラインストア"
   }
 }

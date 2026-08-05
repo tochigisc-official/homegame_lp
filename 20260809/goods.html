@@ -2,18 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<!-- Google アナリティクス（GA4: G-LEQRZNTS0L）。公開ページ（github.io）でのみ計測 -->
-<script>
-if(location.hostname.endsWith('github.io')){
-  var _ga=document.createElement('script');_ga.async=true;_ga.src='https://www.googletagmanager.com/gtag/js?id=G-LEQRZNTS0L';
-  document.head.appendChild(_ga);
-  window.dataLayer=window.dataLayer||[];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js',new Date());
-  gtag('config','G-LEQRZNTS0L');
-}
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
 <title>スタジアムグッズ｜栃木SC ホームゲーム 8/9 vs 金沢</title>
 <!-- タブのアイコン。栃木SCエンブレムから生成 -->
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -151,7 +141,14 @@ a{color:inherit; text-decoration:none;}
 header.hd{position:sticky; top:0; z-index:40; background:var(--navy);}
 .hd-in{display:flex; align-items:center; justify-content:space-between;
        gap:10px; padding:9px 14px;}
-.back{font-size:14.5px; color:#fff; font-weight:700; white-space:nowrap;}
+/* 戻る。「◀」の塗り三角は他のアイコン（線画）と質感が合わないため、
+   丸い枠に線の矢印を入れた形にする。ページ内の他のアイコンと揃う。 */
+.back{display:inline-flex; align-items:center; gap:8px;
+      font-size:14.5px; color:#fff; font-weight:600; white-space:nowrap;}
+.back .ic{flex:none; width:26px; height:26px; border-radius:50%;
+          border:1.5px solid rgba(255,255,255,.5); display:flex; align-items:center; justify-content:center;}
+.back .ic svg{width:14px; height:14px; stroke:#fff; stroke-width:2; fill:none;
+              stroke-linecap:round; stroke-linejoin:round;}
 
 /* グルメ⇄グッズの切り替え。枠線を引かず、薄い地の上に「つまみ」を置く形。
    選択中がどちらかを、線ではなく面で示す。 */
@@ -164,7 +161,10 @@ header.hd{position:sticky; top:0; z-index:40; background:var(--navy);}
 
 /* ページ内移動。ネイビー地の上では黄色マーカーが読めないので、
    現在地は黄色の文字＋下線で示す。LPの .qnav a:hover と同じ考え方。 */
-.jump{display:flex; align-items:center; gap:20px; padding:0 16px 9px;
+/* 左寄せだと右側だけ余白が残り、上段（中央のグルメ⇄グッズ）と軸がずれて見える。
+   space-evenly で左右対称に散らす。gap は「最低これだけは空ける」下限として効くので、
+   幅の狭い端末では 10px まで詰まり、項目が4つでも折り返さない。 */
+.jump{display:flex; align-items:center; justify-content:space-evenly; gap:10px; padding:0 16px 9px;
       overflow:hidden; transition:max-height .22s ease, opacity .18s ease; max-height:44px;}
 /* 上段（戻る・グルメ⇄グッズ）は常に出したまま、ページ内ナビの帯だけ畳んで
    本文の見える面積を増やす。畳むと高さが変わり、その分だけ本文が動くが、
@@ -173,9 +173,9 @@ header.hd{position:sticky; top:0; z-index:40; background:var(--navy);}
 /* padding も0にする。max-height だけだと下の余白9pxが残り、
    ヘッダーの高さが会場図の固定位置（--hdH＝上段の高さ）と9pxずれる。 */
 header.hd.nav-hidden .jump{max-height:0; padding-top:0; padding-bottom:0; opacity:0;}
-.jump a{font-size:13.5px; font-weight:800; color:rgba(255,255,255,.72);
+.jump a{font-size:13.5px; font-weight:600; color:rgba(255,255,255,.72);
         white-space:nowrap; padding:1px 0; border-bottom:2px solid transparent; transition:color .15s;}
-.jump a.on{color:var(--yellow); border-bottom-color:var(--yellow);}
+.jump a.on{color:var(--yellow); border-bottom-color:var(--yellow); font-weight:700;}
 /* --- ブランド帯（ビストロトッキー／トッキースクエア）-------------
    左右いっぱいの帯にする。ブロックで置くと「画像を貼った」ように見えるため。
    帯色とロゴの幅は店ごとに違うのでデータ側（brand.bg / brand.logoW）から与える。
@@ -196,6 +196,10 @@ header.hd.nav-hidden .jump{max-height:0; padding-top:0; padding-bottom:0; opacit
 .util .v{color:#33404f; min-width:0;} .util .v b{color:var(--navy);}
 .util a.link{color:var(--blue); font-weight:700; text-decoration:underline;}
 .util .v .sub{display:block; margin-top:3px; font-size:13px; color:var(--muted);}
+/* 「お支払いはキャッシュレスのみです」の一行。現金が使えないことは
+   当日困る人が出るので、他の補足より強く見せる。
+   ポップアップ（.pop）側にも同じ指定があり、あちらは各テンプレートが持つ。 */
+.util .v .sub.short{font-weight:700; color:#33404f;}
 
 /* --- アコーディオン ---------------------------------------------
    ページを開いた瞬間は要点だけを見せ、細かい説明はしまっておく。
@@ -220,26 +224,80 @@ header.hd.nav-hidden .jump{max-height:0; padding-top:0; padding-bottom:0; opacit
 .js .rv.pre{opacity:0; transform:translateY(12px);}
 @media (prefers-reduced-motion:reduce){.js .rv,.js .rv.pre{opacity:1; transform:none; transition:none;}}
 
-/* --- フッター：ホームゲームLP本体と同じもの ---------------------
-   数値はすべて homegame_lp/20260809/index.html の footer から写している。
-   エンブレムの丸は、LP側がインラインで背景と枠を消しているので、
-   ここでも最初から付けない。 */
-footer{background:var(--navy); color:#9db4cc; text-align:center;
-       padding:14px 20px 16px; font-size:11px;}
-footer .official{display:inline-flex; flex-direction:column; align-items:center; gap:2px;
-                 color:#cfe0f2; text-decoration:none; font-size:12px; font-weight:700; margin-bottom:8px;}
-footer .official .arw{font-weight:400;}
-footer .official:active{opacity:.7;}
+/* --- フッター：エンブレム＋著作権表示 ---------------------------
+   色と文字サイズは homegame_lp/20260809/index.html の footer から写している。
+   エンブレムはページの締めとして残す。外していたのは「クラブ公式HP」の
+   リンクだけで、これは下部の固定ナビに同じ行き先のボタンが常に出ており、
+   同じ画面で二度案内することになるため。
+   エンブレムの丸は、LP側がインラインで背景と枠を消しているので付けない。 */
+footer{margin-top:32px; background:var(--navy); color:#9db4cc; text-align:center;
+       padding:14px 20px 15px; font-size:11px;}
 footer .em{width:30px; height:30px; margin:0 auto 6px;
            background-size:contain; background-repeat:no-repeat; background-position:center;}
+
+/* --- 下部に固定するナビ：ホームゲームLP本体の .sticky-cta と同じもの ------
+   数値・色・比率はすべて LP のテンプレート（index.template.html）から
+   そのまま写している。LP側を変えるときは、ここも同時に直す。
+   position:sticky なので、スクロール中は画面下に貼り付き、
+   ページ末尾では本文の流れの中に収まる。 */
+.sticky-cta{position:sticky; bottom:0; z-index:50; background:var(--navy);
+            padding:8px 12px; display:flex; gap:8px; align-items:stretch;
+            border-top:3px solid var(--yellow);}
+.sticky-cta a{flex:1 1 0; display:inline-flex; align-items:center; justify-content:center; gap:6px;
+              font-weight:600; font-size:14px; text-decoration:none; min-height:44px; padding:4px 8px;
+              border-radius:10px; white-space:nowrap; min-width:0;}
+/* 画面幅に応じて文字が自動で少し縮む＝どの幅でも1行に収まる（折返し禁止） */
+.sticky-cta a.sc-nav{flex:.8 1 0; background:transparent; color:#fff;
+                     border:1.5px solid rgba(255,255,255,.55);
+                     font-size:clamp(10.5px,3.2vw,12.5px); padding:4px 2px;}
+.sticky-cta .sc-guide{background:transparent; color:#fff;
+                      border:1.5px solid rgba(255,255,255,.55);
+                      font-size:clamp(11px,3.4vw,13px); padding:4px 4px;}
+.sticky-cta .sc-ticket{flex:1.25 1 0; background:var(--yellow); color:var(--navy); font-weight:700;
+                       font-size:clamp(11.5px,3.6vw,14px);}
+@media(max-width:420px){ .sticky-cta{gap:6px; padding:8px 8px;} }
 
 /* ===== ここから下はグッズ詳細ページ固有の指定 =====
    色・書体・見出し・カード・番号バッジは共通トンマナ層（tone.css）が持つ。
    グルメページと形がずれるので、ここで上書きしない。 */
 
+  /* どの試合の情報かを、英字見出しの横に小さく添える。
+     和文見出しに入れると1行が長くなるので、ここに置いて行数を減らす。
+     この見出しには黄色の下線を引かない（すぐ下の「今節のおすすめ」と
+     黄色が続いてうるさくなるため）。 */
+  .head .disp .mt{font-family:var(--jp); font-size:13px; font-weight:700; color:var(--muted);
+                  letter-spacing:0; text-transform:none; margin-left:9px;
+                  position:relative; top:-3px;}
+
   /* 節間の余白。グルメページと同じ扱い */
   .head{padding-top:28px;} .head.first{padding-top:18px;}
   .ctx{font-size:13.5px; color:var(--muted); font-weight:600; padding:2px 20px 0;} .ctx b{color:var(--navy);}
+  /* 見出しのすぐ下に置く断り書き。見出しと商品の間に挟まるので、
+     読み飛ばせる細さにしつつ、行間は本文なみに取って読めるようにする。 */
+  .ctx.note{font-weight:500; line-height:1.65; padding-top:6px;}
+
+  /* オフィシャルオンラインストアへの導線。
+     最初はネイビーの帯にしたが、ヘッダーやフッターと同じ色なのでページの骨格に見え、
+     押せるものだと気づかれなかった。黄色の面にして、白地の中で浮かせている。
+     紙の幅いっぱいにはせず左右に余白を残すのも同じ理由で、
+     帯にすると「区切り」に見えて、押す対象として読まれない。
+     エンブレムはクラブ公式の行き先であることを示すために置いている。
+     置き場所はラインナップの末尾。先頭に置くと、当日の売店を見る前に外へ送ってしまう。 */
+  .store{display:flex; align-items:center; gap:14px; margin:26px 16px 0; padding:14px 16px;
+         background:var(--yellow); color:var(--navy); text-decoration:none;
+         border-radius:var(--card-r); box-shadow:0 2px 10px rgba(4,34,66,.16);}
+  /* 文字が1行になったぶんはエンブレムに回す。46px はボタンの高さ（74px）を
+     変えずに入る最大。これ以上大きくすると帯が伸びる。 */
+  .store .st-em{flex:none; width:46px; height:46px; background-size:contain;
+                background-repeat:no-repeat; background-position:center;}
+  .store .st-t{display:block; font-size:15.5px; font-weight:900; line-height:1.35;}
+  .store .st-n{display:block; font-size:12px; font-weight:700; color:rgba(4,34,66,.62); margin-top:3px;}
+  .store .st-a{margin-left:auto; flex:none; font-size:22px; font-weight:900; line-height:1;}
+  .store:active{transform:translateY(1px); box-shadow:0 1px 5px rgba(4,34,66,.18);}
+  /* 画像バナー版。角丸・影・余白は文字ボタンと同じにして、
+     どちらを選んでも周りの見え方が変わらないようにしている。 */
+  .store.is-img{display:block; padding:0; overflow:hidden; background:none;}
+  .store.is-img img{display:block; width:100%; height:auto;}
 
   /* 追従ヘッダー・切り替えセレクター・ページ内ナビは共通トンマナ層にある */
 
@@ -247,76 +305,147 @@ footer .em{width:30px; height:30px; margin:0 auto 6px;
   .venue{margin-top:14px;}
   .venue img{width:100%; height:auto; display:block;}
 
-  /* ===== 商品カード =====
-     写真は一覧でもスワイプできる。複数枚あることは点の数で分かるので、
-     「写真2枚」のような枚数表示はしない。 */
-  /* 2列は行ごとに高さを揃える（align-items を start にしない）。
-     左右で高さが違うと、同じ並びなのに不揃いに見えるため。 */
+  /* ===== 商品カード（B案）=====
+     カードは「商品名＋価格」だけ。詳細はタップで全面のシートに出す。
+     2列のまま説明文まで入れると幅が足りず縦に伸びて読みにくかったため。 */
   .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px 12px; padding:10px 16px 0;}
-  /* ただし、どれか1枚を開いているあいだは揃えない。開いた側に合わせて
-     隣のカードまで伸び、そこに大きな空白ができてしまうため。 */
-  .grid.has-open{align-items:start;}
   .item{background:#fff; border:1px solid var(--card-bd); border-radius:var(--card-r); overflow:hidden;
         box-shadow:var(--card-sh); display:flex; flex-direction:column;
-        text-align:left; width:100%; font:inherit; color:inherit; padding:0;}
+        text-align:left; width:100%; font:inherit; color:inherit; padding:0;
+        cursor:pointer; position:relative; transition:transform .12s ease;}
+  .item:active{transform:scale(.985);}      /* 押した手応え */
   .item .bd{padding:10px 12px 12px; display:flex; flex-direction:column; flex:1;}
   .item .nm{font-size:15px; font-weight:800; line-height:1.35;}
-  /* グッズの価格はグルメと逆で明快に出す。買うかどうかの判断に直結するため（指示書7.4） */
   .item .pr{font-family:var(--latin); font-size:15px; font-weight:800; color:var(--blue); margin-top:5px;}
   .item .tags{display:flex; gap:5px; flex-wrap:wrap; margin-top:8px;}
   .tag{font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:4px; white-space:nowrap;}
   .tag.players{background:var(--yellow); color:var(--navy);}
   .tag.gacha{background:var(--navy); color:#fff;}
-  /* 開閉のきっかけ。文字は短く、商品名より弱く。カードの底に揃える */
-  .item .acc-btn{margin-top:auto; padding-top:10px; font-size:12.5px;}
+  /* 押せることの合図。文字を置かない代わりに、写真の右下に小さな「＋」を出す。
+     これが無いと、ただの一覧に見えてタップされない。 */
+  .item .more{position:absolute; right:8px; bottom:8px; z-index:3;
+              width:26px; height:26px; border-radius:50%;
+              background:rgba(255,255,255,.92); box-shadow:0 1px 4px rgba(4,34,66,.22);
+              color:var(--navy); font-size:17px; font-weight:700; line-height:24px; text-align:center;}
 
-  /* --- スワイプで見る写真面 ----------------------------------------
-     JSに頼らず、CSSのスクロールスナップで動かす。指で横に送れる。
-     JSが止まっても横スクロールで全部見られる状態を保つ。 */
+  /* --- 写真（一覧・シート共用のスワイプ面）--- */
   .swipe{position:relative; background:#f2f4f7;}
   .swipe .track{display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch; scrollbar-width:none;}
   .swipe .track::-webkit-scrollbar{display:none;}
   .swipe .slide{flex:0 0 100%; scroll-snap-align:center; position:relative; aspect-ratio:1/1;}
-  /* グッズ写真は白背景の商品撮影。切れると困るので cover ではなく contain で全体を見せる */
   .swipe .slide img{position:absolute; inset:0; width:100%; height:100%; object-fit:contain;}
-  /* 写真が何を伝えているか（3色展開・中に6本入る等）を写真の上に添える。
-     めくって初めて分かる情報を、めくる前にも言葉で拾えるようにする。 */
   .swipe .cap{position:absolute; left:0; right:0; bottom:0; z-index:2;
               background:linear-gradient(transparent, rgba(4,34,66,.82));
               color:#fff; font-size:11.5px; font-weight:700; padding:18px 10px 8px;}
-  /* 点は「まだ写真がある」ことの合図でもある。枚数を文字で書かずに済む */
   .swipe .dots{display:flex; justify-content:center; gap:6px; padding:8px 0 6px;}
   .swipe .dots i{width:6px; height:6px; border-radius:50%; background:rgba(4,34,66,.22); transition:background .2s, width .2s;}
   .swipe .dots i.on{width:16px; border-radius:3px; background:var(--navy);}
+  /* 一覧のカードでは写真を送らせない（縦スクロールの邪魔になるため）。
+     写真送りはシートの中だけ。 */
+  .item .swipe .track{overflow-x:hidden;}
 
-  /* --- 開いた中身 --- */
-  .detail .ds{font-size:13.5px; color:#4b5563; line-height:1.75; margin-top:8px;}
-  .detail .spec{margin-top:10px; border-top:1px solid var(--line);}
-  /* 2列カードの中は幅が150px前後しかない。ラベルと値を横に並べると値が
-     1文字ずつ折り返すので、ラベルを上に積む。 */
-  .detail .spec .r{display:flex; flex-direction:column; gap:1px; padding:6px 0;
-                   border-bottom:1px solid var(--line); font-size:12.5px;}
-  .detail .spec .r .k{color:var(--muted); font-weight:700; font-size:11.5px;}
-  .detail .spec .r .v{color:#33404f; min-width:0;}
-  /* おすすめは1枚が広いので、ラベルと値を横に並べたほうが読みやすい */
-  .picks .detail .spec .r{flex-direction:row; gap:10px;}
-  .picks .detail .spec .r .k{flex:0 0 5em; font-size:12.5px;}
-  .detail .pnote{margin-top:9px; font-size:12.5px; font-weight:700; color:var(--navy);}
+  /* --- ヒーロー：いちばん見せたい写真を自動で送る ------------------
+     商品一覧が白背景の商品写真ばかりなので、ここだけ寄り・着用・屋外の
+     写真を大きく出して、ページを開いた瞬間の印象をつくる。 */
+  .hero{position:relative; background:#f2f4f7; overflow:hidden;}
+  .hero .htrack{display:flex; transition:transform .6s cubic-bezier(.4,0,.2,1);}
+  .hero .hslide{flex:0 0 100%; aspect-ratio:4/3; position:relative;}
+  .hero .hslide img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .hero .hdots{position:absolute; left:0; right:0; bottom:8px; z-index:2;
+               display:flex; justify-content:center; gap:6px;}
+  .hero .hdots i{width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,.55);
+                 box-shadow:0 0 3px rgba(0,0,0,.3); transition:width .25s, background .25s;}
+  .hero .hdots i.on{width:16px; border-radius:3px; background:#fff;}
 
-  /* おすすめ。1列（PCは2列）で大きく見せる。開き方は一覧と同じ */
-  .picks{padding:6px 16px 0; display:grid; grid-template-columns:1fr; gap:16px;}
-  @media(min-width:561px){ .picks{grid-template-columns:1fr 1fr;} }
-  .picks .item .nm{font-size:19px;}
-  .picks .item .pr{font-size:17px;}
-  .picks .item .ds{font-size:14px;}
-  .picks .swipe .cap{font-size:12.5px; padding:20px 12px 9px;}
+  /* --- おすすめ：横スライド --------------------------------------
+     縦に積むと4枚で画面3つ分になり、下の一覧まで遠かった。
+     横に送る形にして、1画面に収める。 */
+  .picks{display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory;
+         -webkit-overflow-scrolling:touch; padding:6px 16px 4px; scrollbar-width:none;}
+  .picks::-webkit-scrollbar{display:none;}
+  .picks .item{flex:0 0 78%; scroll-snap-align:center;}
+  .picks .item .nm{font-size:17px;}
+  .picks .item .pr{font-size:16px;}
+  .pickdots{display:flex; justify-content:center; gap:6px; padding:8px 0 0;}
+  .pickdots i{width:6px; height:6px; border-radius:50%; background:rgba(4,34,66,.22); transition:background .2s, width .2s;}
+  .pickdots i.on{width:16px; border-radius:3px; background:var(--navy);}
+
+  /* --- 営業時間・支払方法のポップアップ ---------------------------
+     本文に置くと、商品を見に来た人の前に実用情報が挟まって邪魔になる。
+     必要な人だけがメニューから開く形にした。 */
+  .pop{position:fixed; inset:0; z-index:110; display:none;}
+  .pop.on{display:block;}
+  .pop .veil{position:absolute; inset:0; background:rgba(4,34,66,.45); opacity:0; transition:opacity .2s;}
+  .pop.in .veil{opacity:1;}
+  .pop .box{position:absolute; left:50%; top:50%; transform:translate(-50%,-46%) scale(.96);
+            width:min(92%, 420px); max-height:80%; overflow:auto; background:#fff; border-radius:16px;
+            padding:18px 18px 20px; opacity:0; transition:opacity .2s, transform .2s;}
+  .pop.in .box{transform:translate(-50%,-50%) scale(1); opacity:1;}
+  .pop h3{font-size:17px; font-weight:900; color:var(--navy); margin-bottom:10px;}
+  .pop .row{display:flex; gap:10px; padding:10px 0; border-top:1px solid var(--line); font-size:14px;}
+  .pop .row .k{flex:0 0 auto; font-weight:800; color:var(--navy); background:var(--yellow);
+               padding:2px 8px; border-radius:5px; font-size:12.5px; white-space:nowrap; height:fit-content;}
+  .pop .row .v{color:#33404f; min-width:0;} .pop .row .v b{color:var(--navy);}
+  .pop .row .v .sub{display:block; margin-top:3px; font-size:12.5px; color:var(--muted);}
+  /* 現金が使えないことは当日困る人が出るので、他の補足より強く見せる（共通層と同じ扱い） */
+  .pop .row .v .sub.short{font-weight:700; color:#33404f;}
+  .pop .close{margin-top:14px; width:100%; padding:10px; border:0; border-radius:10px; cursor:pointer;
+              background:var(--navy); color:#fff; font-weight:700; font-size:14px;}
+
+  /* ===== 詳細シート（下から出る全面カード）=====
+     ヘッダー(40)・固定ナビ(50)より前に出す。 */
+  .sheet{position:fixed; inset:0; z-index:100; display:none;}
+  .sheet.on{display:block;}
+  .sheet .veil{position:absolute; inset:0; background:rgba(4,34,66,.45); opacity:0; transition:opacity .25s ease;}
+  .sheet.in .veil{opacity:1;}
+  /* 上端を固定（1段目ヘッダーの高さ＝58px の下）して、常に同じ高さまで上がるようにする。
+     中身の量で止まる位置が変わると「中途半端な高さで止まった」ように見えるため。 */
+  .sheet .panel{position:absolute; left:0; right:0; top:58px; bottom:0;
+                max-width:var(--maxw); margin:0 auto; background:#fff;
+                border-radius:18px 18px 0 0; overflow:hidden auto; -webkit-overflow-scrolling:touch;
+                transform:translateY(100%); transition:transform .3s cubic-bezier(.22,.7,.3,1);}
+  .sheet.in .panel{transform:translateY(0);}
+  /* つまみ。下から出てきたことと、下げて閉じられることを示す */
+  /* つまみ。ここは指の動きをブラウザのスクロールに渡さない（touch-action:none）。
+     これが無いと、指を下げた瞬間に中身のスクロールとして処理され、
+     引っ張って閉じられないカードが出る。 */
+  .sheet .grip{position:sticky; top:0; z-index:4; background:#fff; padding:10px 0 8px;
+               touch-action:none; cursor:grab;}
+  .sheet .grip:active{cursor:grabbing;}
+  .sheet .grip::after{content:""; display:block; width:44px; height:5px; border-radius:3px;
+                      background:rgba(4,34,66,.22); margin:0 auto;}
+  .sheet .close{position:absolute; left:10px; top:8px; z-index:3;
+                width:34px; height:34px; border:0; border-radius:50%; cursor:pointer;
+                background:rgba(255,255,255,.92); box-shadow:0 1px 5px rgba(4,34,66,.25);
+                color:var(--navy); font-size:19px; line-height:34px; text-align:center; padding:0;}
+  .sheet .body{padding:0 16px 24px;}
+  .sheet .nm{font-size:21px; font-weight:900; line-height:1.3; margin-top:12px;}
+  .sheet .pr{font-family:var(--latin); font-size:19px; font-weight:800; color:var(--blue); margin-top:6px;}
+  .sheet .tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:10px;}
+  .sheet .ds{font-size:14px; color:#4b5563; line-height:1.8; margin-top:12px;}
+  .sheet .spec{margin-top:14px; border-top:1px solid var(--line);}
+  .sheet .spec .r{display:flex; gap:12px; padding:8px 0; border-bottom:1px solid var(--line); font-size:13.5px;}
+  .sheet .spec .r .k{flex:0 0 5em; color:var(--muted); font-weight:700;}
+  .sheet .spec .r .v{color:#33404f; min-width:0;}
+  .sheet .pnote{margin-top:12px; font-size:13px; font-weight:700; color:var(--navy);}
+  /* PCでは全面に出す必要がない。中央に横幅2/3程度のカードとして出す。 */
+  @media(min-width:601px){
+    .sheet .panel{top:50%; bottom:auto; left:50%; right:auto;
+                  width:min(66%, 460px); max-width:none; max-height:82vh;
+                  border-radius:16px; transform:translate(-50%, 60vh); }
+    .sheet.in .panel{transform:translate(-50%,-50%);}
+    .sheet .grip{display:none;}          /* PCでは引っ張らない。✕で閉じる */
+  }
+
+  /* シートを開いているあいだ、後ろの本文は動かさない */
+  body.sheet-open{overflow:hidden;}
 
   /* オンラインストアへの案内はこのページに置かない。
      在庫の調整があり「売り切れてもオンラインで買える」と読ませてしまうため。
      このページの目的は、当日スタジアムの売店で買ってもらうこと。 */
 
-  .fab{position:fixed; right:14px; bottom:16px; z-index:60; display:none;
+  .fab{position:fixed; right:14px; bottom:82px; z-index:60; display:none;
        align-items:center; justify-content:center; width:46px; height:46px; border-radius:8px;
        background:rgba(255,255,255,.72); border:1px solid rgba(4,34,66,.16); color:var(--navy);
        -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
@@ -335,40 +464,41 @@ footer .em{width:30px; height:30px; margin:0 auto 6px;
 
   <header class="hd">
     <div class="hd-in">
-      <a class="back" href="https://tochigisc-official.github.io/homegame_lp/20260809/index.html">◀ ホームゲーム</a>
+      <a class="back" href="index.html"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></span><span class="bt">ホームゲーム情報</span></a>
       <nav class="seg"><a href="gourmet.html">グルメ</a><a class="on" href="goods.html">グッズ</a></nav>
     </div>
     <nav class="jump">
       <a href="#pickSec">おすすめ</a>
-      <a href="#listSec">商品一覧</a>
+      <a href="#listSec">ラインナップ</a>
       <a href="#venueSec">会場図</a>
+      <a href="#" id="openInfo">営業時間・支払方法</a>
     </nav>
   </header>
 
-  <div class="brandmark" id="brandmark"></div>
+  <div class="hero" id="hero"></div>
 
   <div class="head first">
-    <span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
-    <span class="disp">GOODS</span>
-    <h2><span class="mk">スタジアムグッズ</span></h2>
+    <span class="disp">GOODS<span class="mt" id="titleMatch"></span></span>
   </div>
-  <div class="ctx" id="ctxLine"></div>
-
-  <div class="util rv" id="utilBar"></div>
 
   <div class="head" id="pickSec">
     <span class="hicon"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z"/></svg></span>
     <h2><span class="mk">今節のおすすめ</span></h2>
   </div>
   <div class="picks" id="picks"></div>
+  <div class="pickdots" id="pickdots"></div>
 
   <div class="head" id="listSec">
     <span class="hicon"><svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></span>
-    <span class="disp">ALL GOODS</span>
-    <h2><span class="mk">商品一覧</span></h2>
-    <span class="cnt" id="cnt"></span>
+    <span class="disp">LINEUP</span>
+    <h2><span class="mk">ラインナップ</span></h2>
   </div>
+  <!-- 「一覧」ではないことを一行で断る。節の名前を「ラインナップ」に変えても、
+       ここに載っているものが全部だと読まれる余地は残るため。 -->
+  <p class="ctx note">グッズ売店では、ここで紹介している商品のほかにも多数取りそろえています。</p>
   <div id="list"></div>
+
+  <a class="store" id="storeLink" target="_blank" rel="noopener"></a>
 
   <div class="head" id="venueSec">
     <span class="hicon"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></span>
@@ -377,14 +507,33 @@ footer .em{width:30px; height:30px; margin:0 auto 6px;
   </div>
   <div class="venue" id="venue"></div>
 
+  <!-- エンブレム＋著作権表示。公式HPへのリンクは下部の固定ナビが持っているので置かない -->
   <footer>
-    <a class="official" href="https://www.tochigisc.jp/" target="_blank" rel="noopener">
-      <div class="em" style="background-image:url(assets/img/tsc.webp)"></div>
-      <span>クラブ公式HP</span>
-    </a>
+    <div class="em" style="background-image:url(assets/img/tsc.webp)"></div>
     <div>© TOCHIGI SC</div>
   </footer>
 
+  <!-- 下部の固定ナビ。ホームゲームLP本体（index.template.html）と同じ内容 -->
+  <div class="sticky-cta"><a class="sc-nav" href="https://www.tochigisc.jp/" target="_blank" rel="noopener">公式HP</a><a class="sc-nav" href="https://tochigisc-official.github.io/players_26-27/" target="_blank" rel="noopener">選手紹介</a><a href="https://tochigisc-official.github.io/stadium-guide/?venue=kanseki" class="sc-guide">観戦ガイド</a><a href="https://www.jleague-ticket.jp/club/ts/" target="_blank" rel="noopener" class="sc-ticket">チケット購入</a></div>
+
+
+</div>
+
+<!-- 営業時間・支払方法。メニューから開く -->
+<div class="pop" id="pop" role="dialog" aria-modal="true" aria-label="営業時間と支払方法">
+  <div class="veil" data-popclose></div>
+  <div class="box"><div id="popBody"></div>
+    <button class="close" type="button" data-popclose>とじる</button></div>
+</div>
+
+<!-- 詳細シート。下から出て、ヘッダー・固定ナビより前に重なる -->
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="商品の詳細">
+  <div class="veil" data-close></div>
+  <div class="panel">
+    <button class="close" type="button" data-close aria-label="閉じる">✕</button>
+    <div class="grip"></div>
+    <div class="body" id="sheetBody"></div>
+  </div>
 </div>
 
 <a href="#top" class="fab" id="fab" aria-label="ページ上部へ戻る">
@@ -395,7 +544,7 @@ footer .em{width:30px; height:30px; margin:0 auto 6px;
 </a>
 
 <script>
-const DATA = {"_readme":["グッズ詳細ページの唯一の正データ。HTMLを手で書き換えないこと。","出典＝栃木SC公式ニュース『【8/9金沢戦】グッズ情報』 https://www.tochigisc.jp/news/1857","","images の考え方（重要）:","  images[0] が必ず一覧カードのサムネイルになる。","  role は『その写真が何を伝えるか』。枚数ではなく役割で扱う。","    main   … 商品そのもの","    lineup … 色やサイズの展開が一覧で分かる（どれを選ぶかが決まる）","    detail … 質感・仕様の寄り（モノの良さが伝わる）","    use    … 使えることの証明（当日どう役に立つかが分かる）","  use の note だけはカードに文字でも出す。写真を開かなくても効くため。","","オンラインストアへの案内はページに載せない。在庫の調整があり、「売り切れてもオンラインで買える」と読ませてしまうため。このページの目的は当日スタジアムの売店で買ってもらうこと。（参考URL: https://www.rakuten.ne.jp/gold/monmiya/tochigi-sc/）","","区分（カテゴリー）は設けない。毎試合ラインナップが変わるため、区分の割り当てが運用の手間になる。items の並び順がそのまま掲載順。","brand.logo が空のあいだはブランド帯を出さない。トッキースクエアのロゴを 20_素材 に置いてパスを入れると表示される。"],"match":{"date":"2026-08-09","kickoff":"19:00","opponent":"ツエーゲン金沢","venue":"カンセキスタジアムとちぎ"},"shop":{"name":"場外 グッズ売店","gate":"Aゲート","hours":"16:00〜21:00","note":"ガチャは準備でき次第の販売開始です。"},"payment":{"lead":"キャッシュレスでお会計もスムーズ","short":"お支払いはキャッシュレスのみです。","body":"クレジットカード・スマホ決済・電子マネーがそのまま使えます。現金はご利用いただけません。","note":"現金をお持ちの方は、当日場内の専用ブースでプリペイドカードをご用意しています。","guideUrl":"#","gachaNote":"ガチャのみキャッシュレス対象外です。現金をご用意ください。"},"items":[{"id":"cooltowel","name":"選手名クールタオル","price":2915,"hero":true,"allPlayers":true,"desc":"推し選手と一緒に夏のスタジアムを楽しもう！首に掛けやすいサイズで、暑い日の観戦やイベントなど幅広いシーンで活躍します。","spec":{"size":"幅960×高さ300mm"},"images":[{"src":"assets/img/gd_cooltowel_1.webp","role":"main"}]},{"id":"penlight","name":"2026/27ペンライト","price":2420,"hero":true,"desc":"14色に切り替え可能なLEDライトで、スタジアムを栃木SCカラーに染め、選手たちへ熱い声援を届けましょう。","spec":{"size":"約H250×Φ11mm","note":"単4形電池×3本使用（テスト用電池付属）"},"images":[{"src":"assets/img/gd_penlight_1.webp","role":"main"}]},{"id":"armcover","name":"アームカバー","price":2420,"hero":true,"desc":"接触冷感素材を使用した、暑い季節にぴったりのアームカバー。UPF50+で紫外線から腕をしっかりガードします。","spec":{"color":"ホワイト／ブラック","size":"長さ43cm・腕側周り29cm・手首側周り18cm","material":"ポリエステル、ポリウレタン（接触冷感・UPF50+）"},"images":[{"src":"assets/img/gd_armcover_1.webp","role":"main"}]},{"id":"coolerbag","name":"保冷バッグ","price":4400,"hero":true,"desc":"観戦はもちろん、毎日のお買い物やレジャーにも活躍する保冷バッグ。普段使いしやすいカジュアルなデザインです。","spec":{"size":"幅240×高さ240×奥行150mm","material":"厚手トロマット、ポリエステル（裏地アルミ）"},"images":[{"src":"assets/img/gd_coolerbag_1.webp","role":"main"},{"src":"assets/img/gd_coolerbag_2.webp","role":"use","note":"500mlペットボトルが6本入ります"}]},{"id":"towelmuffler","name":"タオルマフラー","price":1925,"desc":"応援の定番アイテム。暑い時期には何本あっても助かります。","spec":{"size":"高さ200×幅1,100mm","material":"綿100%"},"images":[{"src":"assets/img/gd_towelmuffler_1.webp","role":"main"}]},{"id":"uniform_replica","name":"レプリカユニフォーム","price":17600,"desc":"幾重にも重なる「T」のラインで、挑戦を積み重ねながら前進してきた軌跡を表現。その先にはJ2昇格へ向かう力強い上昇の矢印が浮かび上がるデザイン。","images":[{"src":"assets/img/gd_uniform_replica_1.webp","role":"main"}]},{"id":"uniform_authentic","name":"オーセンティックユニフォーム","price":20350,"desc":"選手が実際に着用するモデルと同じ仕様。デザインはレプリカと共通です。","images":[{"src":"assets/img/gd_uniform_replica_1.webp","role":"main"}]},{"id":"tee_raglan","name":"ラグランTシャツ","price":4290,"desc":"カレッジ風デザインを取り入れた、普段使いしやすい一着。試合観戦はもちろん、デイリーユースにもおすすめです。","spec":{"size":"M／L／XL","material":"綿100%"},"images":[{"src":"assets/img/gd_tee_raglan_1.webp","role":"main"}]},{"id":"shirt_linerib","name":"ラインリブシャツ","price":3520,"desc":"「SC」をスタイリッシュなロゴ風にデザインしたプリントが印象的なラインリブシャツ。襟元と袖口のラインリブがアクセントとなり、スポーティーさとカジュアルさを兼ね備えた一着です。試合観戦はもちろん、普段使いにもおすすめです。","spec":{"material":"ポリエステル100%","size":"M／L／XL"},"images":[{"src":"assets/img/gd_shirt_linerib_1.webp","role":"main"}]},{"id":"cap_newhattan","name":"NEWHATTANキャップ","price":3410,"desc":"人気ブランド「NEWHATTAN」の定番キャップに栃木SCデザインをプラス。観戦から普段のコーディネートまで幅広く活躍します。","spec":{"color":"カーキ／ネイビー／ブルーグレー"},"images":[{"src":"assets/img/gd_cap_newhattan_1.webp","role":"lineup","note":"3色展開"},{"src":"assets/img/gd_cap_newhattan_2.webp","role":"detail"}]},{"id":"cap_flatvisor","name":"フラットバイザーキャップ","price":6600,"desc":"フラットバイザーのシルエットが魅力。カジュアルなスタイルに合わせやすく、日常使いにもおすすめです。","spec":{"color":"ブラック／ダークネイビー／スプルース"},"images":[{"src":"assets/img/gd_cap_flatvisor_1.webp","role":"lineup","note":"3色展開"},{"src":"assets/img/gd_cap_flatvisor_2.webp","role":"detail"}]},{"id":"acrylic_keyholder","name":"アクリルキーホルダー","price":1210,"allPlayers":true,"desc":"クールな宣材写真を使用し、アンティーク調の額縁風デザインで高級感のある仕上がりに。お気に入りの選手をいつでも身近に持ち歩けます。","spec":{"size":"幅66×高さ68mm"},"images":[{"src":"assets/img/gd_acrylic_keyholder_1.webp","role":"main"}]},{"id":"gacha_name","name":"おなまえアクリルキーホルダー","price":400,"allPlayers":true,"gacha":true,"desc":"全選手展開で、選手名をデザインしたアクリルキーホルダー。推し選手の名前をアピールしたり、コレクションとしても楽しめるガチャ限定アイテムです。","images":[{"src":"assets/img/gd_gacha_name_1.webp","role":"main"}]},{"id":"gacha_omamori","name":"お守りアクリルキーホルダー","price":400,"allPlayers":true,"gacha":true,"desc":"勝利への願いを込めた、お守り風デザインのアクリルキーホルダーが新登場！全選手展開なので、お気に入りの選手を集めたり、応援のお供としてもぴったりのガチャ限定アイテムです。","images":[{"src":"assets/img/gd_gacha_omamori_1.webp","role":"main"}]},{"id":"yearbook","name":"2026/27イヤーブック","price":1650,"desc":"トップチームの全選手・スタッフをはじめ、アカデミーやチアーズまで、栃木SCファミリーを網羅した一冊。全48ページ・フルカラー。","spec":{"size":"A4サイズ"},"images":[{"src":"assets/img/gd_yearbook_1.webp","role":"main"}]},{"id":"calendar","name":"2026/27卓上カレンダー","price":2530,"desc":"試合スケジュールと選手の誕生日を掲載。デスクやお部屋に飾れば、毎日栃木SCを身近に感じながらシーズンを楽しめます。2026年8月〜2027年7月対応。","spec":{"size":"幅297×高さ105mm"},"images":[{"src":"assets/img/gd_calendar_1.webp","role":"main"}]},{"id":"clearseal","name":"ぷっくりクリアシール","price":715,"desc":"トッキーやエンブレムなどをデザインした、トレンドのぷっくりクリアシール。スマホやノート、パソコンを栃木SC仕様にデコレーションできます。","spec":{"size":"95×200mm"},"images":[{"src":"assets/img/gd_clearseal_1.webp","role":"main"}]}],"_todo":["オーセンティックユニフォームの写真：レプリカと同じ画像を暫定で使用。専用写真があれば差し替え。","写真はすべて公式サイトへの直リンク。担当者から元データを預かってWebP化する。"],"brand":{"name":"TOCKEY SQUARE","sub":"栃木SC オフィシャルショップ","logo":"assets/img/tockey_square.svg","bg":"#F4D14D","logoW":"240px","logoMax":"72%"},"venueMap":{"img":"assets/img/venue_map_b.webp","alt":"カンセキスタジアムとちぎ 会場案内図（グッズ売店・総合案内所・場外グルメエリアの位置）"},"_venueMapA":{"img":"assets/img/venue_map_0803.webp","alt":"カンセキスタジアムとちぎ 会場案内図（グッズ売場・グルメ・総合案内所の位置）"}};
+const DATA = {"_readme":["グッズ詳細ページの唯一の正データ。HTMLを手で書き換えないこと。","出典＝栃木SC公式ニュース『【8/9金沢戦】グッズ情報』 https://www.tochigisc.jp/news/1857","","images の考え方（重要）:","  images[0] が必ず一覧カードのサムネイルになる。","  role は『その写真が何を伝えるか』。枚数ではなく役割で扱う。","    main   … 商品そのもの","    lineup … 色やサイズの展開が一覧で分かる（どれを選ぶかが決まる）","    detail … 質感・仕様の寄り（モノの良さが伝わる）","    use    … 使えることの証明（当日どう役に立つかが分かる）","  use の note だけはカードに文字でも出す。写真を開かなくても効くため。","","オンラインストアへの案内はページに載せない。在庫の調整があり、「売り切れてもオンラインで買える」と読ませてしまうため。このページの目的は当日スタジアムの売店で買ってもらうこと。（参考URL: https://www.rakuten.ne.jp/gold/monmiya/tochigi-sc/）","","区分（カテゴリー）は設けない。毎試合ラインナップが変わるため、区分の割り当てが運用の手間になる。items の並び順がそのまま掲載順。","brand.logo が空のあいだはブランド帯を出さない。トッキースクエアのロゴを 20_素材 に置いてパスを入れると表示される。"],"match":{"date":"2026-08-09","kickoff":"19:00","opponent":"ツエーゲン金沢","venue":"カンセキスタジアムとちぎ","short":"金沢"},"shop":{"name":"場外 グッズ売店","gate":"Aゲート","hours":"16:00〜21:00","note":"ガチャは準備でき次第の販売開始です。"},"payment":{"lead":"キャッシュレスでお会計もスムーズ","short":"お支払いはキャッシュレスのみです。","body":"クレジットカード・スマホ決済・電子マネーがそのまま使えます。現金はご利用いただけません。","note":"現金をお持ちの方は、当日場内の専用ブースでプリペイドカードをご用意しています。","guideUrl":"#","gachaNote":"ガチャのみキャッシュレス対象外です。現金をご用意ください。"},"items":[{"id":"cooltowel","name":"選手名クールタオル","price":2915,"hero":true,"allPlayers":true,"desc":"推し選手と一緒に夏のスタジアムを楽しもう！首に掛けやすいサイズで、暑い日の観戦やイベントなど幅広いシーンで活躍します。","spec":{"size":"幅960×高さ300mm"},"images":[{"src":"assets/img/goods/cooltowel.webp","role":"main"}]},{"id":"penlight","name":"2026/27ペンライト","price":2420,"hero":true,"desc":"14色に切り替え可能なLEDライトで、スタジアムを栃木SCカラーに染め、選手たちへ熱い声援を届けましょう。","spec":{"size":"約H250×Φ11mm","note":"単4形電池×3本使用（テスト用電池付属）"},"images":[{"src":"assets/img/goods/penlight.webp","role":"main"}]},{"id":"armcover","name":"アームカバー","price":2420,"hero":true,"desc":"接触冷感素材を使用した、暑い季節にぴったりのアームカバー。UPF50+で紫外線から腕をしっかりガードします。","spec":{"color":"ホワイト／ブラック","size":"長さ43cm・腕側周り29cm・手首側周り18cm","material":"ポリエステル、ポリウレタン（接触冷感・UPF50+）"},"images":[{"src":"assets/img/goods/armcover.webp","role":"main"}]},{"id":"coolerbag","name":"保冷バッグ","price":4400,"hero":true,"desc":"観戦はもちろん、毎日のお買い物やレジャーにも活躍する保冷バッグ。普段使いしやすいカジュアルなデザインです。","spec":{"size":"幅240×高さ240×奥行150mm","material":"厚手トロマット、ポリエステル（裏地アルミ）"},"images":[{"src":"assets/img/goods/coolerbag.webp","role":"main"},{"src":"assets/img/goods/coolerbag_use.webp","role":"use","note":"500mlペットボトルが6本入ります"}]},{"id":"towelmuffler","name":"タオルマフラー","price":1925,"desc":"応援の定番アイテム。暑い時期には何本あっても助かります。","spec":{"size":"高さ200×幅1,100mm","material":"綿100%"},"images":[{"src":"assets/img/goods/towelmuffler.webp","role":"main"}]},{"id":"uniform_replica","name":"レプリカユニフォーム","price":17600,"desc":"幾重にも重なる「T」のラインで、挑戦を積み重ねながら前進してきた軌跡を表現。その先にはJ2昇格へ向かう力強い上昇の矢印が浮かび上がるデザイン。","images":[{"src":"assets/img/goods/uniform_replica.webp","role":"main"}]},{"id":"uniform_authentic","name":"オーセンティックユニフォーム","price":20350,"desc":"選手が実際に着用するモデルと同じ仕様。デザインはレプリカと共通です。","images":[{"src":"assets/img/goods/uniform_authentic.webp","role":"main"}]},{"id":"tee_raglan","name":"ラグランTシャツ","price":4290,"desc":"カレッジ風デザインを取り入れた、普段使いしやすい一着。試合観戦はもちろん、デイリーユースにもおすすめです。","spec":{"size":"M／L／XL","material":"綿100%"},"images":[{"src":"assets/img/goods/tee_raglan.webp","role":"main"}]},{"id":"shirt_linerib","name":"ラインリブシャツ","price":3520,"desc":"「SC」をスタイリッシュなロゴ風にデザインしたプリントが印象的なラインリブシャツ。襟元と袖口のラインリブがアクセントとなり、スポーティーさとカジュアルさを兼ね備えた一着です。試合観戦はもちろん、普段使いにもおすすめです。","spec":{"material":"ポリエステル100%","size":"M／L／XL"},"images":[{"src":"assets/img/goods/shirt_linerib.webp","role":"main"}]},{"id":"cap_newhattan","name":"NEWHATTANキャップ","price":3410,"desc":"人気ブランド「NEWHATTAN」の定番キャップに栃木SCデザインをプラス。観戦から普段のコーディネートまで幅広く活躍します。","spec":{"color":"カーキ／ネイビー／ブルーグレー"},"images":[{"src":"assets/img/goods/cap_newhattan.webp","role":"lineup","note":"3色展開"},{"src":"assets/img/goods/cap_newhattan_detail.webp","role":"detail"}]},{"id":"cap_flatvisor","name":"フラットバイザーキャップ","price":6600,"desc":"フラットバイザーのシルエットが魅力。カジュアルなスタイルに合わせやすく、日常使いにもおすすめです。","spec":{"color":"ブラック／ダークネイビー／スプルース"},"images":[{"src":"assets/img/goods/cap_flatvisor.webp","role":"lineup","note":"3色展開"},{"src":"assets/img/goods/cap_flatvisor_detail.webp","role":"detail"}]},{"id":"acrylic_keyholder","name":"アクリルキーホルダー","price":1210,"allPlayers":true,"desc":"クールな宣材写真を使用し、アンティーク調の額縁風デザインで高級感のある仕上がりに。お気に入りの選手をいつでも身近に持ち歩けます。","spec":{"size":"幅66×高さ68mm"},"images":[{"src":"assets/img/goods/acrylic_keyholder.webp","role":"main"}]},{"id":"gacha_name","name":"おなまえアクリルキーホルダー","price":400,"allPlayers":true,"gacha":true,"desc":"全選手展開で、選手名をデザインしたアクリルキーホルダー。推し選手の名前をアピールしたり、コレクションとしても楽しめるガチャ限定アイテムです。","images":[{"src":"assets/img/goods/gacha_name.webp","role":"main"}]},{"id":"gacha_omamori","name":"お守りアクリルキーホルダー","price":400,"allPlayers":true,"gacha":true,"desc":"勝利への願いを込めた、お守り風デザインのアクリルキーホルダーが新登場！全選手展開なので、お気に入りの選手を集めたり、応援のお供としてもぴったりのガチャ限定アイテムです。","images":[{"src":"assets/img/goods/gacha_omamori.webp","role":"main"}]},{"id":"yearbook","name":"2026/27イヤーブック","price":1650,"desc":"トップチームの全選手・スタッフをはじめ、アカデミーやチアーズまで、栃木SCファミリーを網羅した一冊。全48ページ・フルカラー。","spec":{"size":"A4サイズ"},"images":[{"src":"assets/img/goods/yearbook.webp","role":"main"}]},{"id":"calendar","name":"2026/27卓上カレンダー","price":2530,"desc":"試合スケジュールと選手の誕生日を掲載。デスクやお部屋に飾れば、毎日栃木SCを身近に感じながらシーズンを楽しめます。2026年8月〜2027年7月対応。","spec":{"size":"幅297×高さ105mm"},"images":[{"src":"assets/img/goods/calendar.webp","role":"main"}]},{"id":"clearseal","name":"ぷっくりクリアシール","price":715,"desc":"トッキーやエンブレムなどをデザインした、トレンドのぷっくりクリアシール。スマホやノート、パソコンを栃木SC仕様にデコレーションできます。","spec":{"size":"95×200mm"},"images":[{"src":"assets/img/goods/clearseal.webp","role":"main"}]}],"_todo":["お守りアクリルキーホルダーは公式サイトのスクリーンショット4種を2×2に合成したもの。撮り下ろしが来たら差し替える。","オーセンティックユニフォームは専用写真が無いため、選手紹介ページの黒背景写真（五十嵐太陽）を上半身に切って使用。"],"venueMap":{"img":"assets/img/venue_map_b.webp","alt":"カンセキスタジアムとちぎ 会場案内図（グッズ売店・総合案内所・場外グルメエリアの位置）"},"_venueMapA":{"img":"assets/img/venue_map_0803.webp","alt":"カンセキスタジアムとちぎ 会場案内図（グッズ売場・グルメ・総合案内所の位置）"},"heroImages":[{"src":"assets/img/goods_hero1.webp","alt":"栃木SC スタジアムグッズ"},{"src":"assets/img/goods_hero2.webp","alt":"2026/27 レプリカユニフォーム"},{"src":"assets/img/goods_hero3.webp","alt":"Tochigi SC ロゴのTシャツ"},{"src":"assets/img/goods_hero4.webp","alt":"トートバッグを持って歩く様子"},{"src":"assets/img/goods_hero5.webp","alt":"フラットバイザーキャップ"}],"onlineStore":{"url":"https://www.rakuten.ne.jp/gold/monmiya/tochigi-sc/","label":"オフィシャルオンラインストア"}};
 
 
 document.documentElement.className += ' js';
@@ -447,7 +596,11 @@ var NAV_LOCK_UNTIL = 0;
   document.addEventListener('click', function(e){
     var a = e.target.closest ? e.target.closest('.jump a[href^="#"]') : null;
     if(!a) return;
-    var t = document.querySelector(a.getAttribute('href'));
+    // ページ内ナビには「営業時間・支払方法」のように節を持たない href="#" のボタンも並ぶ。
+    // そのまま querySelector('#') に渡すと例外になり、ここから下が全部止まる。
+    var href = a.getAttribute('href');
+    if(!href || href.length < 2) return;
+    var t = document.querySelector(href);
     if(!t) return;
     e.preventDefault();
     var hd = document.querySelector('header.hd');
@@ -482,33 +635,81 @@ function yen(n){ return '¥' + Number(n).toLocaleString('ja-JP'); }
   el.innerHTML=txt;
 })();
 
-// 売店・お支払い
-// お支払いは、ページを開いた瞬間に長い説明が出ないようにする。
-// 見えているのは「スムーズ」という利点と「キャッシュレスのみ」という一行だけ。
-// 決済手段の詳細を知りたい人だけがアコーディオンを開く。
+// 営業時間・支払方法。本文には出さず、メニューからポップアップで開く。
+// 商品を見に来た人の前に実用情報が挟まると、目的に届くまでが遠くなるため。
 (function(){
-  var el=document.getElementById('utilBar'); if(!el) return;
-  var s=DATA.shop||{}, p=DATA.payment||{}, html='';
+  var pop=document.getElementById('pop'), body=document.getElementById('popBody');
+  var btn=document.getElementById('openInfo');
+  if(!pop||!btn) return;
+  var s=DATA.shop||{}, p=DATA.payment||{}, html='<h3>営業時間と支払方法</h3>';
   if(s.hours){
     html+='<div class="row"><span class="k">売店</span><span class="v">'+
       esc(s.name||'グッズ売店')+(s.gate? '（'+esc(s.gate)+'）':'')+' <b>'+esc(s.hours)+'</b>'+
-      (s.note? '<span class="sub">'+esc(s.note)+'</span>':'')+
-      '</span></div>';
+      (s.note? '<span class="sub">'+esc(s.note)+'</span>':'')+'</span></div>';
   }
-  if(p.lead || p.short || p.body){
-    var inner='';
-    if(p.body)      inner+='<p>'+esc(p.body)+'</p>';
-    if(p.note)      inner+='<p>'+esc(p.note)+'</p>';
-    if(p.gachaNote) inner+='<p>'+esc(p.gachaNote)+'</p>';
-    if(p.guideUrl)  inner+='<p><a class="link" href="'+esc(p.guideUrl)+'">決済のくわしくは観戦ガイドへ</a></p>';
+  if(p.lead||p.short||p.body){
     html+='<div class="row"><span class="k">お支払い</span><span class="v">'+
-      (p.lead? '<b>'+esc(p.lead)+'</b>' : '')+
-      (p.short? '<span class="sub">'+esc(p.short)+'</span>' : '')+
-      (inner? '<button class="acc-btn" type="button" aria-expanded="false">決済方法をみる<span class="chev">▶</span></button>'+
-              '<div class="acc-body" hidden>'+inner+'</div>' : '')+
+      (p.lead? '<b>'+esc(p.lead)+'</b>':'')+
+      (p.short? '<span class="sub short">'+esc(p.short)+'</span>':'')+
+      (p.body? '<span class="sub">'+esc(p.body)+'</span>':'')+
+      (p.note? '<span class="sub">'+esc(p.note)+'</span>':'')+
+      (p.gachaNote? '<span class="sub">'+esc(p.gachaNote)+'</span>':'')+
       '</span></div>';
   }
-  el.innerHTML=html;
+  body.innerHTML=html;
+  function open(e){ if(e) e.preventDefault();
+    pop.classList.add('on'); void pop.querySelector('.box').offsetHeight; pop.classList.add('in'); }
+  function close(){ pop.classList.remove('in'); setTimeout(function(){ pop.classList.remove('on'); },220); }
+  btn.addEventListener('click', open);
+  pop.addEventListener('click', function(e){ if(e.target.closest('[data-popclose]')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && pop.classList.contains('on')) close(); });
+})();
+
+// ヒーロー。自動で送る。指で送ることもできる。
+(function(){
+  var el=document.getElementById('hero'), imgs=DATA.heroImages||[];
+  if(!el) return;
+  if(!imgs.length){ el.remove(); return; }
+  el.innerHTML='<div class="htrack">'+imgs.map(function(im){
+      return '<div class="hslide"><img src="'+esc(im.src)+'" alt="'+esc(im.alt||'')+'"></div>';
+    }).join('')+'</div>'+
+    (imgs.length>1 ? '<div class="hdots">'+imgs.map(function(_,i){ return '<i class="'+(i?'':'on')+'"></i>'; }).join('')+'</div>' : '');
+  if(imgs.length<2) return;
+  var track=el.querySelector('.htrack'), dots=el.querySelector('.hdots'), i=0, timer=null;
+  function go(n){
+    i=(n+imgs.length)%imgs.length;
+    track.style.transform='translateX('+(-i*100)+'%)';
+    [].forEach.call(dots.children,function(d,k){ d.classList.toggle('on',k===i); });
+  }
+  function play(){ stop(); timer=setInterval(function(){ go(i+1); }, 4000); }
+  function stop(){ if(timer) clearInterval(timer); timer=null; }
+  // 画面に入っているときだけ動かす（見えない場所で回し続けない）
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ en[0].isIntersecting? play() : stop(); },{threshold:.2}).observe(el);
+  } else play();
+  // 指で左右に送る
+  var sx=0, moved=false;
+  el.addEventListener('pointerdown',function(e){ sx=e.clientX; moved=false; stop(); },{passive:true});
+  el.addEventListener('pointermove',function(e){ if(Math.abs(e.clientX-sx)>30) moved=true; },{passive:true});
+  el.addEventListener('pointerup',function(e){
+    if(moved) go(i + (e.clientX<sx ? 1 : -1));
+    play();
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') stop(); });
+})();
+
+// どの試合のページかを、戻るボタンと見出しの両方で示す
+(function(){
+  var m=DATA.match||{}, name=m.short||m.opponent||'', md='';
+  if(m.date){ var p=String(m.date).split('-'); md=(+p[1])+'/'+(+p[2]); }
+  // 戻るボタンは「どこへ行くか」だけを言う。
+  // どの試合かは見出しが持つ（ボタンに両方を持たせると、どちらも弱くなる）。
+  // 見出しの横は文章的に「（8月9日金沢戦）」
+  var t=document.getElementById('titleMatch');
+  if(t && m.date){
+    var q=String(m.date).split('-');
+    t.textContent='（'+(+q[1])+'月'+(+q[2])+'日'+(name?name+'戦':'')+'）';
+  }
 })();
 
 // アコーディオン。ページ全体で使うので1か所にまとめる。
@@ -544,9 +745,8 @@ document.addEventListener('click', function(e){
     'style="width:'+esc(b.logoW||'124px')+'; max-width:'+esc(b.logoMax||'38%')+'"></span>';
 })();
 
-// ===== 商品カード =====
-// 写真は一覧でもスワイプできる。複数枚あることは点の数で分かるので、
-// 「写真2枚」のような枚数表示はしない。
+// ===== 商品カード（B案）=====
+// カードは「商品名＋価格」だけ。詳細はタップで下から出るシートに表示する。
 var SPEC_LABEL = { color:'カラー', size:'サイズ', material:'素材', note:'ほか' };
 
 function slideHtml(img, name){
@@ -555,18 +755,40 @@ function slideHtml(img, name){
     (img.note? '<div class="cap">'+esc(img.note)+'</div>' : '')+
   '</div>';
 }
-
-function swipeHtml(it){
+function swipeHtml(it, withDots){
   var imgs = it.images||[];
   return '<div class="swipe">'+
     '<div class="track">'+imgs.map(function(im){ return slideHtml(im, it.name); }).join('')+'</div>'+
-    (imgs.length>1
+    (withDots && imgs.length>1
       ? '<div class="dots">'+imgs.map(function(_,i){ return '<i class="'+(i?'':'on')+'"></i>'; }).join('')+'</div>'
       : '')+
   '</div>';
 }
+function tagsHtml(it){
+  var t='';
+  if(it.allPlayers) t+='<span class="tag players">全選手展開</span>';
+  if(it.gacha)      t+='<span class="tag gacha">ガチャ</span>';
+  return t;
+}
 
-function bodyHtml(it){
+// 一覧・おすすめのカード。写真は送らせない（縦スクロールの邪魔になるため）
+function cardHtml(it){
+  var first=(it.images||[])[0]||{};
+  var t=tagsHtml(it);
+  return '<div class="item" data-id="'+esc(it.id)+'" role="button" tabindex="0">'+
+    '<div class="swipe"><div class="track"><div class="slide">'+
+      (first.src? '<img src="'+esc(first.src)+'" alt="'+esc(it.name)+'" loading="lazy">':'')+
+    '</div></div><span class="more" aria-hidden="true">＋</span></div>'+
+    '<div class="bd">'+
+      '<div class="nm">'+esc(it.name)+'</div>'+
+      '<div class="pr">'+yen(it.price)+'</div>'+
+      (t? '<div class="tags">'+t+'</div>' : '')+
+    '</div>'+
+  '</div>';
+}
+
+// シートの中身
+function sheetHtml(it){
   var spec='';
   if(it.spec){
     var rows=Object.keys(it.spec).filter(function(k){ return it.spec[k]; }).map(function(k){
@@ -574,50 +796,119 @@ function bodyHtml(it){
     }).join('');
     if(rows) spec='<div class="spec">'+rows+'</div>';
   }
-  var pnote = it.allPlayers ? '<p class="pnote">全選手展開です。推しの選手は売店で選べます。</p>' : '';
-  return '<p class="ds">'+esc(it.desc||'')+'</p>'+spec+pnote;
-}
-
-// open=true のカードは説明を最初から出す（おすすめ用）。
-// 一覧はアコーディオンにして、カードの高さを揃えたまま置く。
-function cardHtml(it, alwaysOpen){
-  var tags='';
-  if(it.allPlayers) tags+='<span class="tag players">全選手展開</span>';
-  if(it.gacha)      tags+='<span class="tag gacha">ガチャ</span>';
-
-  // 文字は短く。何も出さないとカードが押せることが伝わらず、
-  // 素材・サイズ（買う判断の材料）が誰にも開かれないまま終わる。
-  var body = alwaysOpen
-    ? '<div class="detail">'+bodyHtml(it)+'</div>'
-    : '<button class="acc-btn" type="button" aria-expanded="false" '+
-        'data-open-label="とじる" data-closed-label="くわしく">くわしく<span class="chev">▶</span></button>'+
-      '<div class="acc-body detail" hidden>'+bodyHtml(it)+'</div>';
-
-  return '<div class="item" data-id="'+esc(it.id)+'">'+
-    swipeHtml(it)+
-    '<div class="bd">'+
-      '<div class="nm">'+esc(it.name)+'</div>'+
-      '<div class="pr">'+yen(it.price)+'</div>'+
-      (tags? '<div class="tags">'+tags+'</div>' : '')+
-      body+
-    '</div>'+
-  '</div>';
+  var t=tagsHtml(it);
+  return swipeHtml(it, true)+
+    '<div class="nm">'+esc(it.name)+'</div>'+
+    '<div class="pr">'+yen(it.price)+'</div>'+
+    (t? '<div class="tags">'+t+'</div>' : '')+
+    '<p class="ds">'+esc(it.desc||'')+'</p>'+ spec+
+    (it.allPlayers? '<p class="pnote">全選手展開です。推しの選手は売店で選べます。</p>' : '');
 }
 
 (function(){
   var items = DATA.items||[];
-
-  // おすすめ。開き方は一覧と同じ（「くわしく ▶」）。同じカードで挙動が違うと迷うため。
-  var picks = items.filter(function(i){ return i.hero; });
-  document.getElementById('picks').innerHTML = picks.map(function(i){ return cardHtml(i, false); }).join('');
-
-  // 一覧は区分を作らず、全商品を掲載順にそのまま並べる。
-  // 毎試合ラインナップが変わるので、区分の割り当てが運用の手間になるため。
-  document.getElementById('list').innerHTML =
-    '<div class="grid">'+items.map(function(i){ return cardHtml(i, false); }).join('')+'</div>';
-
-  var cnt=document.getElementById('cnt'); if(cnt) cnt.textContent = '全'+items.length+'品';
+  document.getElementById('picks').innerHTML = items.filter(function(i){ return i.hero; }).map(cardHtml).join('');
+  document.getElementById('list').innerHTML  = '<div class="grid">'+items.map(cardHtml).join('')+'</div>';
 })();
+
+// --- おすすめの横スライドに点を付ける ---
+(function(){
+  var rail=document.getElementById('picks'), dots=document.getElementById('pickdots');
+  if(!rail||!dots) return;
+  var n=rail.children.length;
+  if(n<2){ dots.remove(); return; }
+  dots.innerHTML=Array.from({length:n}).map(function(_,i){ return '<i class="'+(i?'':'on')+'"></i>'; }).join('');
+  rail.addEventListener('scroll', function(){
+    var i=Math.round(rail.scrollLeft/(rail.scrollWidth/n));
+    [].forEach.call(dots.children,function(d,k){ d.classList.toggle('on', k===i); });
+  }, {passive:true});
+})();
+
+// --- 詳細シートの開閉 -------------------------------------------------
+// タップとスクロールの取り違えを防ぐのが肝。指が10px以上動いたら
+// 「スクロールしていた」とみなして開かない。
+(function(){
+  var sheet=document.getElementById('sheet'), body=document.getElementById('sheetBody');
+  var byId={}; (DATA.items||[]).forEach(function(i){ byId[i.id]=i; });
+  var lastY=0;
+
+  function open(id){
+    var it=byId[id]; if(!it) return;
+    body.innerHTML=sheetHtml(it);
+    lastY=window.pageYOffset;
+    sheet.classList.add('on');
+    document.body.classList.add('sheet-open');
+    // requestAnimationFrame は画面が非表示のとき呼ばれないことがあり、
+    // 出かかったまま止まる。レイアウトを一度確定させてからクラスを付ける。
+    void sheet.querySelector('.panel').offsetHeight;
+    sheet.classList.add('in');
+  }
+  function close(){
+    sheet.classList.remove('in');
+    document.body.classList.remove('sheet-open');
+    setTimeout(function(){ sheet.classList.remove('on'); body.innerHTML=''; }, 260);
+  }
+
+  // 指の移動量を見てタップかどうかを判定する
+  var sx=0, sy=0, moved=false;
+  document.addEventListener('pointerdown', function(e){
+    var el=e.target.closest && e.target.closest('.item');
+    if(!el) return;
+    sx=e.clientX; sy=e.clientY; moved=false;
+  }, {passive:true});
+  document.addEventListener('pointermove', function(e){
+    if(Math.abs(e.clientX-sx)>10 || Math.abs(e.clientY-sy)>10) moved=true;
+  }, {passive:true});
+  document.addEventListener('pointerup', function(e){
+    var el=e.target.closest && e.target.closest('.item');
+    if(!el || moved) return;      // 動いていたらスクロール。開かない
+    open(el.dataset.id);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape' && sheet.classList.contains('on')){ close(); return; }
+    if(e.key!=='Enter' && e.key!==' ') return;
+    var el=e.target.closest && e.target.closest('.item');
+    if(el){ e.preventDefault(); open(el.dataset.id); }
+  });
+  sheet.addEventListener('click', function(e){ if(e.target.closest('[data-close]')) close(); });
+
+  // シートを下へ引っ張って閉じる（スマホのみ）。
+  // つまみ（grip）だけを掴む場所にする。中身のどこからでも掴めるようにすると、
+  // 指を下げた動きが「中身のスクロール」と取り合いになり、効いたり効かなかったりする。
+  var panel=sheet.querySelector('.panel'), grip=sheet.querySelector('.grip');
+  var dy=0, dsy=0, dragging=false;
+  grip.addEventListener('pointerdown', function(e){
+    if(window.innerWidth>=601) return;          // PCは✕で閉じる
+    dragging=true; dsy=e.clientY; dy=0;
+    grip.setPointerCapture(e.pointerId);        // 指が外れても追い続ける
+    panel.style.transition='none';
+  });
+  grip.addEventListener('pointermove', function(e){
+    if(!dragging) return;
+    dy=e.clientY-dsy;
+    panel.style.transform='translateY('+Math.max(0,dy)+'px)';
+  });
+  function endDrag(e){
+    if(!dragging) return;
+    dragging=false;
+    try{ grip.releasePointerCapture(e.pointerId); }catch(_){}
+    panel.style.transition=''; panel.style.transform='';
+    if(dy>90) close();
+  }
+  grip.addEventListener('pointerup', endDrag);
+  grip.addEventListener('pointercancel', endDrag);
+
+  // シート内の写真スワイプで点を更新
+  document.addEventListener('scroll', function(e){
+    var t=e.target;
+    if(!t.classList || !t.classList.contains('track')) return;
+    var d=t.parentNode.querySelector('.dots'); if(!d) return;
+    var i=Math.round(t.scrollLeft/t.clientWidth);
+    [].forEach.call(d.children, function(x,n){ x.classList.toggle('on', n===i); });
+  }, true);
+})();
+
+// （旧・アコーディオン方式のカードはB案では使わないので削除）
 
 // スワイプ位置に合わせて点を更新。スクロールそのものはCSSがやっている。
 (function(){
@@ -628,6 +919,25 @@ function cardHtml(it, alwaysOpen){
     var i=Math.round(t.scrollLeft / t.clientWidth);
     [].forEach.call(dots.children, function(d,n){ d.classList.toggle('on', n===i); });
   }, true);
+})();
+
+// オフィシャルオンラインストア。URL・文言は JSON の onlineStore が持つので、
+// 変わってもデータだけ直せばよい。無ければ何も出さない。
+(function(){
+  var s=DATA.onlineStore, el=document.getElementById('storeLink');
+  if(!el) return;
+  if(!s || !s.url){ el.remove(); return; }
+  el.href=s.url;
+  // banner を書けば画像バナー、書かなければ文字のボタン。差し替えはデータだけで済む
+  if(s.banner){
+    el.classList.add('is-img');
+    el.innerHTML='<img src="'+esc(s.banner)+'" alt="'+esc(s.label||'オフィシャルオンラインストア')+'">';
+  }else{
+    el.innerHTML='<span class="st-em" style="background-image:url(assets/img/tsc.webp)"></span>'+
+                 '<span><span class="st-t">'+esc(s.label||'オフィシャルオンラインストア')+'</span>'+
+                 (s.note? '<span class="st-n">'+esc(s.note)+'</span>':'')+'</span>'+
+                 '<span class="st-a" aria-hidden="true">›</span>';
+  }
 })();
 
 // 上へ戻る
