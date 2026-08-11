@@ -1,0 +1,12 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>スマホ表示 v4（枠可変）</title>
+<script>
+/* スマホ実機では本体を直接表示（iframe経由はブラウザUIの伸縮で可視領域が狂うため） */
+if (matchMedia('(max-width: 480px)').matches) { location.replace('index.html'); }
+</script>
+<style>
+html,body{margin:0;background:#EAECEF;height:100%;overflow:hidden}
+.wrap{display:flex;justify-content:center;align-items:center;height:100%}
+/* 枠の高さ＝窓に収まる範囲で最大844px。窓が低くても枠全体（ナビ〜CTA帯）が常に画面内 */
+iframe{width:390px;height:min(844px,calc(100vh - 32px));height:min(844px,calc(100dvh - 32px));border:0;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.15);border-radius:14px}
+.ver{position:fixed;left:10px;bottom:8px;font:11px/1 -apple-system,sans-serif;color:#8A93A0}
+</style></head><body><div class="wrap"><iframe src="index.html" loading="eager"></iframe></div><div class="ver">preview v4</div></body></html>
