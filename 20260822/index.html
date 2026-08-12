@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<!-- Google アナリティクス（GA4: G-LEQRZNTS0L）。公開ページ（github.io）でのみ計測 -->
+<!-- Google アナリティクス（GA4: G-LEQRZNTS0L）。公開ページ（github.io）でのみ計測し、プレビュー・ローカル確認はカウントしない -->
 <script>
 if(location.hostname.endsWith('github.io')){
   var _ga=document.createElement('script');_ga.async=true;_ga.src='https://www.googletagmanager.com/gtag/js?id=G-LEQRZNTS0L';
@@ -147,6 +147,17 @@ if(location.hostname.endsWith('github.io')){
   .qnav a{display:flex;flex-direction:column;align-items:center;gap:5px;padding:11px 2px;text-decoration:none;color:#fff;font-size:11px;font-weight:700;border-bottom:3px solid transparent;margin-bottom:-3px}
   .qnav a:hover,.qnav a:focus{color:var(--yellow);border-bottom-color:var(--yellow)}
   .qnav svg{width:22px;height:22px;fill:currentColor;stroke:none}
+  /* スクロール現在地ハイライト（アイコン＋下線が黄色に） */
+  .qnav a.on{color:var(--yellow);border-bottom-color:var(--yellow)}
+  /* 下スクロール中はナビを隠し、上スクロールで再表示（グルメ/グッズ詳細と同挙動） */
+  .qnav{transition:transform .4s ease}
+  .qnav.qhide{transform:translateY(-100%)}
+  /* ページ上部へ戻るボタン（グルメ/グッズ詳細ページと同デザイン・下部固定バーの上に配置） */
+  .fab{position:fixed;right:14px;bottom:82px;z-index:60;display:none;align-items:center;justify-content:center;width:46px;height:46px;border-radius:8px;background:rgba(255,255,255,.72);border:1px solid rgba(4,34,66,.16);color:var(--navy);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(4,34,66,.12)}
+  .fab.show{display:flex}
+  .fab svg{width:22px;height:22px;fill:currentColor;display:block}
+  /* PC: ページ列(.device 最大680px)の内側右端に配置（背景エリアに出さない） */
+  @media(min-width:681px){.fab{right:calc(50% - 340px + 14px)}}
 
   /* section base */
   section{position:relative}
@@ -388,9 +399,13 @@ if(location.hostname.endsWith('github.io')){
 
   .sticky-cta{position:sticky;bottom:0;z-index:50;background:var(--navy);padding:8px 12px;display:flex;gap:8px;align-items:stretch;border-top:3px solid var(--yellow)}
   .sticky-cta .lbl{color:#fff;font-size:12px;font-weight:700}
-  .sticky-cta a{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-weight:900;font-size:14px;text-decoration:none;padding:12px 8px;border-radius:10px}
+  .sticky-cta a{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-weight:900;font-size:14px;text-decoration:none;padding:12px 8px;border-radius:10px;white-space:nowrap;min-width:0}
   .sticky-cta .sc-ticket{background:var(--yellow);color:var(--navy)}
-  .sticky-cta .sc-guide{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}.sticky-cta a.sc-home{flex:0 0 48px;padding:12px 0;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}.sc-home svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  /* 画面幅に応じて文字が自動で少し縮む＝どの幅でも1行に収まる（折返し禁止） */
+  .sticky-cta .sc-guide{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);font-size:clamp(11px,3.4vw,13px);padding:12px 4px}
+  .sticky-cta a.sc-nav{flex:.8 1 0;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);font-size:clamp(10.5px,3.2vw,12.5px);padding:12px 2px}
+  .sticky-cta .sc-ticket{flex:1.25 1 0;font-size:clamp(11.5px,3.6vw,14px)}
+  @media(max-width:420px){.sticky-cta{gap:6px;padding:8px 8px}}
   .sticky-cta a .arw{font-family:var(--disp);font-weight:400}
 
   .cap{max-width:680px;margin:14px auto 0;font-size:12px;color:#333;background:#fff;border:1px solid #999;padding:12px 14px}
@@ -402,6 +417,11 @@ if(location.hostname.endsWith('github.io')){
   .cashless .cl-head svg{width:22px;height:22px;stroke:var(--navy);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
   .cashless p{font-size:13px;color:#333;margin:8px 0 10px;line-height:1.7}
   .cashless .cl-link{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:800;color:var(--blue);text-decoration:none}
+  /* グルメ/グッズ下：ニュースリリース（もっと見る）への誘導。リード文＋ボタンの2段 */
+  .sec-news{text-align:center;margin:18px 20px 4px}
+  .sec-news .sn-lead{font-size:13px;font-weight:800;color:var(--navy);margin:0 0 8px}
+  .sec-news a{display:inline-flex;align-items:center;gap:7px;font-weight:900;font-size:14px;color:var(--navy);text-decoration:none;background:#fff;border:2px solid var(--navy);border-radius:999px;padding:12px 26px}
+  .sec-news a .arw{font-family:var(--disp);font-weight:400}
   .cashless .cl-link .arw{font-weight:400}
 
   /* ===== 座席図（sk-スコープ）===== */
@@ -494,29 +514,7 @@ if(location.hostname.endsWith('github.io')){
   .img-lb .lb-x{position:absolute;top:14px;right:16px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:22px;line-height:40px;text-align:center;cursor:pointer}
   @media(min-width:681px){.sw{display:none}.ptbl{font-size:15px}.ptbl th,.ptbl td{padding:9px 10px}}
   section[id],#top{scroll-margin-top:58px}
-[data-lz]:not(.lzon){background-image:none!important}
-  /* スクロール現在地ハイライト */
-  .qnav a.on{color:var(--yellow);border-bottom-color:var(--yellow)}
-  .qnav{transition:transform .4s ease}
-  .qnav.qhide{transform:translateY(-100%)}
-  /* ページ上部へ戻るボタン */
-  .fab{position:fixed;right:14px;bottom:82px;z-index:60;display:none;align-items:center;justify-content:center;width:46px;height:46px;border-radius:8px;background:rgba(255,255,255,.72);border:1px solid rgba(4,34,66,.16);color:var(--navy);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(4,34,66,.12)}
-  .fab.show{display:flex}
-  .fab svg{width:22px;height:22px;fill:currentColor;display:block}
-  @media(min-width:681px){.fab{right:calc(50% - 340px + 14px)}}
-  /* 下部固定バー(4ボタン版) */
-  .sticky-cta a{white-space:nowrap;min-width:0}
-  .sticky-cta .sc-guide{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);font-size:clamp(11px,3.4vw,13px);padding:12px 4px}
-  .sticky-cta a.sc-nav{flex:.8 1 0;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);font-size:clamp(10.5px,3.2vw,12.5px);padding:12px 2px}
-  .sticky-cta .sc-ticket{flex:1.25 1 0;font-size:clamp(11.5px,3.6vw,14px)}
-  @media(max-width:420px){.sticky-cta{gap:6px;padding:8px 8px}}
-  /* もっと見る(ニュースリリース誘導) */
-  .sec-news{text-align:center;margin:18px 20px 4px}
-  .sec-news .sn-lead{font-size:13px;font-weight:800;color:var(--navy);margin:0 0 8px}
-  .sec-news a{display:inline-flex;align-items:center;gap:7px;font-weight:900;font-size:14px;color:var(--navy);text-decoration:none;background:#fff;border:2px solid var(--navy);border-radius:999px;padding:12px 26px}
-  .sec-news a .arw{font-family:var(--disp);font-weight:400}
-
-  </style>
+[data-lz]:not(.lzon){background-image:none!important}</style>
 </head>
 <body>
 
@@ -559,7 +557,9 @@ if(location.hostname.endsWith('github.io')){
   </div>
 
   <!-- スペシャルイベント -->
-  <section class="special band-white"><div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg></span><span class="disp">SPECIAL EVENT</span><h2><span class="mk">スペシャルイベント</span></h2></div><div class="sp-stack"><div class="sp-card"><div class="sp-photo np" data-lz style="background-image:url(assets/img/sp_4.webp)"></div><div class="sp-body"><h3 class="sp-h">「栃木ＳＣ夏祭り」開催！</h3><p>スタジアムが夏祭り会場に！友達や家族と一緒に、みんなで夏を楽しもう。</p><div class="sp-terms"><div>時間： 16:00〜19:00 <br>場所：カンセキスタジアム アプローチデッキ</div></div><a class="sp-link" href="https://www.tochigisc.jp/news/1842" target="_blank" rel="noopener">詳細はこちら ›</a></div></div></div></section>
+  <section class="special band-white"><div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg></span><span class="disp">SPECIAL EVENT</span><h2><span class="mk">スペシャルイベント</span></h2></div><div class="sp-stack"><div class="sp-card"><div class="sp-photo np" data-lz style="background-image:url(assets/img/sp_4.webp)"></div><div class="sp-body"><h3 class="sp-h">「栃木ＳＣ夏祭り」開催！</h3><p>スタジアムが夏祭り会場に！友達や家族と一緒に、みんなで夏を楽しもう。</p><div class="sp-terms"><div><b>時間</b>： 16:00〜19:00 <br><b>場所</b>：カンセキスタジアム アプローチデッキ</div></div><a class="sp-link" href="https://www.tochigisc.jp/news/1842" target="_blank" rel="noopener">詳細はこちら ›</a></div></div><div class="sp-card"><div class="sp-photo np" data-lz style="background-image:url(assets/img/sp_12.webp)"></div><div class="sp-body"><h3 class="sp-h">夏祭りグルメが盛りだくさん！</h3><p>夏祭りを楽しむのにぴったりなグルメが盛りだくさん！
+食べて飲んで夏を楽しもう！</p><div class="sp-terms"><div><b>営業時間</b></div><div><b>場外エリア</b>：15:30～試合終了まで</div><div><b>場内エリア</b>：16:30～試合終了まで</div></div><a class="sp-link" href="https://tochigisc-official.github.io/homegame_lp/20260822/gourmet.html" target="_blank" rel="noopener">詳細はこちら ›</a></div></div><div class="sp-card"><div class="sp-photo np" data-lz style="background-image:url(assets/img/sp_13.webp)"></div><div class="sp-body"><h3 class="sp-h">暑い夏に最高な「氷まつり」開催！</h3><p>暑い夏に食べたくなるかき氷が色々な種類で登場！
+夏だからこそのかき氷を満喫しよう！</p><a class="sp-link" href="https://tochigisc-official.github.io/homegame_lp/20260822/gourmet.html" target="_blank" rel="noopener">詳細はこちら ›</a></div></div></div></section>
 
   <div class="sec-div" aria-hidden="true"></div>
     <!-- イベント -->
@@ -568,7 +568,9 @@ if(location.hostname.endsWith('github.io')){
     
     <div class="dots"><i class="on"></i><i></i></div>
     <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/ev_5.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>「消防車がやってくる！わくわく消防体験ひろば！」</h4><div class="meta">時間： 16:00〜19:00 <br>場所：カンセキスタジアム アプローチデッキ下（特設エリア）</div><div class="ev-desc">防火服の着用体験や、水消火器の体験など、ワクワクしながら防災を学べるエリアです。
-夏休みの思い出にぜひお立ち寄りください！ </div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/ev_2.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>「作って遊べる！竹水鉄砲ワークショップ」</h4><div class="meta">時間： 16:00〜18:30 <br>場所：カンセキスタジアム アプローチデッキ<br>定員：120名</div><div class="ev-desc">その他詳細：coming soon</div></div></div></div>
+夏休みの思い出にぜひお立ち寄りください！ </div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/ev_2.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>「作って遊べる！竹水鉄砲ワークショップ」</h4><div class="meta">時間： 16:00〜18:30 <br>場所：カンセキスタジアム アプローチデッキ<br>定員：120名</div><div class="ev-desc">本物の竹を使って自分だけの特別な「竹水鉄砲」を作ろう！
+<br>完成したあとは、隣接エリアですぐに遊ぶことができます。 
+</div><a class="sp-link" href="https://www.tochigisc.jp/news/1866" target="_blank" rel="noopener">詳細はこちら ›</a></div></div></div>
   </section>
 
   <!-- グルメ -->
@@ -576,6 +578,7 @@ if(location.hostname.endsWith('github.io')){
     <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11"/><path d="M16 3c-1.5 0-2.5 2-2.5 4.5S14.5 12 16 12v9"/></svg></span><span class="disp">STADIUM GOURMET</span><h2><span class="mk">グルメ</span></h2><span class="subbrand">BISTRO TOCKEY</span></div>
     <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
     <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goKezu.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>けずりん（フローズンフルーツ）</h4><div class="meta"><span class="shop">けずりん</span><span class="price">¥700</span><span class="desc">苺たっぷりのひんやりフローズンフルーツ。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goTapi.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>タピオカドリンク</h4><div class="meta"><span class="shop">会茶</span><span class="price">¥750</span><span class="desc">もちもちタピオカ入りドリンク。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/go_7.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>けずりいちご</h4><div class="meta"><span class="shop">LUANA</span><span class="price">¥702</span><span class="desc">甘酸っぱいいちごの美味しさを楽しめる、夏にぴったりの一杯。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/go_8.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>みかんかき氷</h4><div class="meta"><span class="shop">日光乙女チーズ</span><span class="price">¥580</span><span class="desc">みかんの爽やかな甘さが広がる、夏にぴったりのかき氷。</span></div></div></div></div>
+    <div class="sec-news"><p class="sn-lead">当日のグルメ情報満載！</p><a href="https://tochigisc-official.github.io/homegame_lp/20260822/gourmet.html" target="_blank" rel="noopener">グルメ情報をもっと見る <span class="arw">›</span></a></div>
   </section>
 
 
@@ -671,6 +674,7 @@ if(location.hostname.endsWith('github.io')){
     <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span><span class="disp">GOODS</span><h2><span class="mk">グッズ</span></h2></div>
     <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
         <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gUni.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#000"></div><div class="cb"><h4>レプリカユニフォーム</h4><div class="meta"><span class="shop">2026/27シーズン</span><span class="price">¥17,600</span><span class="desc">2026/27シーズンの新デザイン・レプリカユニフォーム。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/g_9.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>アクリルキーホルダー</h4><div class="meta"><span class="shop">全選手展開/選手を選んで購入可能</span><span class="price">¥1,210</span><span class="desc">クールな宣材写真を使用し、アンティーク調の額縁風デザインで高級感のある仕上がりに。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/g_10.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>ミニ色紙</h4><div class="meta"><span class="shop">全選手展開/選手を選んで購入可能</span><span class="price">¥880</span><span class="desc">選手の顔写真入りデザインで、サインをもらうのにぴったりのアイテム。練習見学やファンサービスの記念としてはもちろん、コレクションにもおすすめ。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/g_11.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>卓上カレンダー</h4><div class="meta"><span class="shop">2026年8月～2027年7月対応</span><span class="price">¥2,530</span><span class="desc">2026/27シーズンの試合スケジュールと選手の誕生日を掲載した、実用性抜群の卓上カレンダー。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gTowel.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>選手名クールタオル</h4><div class="meta"><span class="shop">選手名入り</span><span class="price">¥2,915</span><span class="desc">ひんやり感のある選手名クールタオル。</span></div></div></div></div>
+    
 
     </section>
 
@@ -1044,7 +1048,9 @@ try{
     a.addEventListener('touchend', function(ev){ /* iOS保険 */ }, {passive:true});
   });
 })();</script>
-<script>(function(){var els=[].slice.call(document.querySelectorAll('[data-lz]'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('lzon')});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('lzon');io.unobserve(x.target);}});},{rootMargin:'300px 0px'});els.forEach(function(e){io.observe(e)});})();</script><script>
+<script>(function(){var els=[].slice.call(document.querySelectorAll('[data-lz]'));if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('lzon')});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('lzon');io.unobserve(x.target);}});},{rootMargin:'300px 0px'});els.forEach(function(e){io.observe(e)});})();</script>
+<script>
+// ページ内ナビ：スクロール現在地ハイライト（黄色アイコン＋下線）
 (function(){
   var nav=document.querySelector('.qnav'); if(!nav) return;
   var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));
@@ -1058,24 +1064,27 @@ try{
   }
   addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
 })();
+// 「上へ戻る」ボタン：1画面分スクロールしたら出現
 (function(){
   var fab=document.getElementById('fab'); if(!fab) return;
   function upd(){fab.classList.toggle('show', window.scrollY>window.innerHeight);}
   addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
   fab.addEventListener('click',function(ev){ev.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
 })();
+// ページ内ナビ：上端に固定→しばらく(約260px)は固定を維持→さらに下で隠す／上スクロールで出す
+// （固定される前＝ページの流れの中にある間は一切動かさない）
 (function(){
   var nav=document.querySelector('.qnav'); if(!nav) return;
-  var GRACE=260;
+  var GRACE=260; /* 固定/再表示してから隠れるまでのスクロール量(px) */
   var last=window.scrollY, anchor=null;
   addEventListener('scroll',function(){
     var y=window.scrollY;
     if(y<10 || y<last-2){
       nav.classList.remove('qhide');
-      anchor=y;
+      anchor=y; /* 再表示地点を基準に、次に隠れるまでの猶予を取り直す */
     }else if(y>last+2){
       if(nav.getBoundingClientRect().top<=0){
-        if(anchor===null) anchor=y;
+        if(anchor===null) anchor=y; /* 固定が始まった地点 */
         if(y>anchor+GRACE) nav.classList.add('qhide');
       }else{
         anchor=null;
@@ -1084,6 +1093,7 @@ try{
     last=y;
   },{passive:true});
 })();
+// 表示の保険：ジャンプ等で発火し損ねたフェード要素を確実に表示（空白のまま残さない）
 (function(){
   function sweep(){
     var vh=window.innerHeight*0.92;
