@@ -14,7 +14,7 @@ if(location.hostname.endsWith('github.io')){
 }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>栃木SC ホームゲームLP ｜ 9/26 松本山雅FC戦</title>
+<title>栃木SC ホームゲームLP ｜ 9/9 モンテディオ山形戦</title>
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/appleTouchIcon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,7 +128,7 @@ if(location.hostname.endsWith('github.io')){
   .match .story{position:relative;text-align:center;font-weight:900;color:var(--navy);font-size:15px;letter-spacing:.04em;margin-bottom:18px}
   .match .story::before,.match .story::after{content:"";display:inline-block;width:22px;height:2px;background:var(--yellow);vertical-align:middle;margin:0 10px}
   .match .mt-meta{position:relative;text-align:center;margin-bottom:8px}
-  .match .mt-league{font-size:14px;font-weight:700;color:rgba(4,34,66,.6);letter-spacing:.02em}
+  .match .mt-league{font-size:clamp(9px,2.9vw,14px);font-weight:700;color:rgba(4,34,66,.6);letter-spacing:.02em;white-space:nowrap}
   .match .mt-ko{font-family:var(--disp);font-size:30px;color:var(--navy);letter-spacing:.02em;margin-top:5px;line-height:1.1}
   .match .mt-ven{font-size:16px;font-weight:700;color:var(--navy);margin-top:4px}
   .match .teams{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
@@ -488,7 +488,7 @@ if(location.hostname.endsWith('github.io')){
     body{background:#fff;padding:0}
     .device{max-width:none;box-shadow:none;margin:0}
     .note,.cap{display:none}
-    .hero{min-height:0;aspect-ratio:1800/1013;background:var(--heroImgPC) center/cover no-repeat,var(--navy)}
+    .hero{min-height:0;aspect-ratio:1200/650;background:var(--heroImgPC) center/cover no-repeat,var(--navy)}
   }
   /* === PC対応（A：中央寄せ640px・スマホ重視／ヒーローのみ横長化） === */
   @media (min-width:601px){
@@ -498,8 +498,8 @@ if(location.hostname.endsWith('github.io')){
     .sk-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;padding:0 20px}
     .sk-duo .sk-seat-view{margin-top:0}
     /* ヒーロー：縦長(2:3)→横長バンドに。岩城さんの横長画像=--heroImgPC を使用（未設定時はプレースホルダー）
-       枠の縦横比は入稿画像に合わせて自動（1800/1013）＝画像が欠けない */
-    .hero{min-height:0;aspect-ratio:1800/1013;background:var(--heroImgPC) center/cover no-repeat,var(--navy)}
+       枠の縦横比は入稿画像に合わせて自動（1200/650）＝画像が欠けない */
+    .hero{min-height:0;aspect-ratio:1200/650;background:var(--heroImgPC) center/cover no-repeat,var(--navy)}
     .hero .info{max-width:52%}
     /* 横スライドカード（イベント/グルメ/グッズ/CLUB.T）→ PCは2列グリッド一覧に */
     .rail{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;overflow:visible;scroll-snap-type:none;padding:4px 20px 14px}
@@ -527,14 +527,14 @@ if(location.hostname.endsWith('github.io')){
     <!-- MATCH CARD -->
   <div class="match">
     <div class="mt-meta">
-      <div class="mt-league">2026/27 明治安田J3リーグ 第8節</div>
-      <div class="mt-ko">17:00 KICK OFF</div>
+      <div class="mt-league">26/27Ｊリーグ ヤマザキビスケット ルヴァンカップ</div>
+      <div class="mt-ko">19:00 KICK OFF</div>
       <div class="mt-ven">カンセキスタジアムとちぎ</div>
     </div>
     <div class="teams">
       <div class="team"><div class="em" style="background-image:var(--tsc);background-size:116%;background-repeat:no-repeat;background-position:center"></div><div class="nm">栃木SC</div><div class="role">HOME</div></div>
       <div class="vs">VS</div>
-      <div class="team"><div class="em" style="background-image:var(--opp);background-size:contain;background-repeat:no-repeat;background-position:center"></div><div class="nm" style="white-space:nowrap;font-size:min(18px,calc((100vw - 87px)*0.0883))">松本山雅FC</div><div class="role">VISITOR</div></div>
+      <div class="team"><div class="em" style="background-image:var(--opp);background-size:contain;background-repeat:no-repeat;background-position:center"></div><div class="nm" style="white-space:nowrap;font-size:min(18px,calc((100vw - 87px)*0.0576))">モンテディオ山形</div><div class="role">VISITOR</div></div>
     </div>
   </div>
 
@@ -558,25 +558,24 @@ if(location.hostname.endsWith('github.io')){
   </div>
 
   <!-- スペシャルイベント -->
-  <section class="special band-white"><div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg></span><span class="disp">SPECIAL EVENT</span><h2><span class="mk">スペシャルイベント</span></h2></div><div class="sp-stack"><div class="sp-card"><div class="sp-photo np" data-lz style="background-image:url(assets/img/sp_17.webp)"></div><div class="sp-body"><h3 class="sp-h">板通スペシャルマッチ限定　「れんがHoneyGarden」ブース出展！</h3><p>今年も開催！<br>
-ワッフル販売と選手サイン入り豪華グッズが当たる抽選会も開催いたします！<br>
-ぜひこの機会に「れんがHoneyGarden」ブースへお立ち寄りください。<br>
-※詳細は追ってお知らせいたします。</p><div class="sp-terms"><div><b>時間</b>： 14:00〜17:00</div><div><b>場所</b>：アプローチデッキ</div></div></div></div></div></section>
+  <section class="special band-white"><div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg></span><span class="disp">SPECIAL EVENT</span><h2><span class="mk">スペシャルイベント</span></h2></div><div class="sp-stack"><div class="sp-card"><div class="sp-photo np" data-lz style="background-image:url(assets/img/sp_11.webp)"></div><div class="sp-body"><h3 class="sp-h">ルヴァンカップキッズイレブン 栃木ＳＣといっしょにファイナルを目指そう！</h3><p>シュートゲームを実施！<br>
+ご参加いただいた方にはヤマザキビスケット社製お菓子 「ルヴァンプライムSS」をプレゼント！（なくなり次第終了）<br>
+※写真はイメージです</p><div class="sp-terms"><div><b>時間</b>：16:00〜18:30<br></div><div><b>場所</b>：ピッチ内（選手バス入口から入場）</div></div></div></div></div></section>
 
   <div class="sec-div" aria-hidden="true"></div>
     <!-- イベント -->
   <section class="band-sec band-white" id="event">
     <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l2-4h12l2 4"/><path d="M9 12h6"/></svg></span><span class="disp">EVENT</span><h2><span class="mk">イベント</span></h2></div>
     
-    <div class="dots"><i class="on"></i><i></i><i></i></div>
-    <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/evSub14.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>人権啓発活動（啓発物品の配布）</h4><div class="meta">配布時間：14:30〜なくなり次第終了<br>配布場所：Aゲート・Cゲート（ビジターゲートを除く）<br>配布数量：先着500名様（中学生以下）</div><div class="ev-desc">栃木県人権啓発活動ネットワーク協議会様より、中学生以下の皆様に啓発物品（オリジナル下敷き）を先着500名様に配布いたします！</div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/evSub1.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>Supported by 株式会社斎藤　選手直送！サインボールプレゼント</h4><div class="meta">時間：試合開始約45分前（ウォーミングアップ開始前）</div><div class="ev-desc">ウォーミングアップに向かう選手たちが、スタンドの皆さまへ直筆サイン入りボールを投げ入れ、プレゼントいたします。<br>どの選手のボールが飛んでくるかは当日のお楽しみ！</div><a class="sp-link" href="https://www.tochigisc.jp/news/1886" target="_blank" rel="noopener">詳細はこちら ›</a></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/evSub16.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>板通　れんがハニーワッフル販売会</h4><div class="meta">9/26／14:00～</div><div class="ev-desc">今年も開催！ワッフルを販売！<br>豪華サイン入りグッズが当たる抽選会も同時開催！<br>場所：アプローチデッキ<br><br>※写真は昨シーズンのものです。</div></div></div></div>
+    
+    <div class="rail"></div>
   </section>
 
   <!-- グルメ -->
   <section class="band-sec band-soft" id="gourmet">
     <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11"/><path d="M16 3c-1.5 0-2.5 2-2.5 4.5S14.5 12 16 12v9"/></svg></span><span class="disp">STADIUM GOURMET</span><h2><span class="mk">グルメ</span></h2><span class="subbrand">BISTRO TOCKEY</span></div>
-    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub2.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>がっつり油淋鶏丼</h4><div class="meta"><span class="shop">けずりん</span><span class="price">¥1,200</span><span class="desc">人気の油淋鶏が丼になりました！ぜひご賞味ください。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub3.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ドン・テリヤキ</h4><div class="meta"><span class="shop">Sports Cafe92</span><span class="price">¥750</span><span class="desc">若鶏もも肉、しめじをバルサミコ酢入りのテリヤキソースでソテーしました！  テリヤキ丼をイタリアンにアレンジ！</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub4.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>スパイシーチキン丼</h4><div class="meta"><span class="shop">月とスパイス</span><span class="price">¥1,300</span><span class="desc">スパイスをマリネしたチキンを唐揚げにして、さらにスパイスソースを絡めたパンチのある一品です。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub5.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ルーロ－飯</h4><div class="meta"><span class="shop">会茶</span><span class="price">¥1,100</span><span class="desc"> じっくり煮込んだ甘辛い豚バラ肉を、あつあつご飯にたっぷり。 一口食べれば、コクと香りが広がる。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub10.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>がっつり油淋鶏丼</h4><div class="meta"><span class="shop">けずりん</span><span class="price">¥1,200</span><span class="desc">人気の油淋鶏が丼になりました！ぜひご賞味ください。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub11.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ドン・テリヤキ</h4><div class="meta"><span class="shop">Sports Cafe92</span><span class="price">¥750</span><span class="desc">若鶏もも肉、しめじをバルサミコ酢入りのテリヤキソースでソテーしました！  テリヤキ丼をイタリアンにアレンジ！</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub12.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>スパイシーチキン丼</h4><div class="meta"><span class="shop">月とスパイス</span><span class="price">¥1,300</span><span class="desc">スパイスをマリネしたチキンを唐揚げにして、さらにスパイスソースを絡めたパンチのある一品です。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub13.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ルーロ－飯</h4><div class="meta"><span class="shop">会茶</span><span class="price">¥1,100</span><span class="desc"> じっくり煮込んだ甘辛い豚バラ肉を、あつあつご飯にたっぷり。 一口食べれば、コクと香りが広がる。</span></div></div></div></div>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+    <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub2.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>玉子焼き</h4><div class="meta"><span class="shop">玉子屋てっちゃん</span><span class="price">¥700</span><span class="desc">玉子屋創業70年、昔ながらの美味しい玉子焼き</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub3.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>チキンカレー</h4><div class="meta"><span class="shop">月とスパイス</span><span class="price">¥1,100</span><span class="desc">本格的南インドカレーの人気店、月とスパイスのこだわりのチキンカレー。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub4.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>チキンオーバーライス</h4><div class="meta"><span class="shop">Feel Good Tacos</span><span class="price">¥1,000</span><span class="desc">ホットソースとホワイトソースが作り出すスパイシーだけどマイルドな味で、チキンたっぷりご飯が病みつきになること間違いなし!!</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/goSub5.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>マルゲリータ</h4><div class="meta"><span class="shop">大谷石窯ピッツァ</span><span class="price">¥1,300</span><span class="desc">大谷石の石窯でその場で焼き上げる本格的ピッツァ！</span></div></div></div></div>
     
   </section>
 
@@ -592,7 +591,7 @@ if(location.hostname.endsWith('github.io')){
   <section class="tl-sec">
     <div class="bg" data-lz style="background-image:var(--phTimeline)"></div>
     <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="disp">TIME TABLE</span><h2><span class="mk">当日のタイムライン</span></h2></div>
-    <div class="tl"><div class="row"><span class="dot"></span><div class="time">14:00</div><div class="c"><h4>シャトルバス運行開始（往路）</h4><p>雀宮駅発 → スタジアム行きの始発。早めの来場がおすすめ。</p></div></div><div class="row"><span class="dot"></span><div class="time">14:30</div><div class="c"><h4>優先入場 開始</h4><p>シーズンパスホルダー限定！場内のイベントや売店がスタート！</p></div></div><div class="row"><span class="dot"></span><div class="time">15:00</div><div class="c"><h4>一般入場 開始</h4></div></div><div class="row"><span class="dot"></span><div class="time">16:15</div><div class="c"><h4>ウォーミングアップ開始</h4><p>選手がピッチに登場。ウォーミングアップも必見！</p></div></div><div class="row"><span class="dot"></span><div class="time">16:45</div><div class="c"><h4>選手紹介</h4><p>かっこいい選手紹介映像でスタメンをチェック！</p></div></div><div class="row"><span class="dot"></span><div class="time">17:00</div><div class="c"><h4>KICK OFF</h4><p>いよいよ試合開始！</p></div></div><div class="row"><span class="dot"></span><div class="time">17:50</div><div class="c"><h4>ハーフタイム（15分間）</h4><p>腹ごしらえやトイレ休憩で後半に向けて準備をしよう！</p></div></div><div class="row"><span class="dot"></span><div class="time">18:50</div><div class="c"><h4>試合終了（目安）</h4><p>勝利したら、みんなで喜ぼう！</p></div></div><div class="row"><span class="dot"></span><div class="time">19:00</div><div class="c"><h4>シャトルバス運行開始（復路）</h4><p>スタジアム バス乗り場発 → 雀宮駅行きの始発。最終便は20:30発。</p></div></div></div>
+    <div class="tl"><div class="row"><span class="dot"></span><div class="time">16:00</div><div class="c"><h4>シャトルバス運行開始（往路）</h4><p>雀宮駅発 → スタジアム行きの始発。早めの来場がおすすめ。</p></div></div><div class="row"><span class="dot"></span><div class="time">17:00</div><div class="c"><h4>一般入場 開始</h4></div></div><div class="row"><span class="dot"></span><div class="time">18:15</div><div class="c"><h4>ウォーミングアップ開始</h4><p>選手がピッチに登場。ウォーミングアップも必見！</p></div></div><div class="row"><span class="dot"></span><div class="time">18:45</div><div class="c"><h4>選手紹介</h4><p>かっこいい選手紹介映像でスタメンをチェック！</p></div></div><div class="row"><span class="dot"></span><div class="time">19:00</div><div class="c"><h4>KICK OFF</h4><p>いよいよ試合開始！</p></div></div><div class="row"><span class="dot"></span><div class="time">19:50</div><div class="c"><h4>ハーフタイム（15分間）</h4><p>腹ごしらえやトイレ休憩で後半に向けて準備をしよう！</p></div></div><div class="row"><span class="dot"></span><div class="time">20:50</div><div class="c"><h4>試合終了（目安）</h4><p>勝利したら、みんなで喜ぼう！</p></div></div><div class="row"><span class="dot"></span><div class="time">21:00</div><div class="c"><h4>シャトルバス運行開始（復路）</h4><p>スタジアム バス乗り場発 → 雀宮駅行きの始発。最終便は22:30発。</p></div></div></div>
   </section>
 
   <!-- 会場マップ -->
@@ -634,14 +633,14 @@ if(location.hostname.endsWith('github.io')){
     <div class="access-panel" data-panel="car">
       <ul class="apts"><li><b>東北道 鹿沼IC</b>から約15分（さつきロード経由）</li><li><b>北関東道 壬生IC</b>から約20分／<b>宇都宮上三川IC</b>から約15分</li><li><b>駐車場</b>：南第1・第2（公園南側）／西・南管理用（公園西側）／北第3（公園北側）｜<b>2時間まで無料</b></li>
       <li><b>精算</b>：現金（千円札・硬貨）／クレジットカード／交通系ほか電子マネー</li>
-      <li><b>北第1・北第2駐車場（予約制）</b>｜スタジアム目の前・栃木SC販売・事前予約で当日スムーズ｜1台 <b>¥2,000</b><br><span class="pk-sale">9/3(木) 12:00〜 CLUB.T会員先行販売</span></li><li><b>akippa 予約制</b>（約500台)｜事前予約で当日スムーズ</li></ul>
+      <li><b>北第1・北第2駐車場（予約制）</b>｜スタジアム目の前・栃木SC販売・事前予約で当日スムーズ｜1台 <b>¥2,000</b><br><span class="pk-sale"></span></li><li><b>akippa 予約制</b>（約500台)｜事前予約で当日スムーズ</li></ul>
       <p class="apnote">※2千円・5千円・1万円札は使用不可／他イベント開催時は満車の場合あり／近隣商業施設への駐車はご遠慮ください／駐車券を紛失した場合：0120-553-350</p>
       
       <div class="alinks"><a href="https://www.jleague-ticket.jp/club/ts/" target="_blank" rel="noopener">北駐車場を予約する ›</a><a href="https://www.akippa.com/tochigisc/" target="_blank" rel="noopener">akippaで予約する ›</a></div>
     </div>
     <div class="access-panel" data-panel="shuttle" hidden>
       <ul class="apts"><li><b>往路</b>：JR雀宮駅 東口のりば → スタジアム（約10分）</li><li><b>復路</b>：スタジアム バスベイ乗り場（アプローチデッキ南側）→ 雀宮駅</li><li><b>運賃</b>：往復500円／片道300円（高校生以下無料・学生証提示）</li></ul>
-      <div class="shuttle-time"><div class="stl">発車時刻 <span class="var">※乗車状況により5分程度前後します</span></div><div class="strow"><span>往路</span><b>14:00 / 14:30 / 15:00 / 15:30 / 16:00 / 16:30 / 17:00（最終）</b></div><div class="strow"><span>復路</span><b>19:00 / 19:15 / 19:30 / 19:45 / 20:00 / 20:15 / 20:30（最終）</b></div></div>
+      <div class="shuttle-time"><div class="stl">発車時刻 <span class="var">※乗車状況により5分程度前後します</span></div><div class="strow"><span>往路</span><b>16:00 / 16:30 / 17:00 / 17:30 / 18:00 / 18:30 / 19:00（最終）</b></div><div class="strow"><span>復路</span><b>21:00 / 21:15 / 21:30 / 21:45 / 22:00 / 22:15 / 22:30（最終）</b></div></div>
       <ul class="apts"><li>乗車券は雀宮駅東口のりばで購入（観戦チケットをご提示ください）</li><li>Suica・PASMO・バスカードは利用できません（お支払いは現金のみです）</li><li>乗車券は当日限り有効／観戦目的の方のみご利用いただけます</li></ul>
       
     </div>
@@ -658,7 +657,7 @@ if(location.hostname.endsWith('github.io')){
     <div class="navy-ov"></div>
     <div class="in">
       <h3>チケットを購入する</h3>
-      <p>9.26(土) 17:00 KICK OFF ／ 松本山雅FC戦</p><div class="tk-sale"><span class="tk-sale-h">チケット販売開始</span><span class="tk-sale-d">9/3（CLUB.T会員先行）・9/5（一般）｜各 12:00〜</span></div><div class="pt-h">チケット料金（1試合）</div><div class="pt-flex">この試合は <b>★★プライス</b></div><div class="ptbl-scroll"><table class="ptbl"><thead><tr><th rowspan="2">席種</th><th colspan="2">前売</th><th colspan="2" class="g">当日</th></tr><tr><th>小中高</th><th>大人</th><th class="g">小中高</th><th>大人</th></tr></thead><tbody><tr><td>メインSS指定席</td><td colspan="2">¥4,700</td><td colspan="2" class="g">¥5,200</td></tr><tr><td>メインS指定席</td><td>¥1,800</td><td>¥4,000</td><td class="g">¥2,300</td><td>¥4,500</td></tr><tr><td>メインS自由席</td><td>¥1,700</td><td>¥3,500</td><td class="g">¥2,200</td><td>¥4,000</td></tr><tr><td>バック自由席</td><td>¥1,500</td><td>¥3,000</td><td class="g">¥2,000</td><td>¥3,500</td></tr><tr><td>ホームゴール裏自由席</td><td>¥900</td><td>¥2,300</td><td class="g">¥1,400</td><td>¥2,800</td></tr><tr><td>ビジターゴール裏自由席</td><td>¥900</td><td>¥2,300</td><td class="g">¥1,400</td><td>¥2,800</td></tr><tr><td>パノラマシート</td><td>¥1,800</td><td>¥4,000</td><td class="g">¥2,300</td><td>¥4,500</td></tr><tr><td>パーティーシート</td><td colspan="2">¥16,000</td><td colspan="2" class="g">¥18,000</td></tr><tr><td>テーブル席</td><td colspan="2">¥5,500</td><td colspan="2" class="g">¥6,000</td></tr><tr><td>車椅子席</td><td>¥1,800</td><td>¥4,000</td><td class="g">¥2,300</td><td>¥4,500</td></tr></tbody></table></div><div class="pt-note">※ 料金は試合により3段階で変動（フレックスプライス）。この試合は<b>★★</b>。テーブル・メインSS指定・パーティーは全年齢共通料金。ホーム／ビジターゴール裏は学割（当日¥1,900）あり。<b>CLUB.T会員はさらにお得な会員価格</b>があります。<br><a href="https://www.tochigisc.jp/ticket/" target="_blank" rel="noopener">詳しい料金・購入方法（公式）›</a></div>
+      <p>9.9(水) 19:00 KICK OFF ／ モンテディオ山形戦</p><div class="tk-sale"><span class="tk-sale-h">チケット販売開始</span><span class="tk-sale-d">8/26（シーズンパス会員超先行）<br>8/27（CLUB.T会員先行）<br>8/28（一般）｜各 12:00〜</span></div><div class="pt-h">チケット料金（1試合）</div><div class="pt-flex">この試合は <b>★★プライス</b></div><div class="ptbl-scroll"><table class="ptbl"><thead><tr><th rowspan="2">席種</th><th colspan="2">前売</th><th colspan="2" class="g">当日</th></tr><tr><th>小中高</th><th>大人</th><th class="g">小中高</th><th>大人</th></tr></thead><tbody><tr><td>メインSS指定席</td><td colspan="2">¥4,700</td><td colspan="2" class="g">¥5,200</td></tr><tr><td>メインS指定席</td><td>¥1,800</td><td>¥4,000</td><td class="g">¥2,300</td><td>¥4,500</td></tr><tr><td>メインS自由席</td><td>¥1,700</td><td>¥3,500</td><td class="g">¥2,200</td><td>¥4,000</td></tr><tr><td>バック自由席</td><td>¥1,500</td><td>¥3,000</td><td class="g">¥2,000</td><td>¥3,500</td></tr><tr><td>ホームゴール裏自由席</td><td>¥900</td><td>¥2,300</td><td class="g">¥1,400</td><td>¥2,800</td></tr><tr><td>ビジターゴール裏自由席</td><td>¥900</td><td>¥2,300</td><td class="g">¥1,400</td><td>¥2,800</td></tr><tr><td>パノラマシート</td><td>¥1,800</td><td>¥4,000</td><td class="g">¥2,300</td><td>¥4,500</td></tr><tr><td>パーティーシート</td><td colspan="2">¥16,000</td><td colspan="2" class="g">¥18,000</td></tr><tr><td>テーブル席</td><td colspan="2">¥5,500</td><td colspan="2" class="g">¥6,000</td></tr><tr><td>車椅子席</td><td>¥1,800</td><td>¥4,000</td><td class="g">¥2,300</td><td>¥4,500</td></tr></tbody></table></div><div class="pt-note">※ 料金は試合により3段階で変動（フレックスプライス）。この試合は<b>★★</b>。テーブル・メインSS指定・パーティーは全年齢共通料金。ホーム／ビジターゴール裏は学割（当日¥1,900）あり。<b>CLUB.T会員はさらにお得な会員価格</b>があります。<br><a href="https://www.tochigisc.jp/ticket/" target="_blank" rel="noopener">詳しい料金・購入方法（公式）›</a></div>
       <a class="buy" href="https://www.jleague-ticket.jp/club/ts/" target="_blank" rel="noopener"><span>Jリーグチケットで購入</span><span class="arw">›</span></a><div class="tk-method">セブン-イレブン店頭でも購入可（チケットぴあ Pコード <b>592-970</b>）</div>
       <div class="note">※Jリーグチケットの購入にはJリーグIDが必要（前売がお得）。※当日券売場では<b>指定席の販売はありません</b>（指定席は事前購入を）。※駆け込みチケット：前半35分以降、当日券価格の<b>半額</b>で販売。</div>
     </div>
@@ -672,7 +671,7 @@ if(location.hostname.endsWith('github.io')){
   <section class="band-sec zone" id="goods">
     <div class="head"><span class="hicon"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span><span class="disp">GOODS</span><h2><span class="mk">グッズ</span></h2></div>
     <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
-        <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub6.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>証明写真風ステッカー</h4><div class="meta"><span class="shop">ガチャ(ランダム)</span><span class="price">¥400</span><span class="desc">全選手展開、証明写真風のステッカーがガチャに登場。笑顔と真顔バージョンがセットになっています。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub7.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>割れないグラス</h4><div class="meta"><span class="shop"></span><span class="price">¥880</span><span class="desc">軽量でありながら高い耐久性を誇るポリカーボネート素材を使用したショットグラスです。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub8.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>PVCシール帳</h4><div class="meta"><span class="shop"></span><span class="price">¥1,650</span><span class="desc">シールコレクションにぴったり！ 待望のPVCシール帳（ポケットシート付）が登場しました。 貼って剥がせるポケットシートが10枚付きなので、お気に入りのシールを台紙を傷めずに収納・整理できます。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub9.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ミニ色紙</h4><div class="meta"><span class="shop">選手選択での購入可</span><span class="price">¥880</span><span class="desc">選手の顔写真入りデザインで、サインをもらうのにぴったりのアイテム。</span></div></div></div></div>
+        <div class="rail"><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub6.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>割れないグラス</h4><div class="meta"><span class="shop"></span><span class="price">¥880</span><span class="desc">軽量でありながら高い耐久性を誇るポリカーボネート素材を使用したショットグラスです。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub7.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ホログラムステッカー 2枚セット</h4><div class="meta"><span class="shop">ガチャ(ランダム)</span><span class="price">¥400</span><span class="desc">全選手展開、画像バージョンとネーム＆ナンバーバージョンの2枚セットのホログラムステッカーのガチャが登場。ガチャ限定アイテムのためお早めに！</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub8.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><h4>ミニ色紙</h4><div class="meta"><span class="shop">選手選択での購入可</span><span class="price">¥880</span><span class="desc">選手の顔写真入りデザインで、サインをもらうのにぴったりのアイテム。</span></div></div></div><div class="card"><div class="ph lb-img" data-lz style="background-image:url(assets/img/gdSub9.webp);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff"></div><div class="cb"><span class="tag y">NEW</span><h4>ミニうちわキーホルダー</h4><div class="meta"><span class="shop">ブラインドパッケージ(ランダム)</span><span class="price">¥770</span><span class="desc">かわいいサイズのミニうちわキーホルダー。 どの選手が出るかは開けてからのお楽しみ！バッグなどに付けて、推し選手と一緒にお出かけしよう！</span></div></div></div></div>
     
 
     </section>
