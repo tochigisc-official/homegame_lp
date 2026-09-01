@@ -57,7 +57,8 @@
      "src": "assets/img/goods/miniuchiwa2.webp",
      "role": "detail"
     }
-   ]
+   ],
+   "hero": true
   },
   {
    "id": "hologram_sticker",
@@ -80,7 +81,8 @@
      "role": "detail",
      "note": "ネーム＆ナンバーver."
     }
-   ]
+   ],
+   "hero": true
   },
   {
    "id": "glass",
@@ -97,7 +99,8 @@
      "src": "assets/img/goods/glass.webp",
      "role": "main"
     }
-   ]
+   ],
+   "hero": true
   },
   {
    "id": "aurora_sticker",
@@ -135,7 +138,6 @@
    "id": "shikishi",
    "name": "ミニ色紙",
    "price": 880,
-   "hero": true,
    "allPlayers": true,
    "desc": "選手の顔写真入りデザインで、サインをもらうのにぴったりのアイテム。ファンサービスの記念としてはもちろん、コレクションにもおすすめ。",
    "spec": {
@@ -154,7 +156,6 @@
    "name": "2026/27コンフィットTシャツ",
    "price": 6380,
    "priceText": "¥6,380／¥7,480",
-   "hero": true,
    "desc": "2026/27シーズンのユニフォームと同じデザインをベースに採用した観戦Tシャツ。ユニフォームの雰囲気を楽しみながら、レプリカユニフォームよりもリーズナブルにお買い求めいただけます。",
    "spec": {
     "size": "110／130／150 ＝ ¥6,380　M／L／O／XO／2XO ＝ ¥7,480",
@@ -176,7 +177,6 @@
    "id": "sandal",
    "name": "サンダル",
    "price": 3520,
-   "hero": true,
    "desc": "足元から栃木SCを楽しめるサンダル。スタイリッシュなフィロソフィーロゴデザインと、トッキーをあしらったポップなデザインの2種類をラインアップ。観戦時はもちろん、普段履きにも活躍します。",
    "spec": {
     "size": "24cm／27cm／29cm"
