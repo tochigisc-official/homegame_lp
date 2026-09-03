@@ -807,14 +807,15 @@ function sheetHtml(it){
     if(rows) spec='<div class="spec">'+rows+'</div>';
   }
   var t=tagsHtml(it);
+  // 注記は本文（説明文）の直後に置く。ガチャは「※中身は選べません」だけ（ガチャであることはタグで分かる）。
+  var pnote = it.gacha
+    ? '<p class="pnote">※中身は選べません</p>'
+    : (it.allPlayers ? '<p class="pnote">全選手展開です。推しの選手は売店で選べます。</p>' : '');
   return swipeHtml(it, true)+
     '<div class="nm">'+esc(it.name)+'</div>'+
     '<div class="pr">'+priceHtml(it)+'</div>'+
     (t? '<div class="tags">'+t+'</div>' : '')+
-    '<p class="ds">'+esc(it.desc||'')+'</p>'+ spec+
-    (it.gacha
-      ? '<p class="pnote">ガチャ商品です。中身は選べません。</p>'
-      : (it.allPlayers ? '<p class="pnote">全選手展開です。推しの選手は売店で選べます。</p>' : ''));
+    '<p class="ds">'+esc(it.desc||'')+'</p>'+ pnote + spec;
 }
 
 (function(){
