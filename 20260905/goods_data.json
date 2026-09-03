@@ -58,7 +58,9 @@
      "role": "detail"
     }
    ],
-   "hero": true
+   "hero": true,
+   "allPlayers": true,
+   "gacha": true
   },
   {
    "id": "hologram_sticker",
