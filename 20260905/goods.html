@@ -434,6 +434,7 @@ footer .em{width:30px; height:30px; margin:0 auto 6px;
   .sheet .spec .r .k{flex:0 0 5em; color:var(--muted); font-weight:700;}
   .sheet .spec .r .v{color:#33404f; min-width:0;}
   .sheet .pnote{margin-top:12px; font-size:13px; font-weight:700; color:var(--navy);}
+  .sheet .ds .inote{font-weight:400; color:var(--navy);}
   /* PCでは全面に出す必要がない。中央に横幅2/3程度のカードとして出す。 */
   @media(min-width:601px){
     .sheet .panel{top:50%; bottom:auto; left:50%; right:auto;
@@ -807,15 +808,16 @@ function sheetHtml(it){
     if(rows) spec='<div class="spec">'+rows+'</div>';
   }
   var t=tagsHtml(it);
-  // 注記は本文（説明文）の直後に置く。ガチャは「※中身は選べません」だけ（ガチャであることはタグで分かる）。
-  var pnote = it.gacha
-    ? '<p class="pnote">※中身は選べません</p>'
-    : (it.allPlayers ? '<p class="pnote">全選手展開です。推しの選手は売店で選べます。</p>' : '');
+  // ガチャ注記は本文（説明文）の末尾にインラインで足す。改行せず、太字にもしない。
+  // スクロールしないと見えない位置だと「選べる」と誤解されるため、文章と同じ行に置く。
+  var descNote = it.gacha ? ' <span class="inote">※中身は選べません</span>' : '';
+  // 全選手展開（選べる品）は従来どおりの注記ブロック。
+  var pnote = (it.allPlayers && !it.gacha) ? '<p class="pnote">全選手展開です。推しの選手は売店で選べます。</p>' : '';
   return swipeHtml(it, true)+
     '<div class="nm">'+esc(it.name)+'</div>'+
     '<div class="pr">'+priceHtml(it)+'</div>'+
     (t? '<div class="tags">'+t+'</div>' : '')+
-    '<p class="ds">'+esc(it.desc||'')+'</p>'+ pnote + spec;
+    '<p class="ds">'+esc(it.desc||'')+ descNote +'</p>'+ pnote + spec;
 }
 
 (function(){
