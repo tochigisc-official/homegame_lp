@@ -538,20 +538,6 @@
    "_カテゴリ": "フード"
   },
   {
-   "id": "teiban_tb_143L12jIhrSX87sxo1LLo3TTW-5xujBMT",
-   "name": "肉巻きおにぎり3種",
-   "price": "￥500",
-   "desc": "特製ダレに2日間漬け込んだ国産豚バラ肉を丁寧におにぎりにしました。\nオリジナルプレーンの他に炙りマヨネーズと焦がしチーズの3種類を用意しております。",
-   "shop": "ザップストア",
-   "zone": "場外",
-   "area": "⑭",
-   "e": "🍴",
-   "img": "",
-   "section": "standard",
-   "_カテゴリ": "フード",
-   "prep": true
-  },
-  {
    "id": "teiban_tb_1NKhTZuaOr6iBgUZoYPeObyw08VQaGO6z",
    "name": "カーリーポテ卜",
    "price": "￥500",
@@ -560,10 +546,9 @@
    "zone": "場外",
    "area": "⑭",
    "e": "🍴",
-   "img": "",
+   "img": "assets/img/gourmet/zap_curly.webp",
    "section": "standard",
-   "_カテゴリ": "フード",
-   "prep": true
+   "_カテゴリ": "フード"
   },
   {
    "id": "teiban_tb_1mVsiqhCwvOanLcEDaYRMl-f5tcxMaI5B",
