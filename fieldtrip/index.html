@@ -272,15 +272,16 @@ p { margin: 0; }
 /* about */
 .about-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 56px; }
 .about-body p { font-size: 16.5px; }
-.pillars { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.pillar { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; }
-.pillar svg { width: 46px; height: 46px; }
-.pillar svg * { fill: none; stroke: var(--board); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.pillar svg .ring { stroke: var(--blue); stroke-width: 1.6; }
-.pillar h3 { font-size: 19px; font-weight: 900; }
-.pillar p { font-size: 15px; color: var(--ink-2); line-height: 1.85; }
+.scenes-block { margin-top: 40px; }
+.scenes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.scene { margin: 0; position: relative; background: var(--card); padding: 8px; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 2px 0 rgba(20, 36, 51, .06); }
+.scene img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.scene::before { content: ""; position: absolute; top: -9px; left: 50%; width: 76px; height: 18px; margin-left: -38px; background: rgba(255, 234, 0, .5); transform: rotate(-2deg); }
+.scene:nth-child(even)::before { transform: rotate(2deg); background: rgba(142, 195, 255, .45); }
+.scenes-note { margin-top: 10px; font-size: 11.5px; color: var(--ink-2); text-align: right; }
 .about-note { margin-top: 26px; color: var(--red); font-size: 18px; transform: rotate(-1deg); transform-origin: left; }
-@media (max-width: 880px) { .about-body, .pillars { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 880px) { .about-body { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) { .scenes-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; } }
 
 /* numbers band */
 .band { background: var(--board); color: var(--chalk); padding-block: 56px; position: relative; overflow: hidden; }
@@ -600,22 +601,14 @@ p { margin: 0; }
         <p>フィールドトリップデーは、地域の子どもたちがプロスポーツとスタジアムを通して学ぶ学校外学習の取り組みです。体験を通じて、<span class="mk">運動の楽しさ、多様な人との共生、仕事や将来、地域・防災への理解</span>を深めます。</p>
         <p>試合観戦と応援では、仲間を支える気持ちや一体感を味わい、<span class="mk">主体性・協調性などの非認知能力</span>や、地域への愛着を育むきっかけをつくります。</p>
       </div>
-      <div class="pillars">
-        <article class="pillar">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle class="ring" cx="24" cy="24" r="21"/><circle cx="24" cy="24" r="10"/><path d="M24 19.5 28.3 22.6 26.6 27.6 21.4 27.6 19.7 22.6Z"/><path d="M24 19.5V14M28.3 22.6 33.4 21M26.6 27.6 29.8 32.2M21.4 27.6 18.2 32.2M19.7 22.6 14.6 21"/></svg>
-          <h3>体験で学ぶ</h3>
-          <p>学年に応じた体験プログラムで、運動・共生・仕事・防災・健康を、からだを動かしながら学びます。</p>
-        </article>
-        <article class="pillar">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle class="ring" cx="24" cy="24" r="21"/><circle cx="17" cy="16.5" r="3.2"/><circle cx="31" cy="16.5" r="3.2"/><path d="M17 21V30M31 21V30M17 30 14 37M17 30 20 37M31 30 28 37M31 30 34 37"/><path d="M11.5 26 17 23 24 27 31 23 36.5 26"/></svg>
-          <h3>応援で育つ</h3>
-          <p>ホームゲームを観戦し、声をそろえて応援します。仲間を支える気持ちと一体感を、スタジアムで味わいます。</p>
-        </article>
-        <article class="pillar">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle class="ring" cx="24" cy="24" r="21"/><path d="M12.5 25.5 24 15 35.5 25.5M16 23V35H32V23"/><path d="M21.5 35V29H26.5V35"/></svg>
-          <h3>地域とつながる</h3>
-          <p>地域の企業や、試合を支える仕事、防災の備えにふれ、自分たちのまちへの愛着を育みます。</p>
-        </article>
+      <div class="scenes-block">
+        <div class="scenes-grid">
+          <figure class="scene"><img src="assets/img/scene-taiken.webp" width="762" height="508" loading="lazy" decoding="async" alt="体験する：体を動かし、楽しさを知る（イメージ）"></figure>
+          <figure class="scene"><img src="assets/img/scene-manabu.webp" width="762" height="508" loading="lazy" decoding="async" alt="学ぶ：プロの仕事や地域の取り組みを知る（イメージ）"></figure>
+          <figure class="scene"><img src="assets/img/scene-mite.webp" width="762" height="508" loading="lazy" decoding="async" alt="見て知る：スタジアムの裏側や防災・地域の仕組みを学ぶ（イメージ）"></figure>
+          <figure class="scene"><img src="assets/img/scene-ouen.webp" width="762" height="508" loading="lazy" decoding="async" alt="応援する：仲間を支え、一体感を味わう（イメージ）"></figure>
+        </div>
+        <p class="scenes-note">※画像はイメージです</p>
       </div>
       <p class="about-note hand">午前は体験、午後は観戦・応援。一日を通して学びます。</p>
     </div>
