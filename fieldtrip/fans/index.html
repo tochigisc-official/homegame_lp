@@ -647,16 +647,11 @@ p { margin: 0; }
 .staff-band .apply { background: var(--paper); border-color: var(--navy); }
 /* 締切後は大募集の帯ごと隠す（ナビの「スタッフ募集」も） */
 .staff-band.is-closed, .gnav a.nav-staff.is-closed { display: none; }
-.cta-band { background: var(--navy); color: #fff; border-radius: 18px; padding: clamp(26px, 5vw, 44px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; }
-.cta-band h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 900; }
-.cta-band p { margin-top: 6px; color: rgba(255,255,255,.8); font-size: 15px; }
-.cta-band .btns { display: flex; flex-wrap: wrap; gap: 12px; }
 @media (max-width: 420px) { .hide-sm { display: none; } }
 .fab { position: fixed; right: 16px; bottom: 24px; z-index: 55; display: none; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 8px; background: rgba(255,255,255,.72); border: 1px solid rgba(4,34,66,.16); color: var(--navy); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: 0 2px 8px rgba(4,34,66,.12); }
 .fab.show { display: flex; }
 .fab svg { width: 22px; height: 22px; fill: currentColor; display: block; }
 @media (max-width: 700px) { .fab { right: 14px; bottom: calc(86px + env(safe-area-inset-bottom, 0px)); } }
-.cta-band .btn.alt { background: transparent; color: #fff; border-color: rgba(255,255,255,.6); box-shadow: none; }
 </style>
 </head>
 <body>
@@ -952,21 +947,6 @@ p { margin: 0; }
             <small>外部サイト（formrun）が開きます</small>
           </div>
           <p class="closed">サポートスタッフの募集は終了しました。<br>たくさんのお申し込みありがとうございました。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" style="padding-top: 24px;">
-    <div class="wrap">
-      <div class="cta-band">
-        <div>
-          <h2>10.21（水）13:00、カンセキスタジアムで会いましょう。</h2>
-          <p>チケット・アクセス・スタジアムグルメは、試合ページにまとめています。</p>
-        </div>
-        <div class="btns">
-          <a class="btn" href="https://tochigisc-official.github.io/homegame_lp/20261021/#ticket">チケットを見る <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn alt" href="https://tochigisc-official.github.io/homegame_lp/20261021/#access">アクセス</a>
         </div>
       </div>
     </div>
