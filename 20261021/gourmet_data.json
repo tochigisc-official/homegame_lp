@@ -6,7 +6,7 @@
   "venue": "カンセキスタジアムとちぎ",
   "short": "レイラック滋賀FC"
  },
- "hasGoods": false,
+ "hasGoods": true,
  "hours": {
   "outside": "9:30〜試合終了",
   "inside": "10:30〜試合終了",
