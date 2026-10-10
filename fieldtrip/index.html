@@ -260,11 +260,11 @@ p { margin: 0; }
 .ftinfo { display: flex; flex-direction: column; align-items: inherit; gap: calc(var(--u) * 2.4); margin-top: calc(var(--u) * .8); }
 .ftinfo .r1 { display: flex; align-items: flex-end; gap: calc(var(--u) * 3); animation-name: finfo1; }
 .ftinfo .d { display: flex; align-items: flex-end; gap: calc(var(--u) * .3); }
-.ftinfo .ch { filter: url(#chalk-jp); }
-.lm-date { height: calc(var(--u) * 10); color: var(--chalk-y); }
-.lm-dow { height: calc(var(--u) * 5.6); color: var(--chalk-y); margin-bottom: calc(var(--u) * .7); }
-.lm-ko { height: calc(var(--u) * 4.8); color: var(--chalk); margin-bottom: calc(var(--u) * .5); }
-.lm-vs { height: calc(var(--u) * 5.2); color: var(--chalk); animation-name: finfo2; }
+/* 日付・時刻・対戦相手もチョーク加工しない（2026-10-10 指定）。チョークは図とアイコンだけ */
+.lm-date { height: calc(var(--u) * 10); color: #FFE421; }
+.lm-dow { height: calc(var(--u) * 5.6); color: #FFE421; margin-bottom: calc(var(--u) * .7); }
+.lm-ko { height: calc(var(--u) * 4.8); color: #fff; margin-bottom: calc(var(--u) * .5); }
+.lm-vs { height: calc(var(--u) * 5.2); color: #fff; animation-name: finfo2; }
 @keyframes finfo1 { 0%, 52% { opacity: 0; transform: translateY(calc(var(--u) * 2)); animation-timing-function: cubic-bezier(.2,.8,.2,1); } 56% { opacity: 1; transform: none; } 100% { opacity: 1; transform: none; } }
 @keyframes finfo2 { 0%, 55% { opacity: 0; transform: translateY(calc(var(--u) * 2)); animation-timing-function: cubic-bezier(.2,.8,.2,1); } 59% { opacity: 1; transform: none; } 100% { opacity: 1; transform: none; } }
 @container stage (aspect-ratio < 1) {
