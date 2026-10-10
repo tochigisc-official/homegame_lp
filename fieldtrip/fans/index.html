@@ -688,7 +688,7 @@ p { margin: 0; }
       <a href="#notice">観戦のお知らせ</a>
       <a href="#staff">スタッフ募集</a>
     </nav>
-    <a class="btn" id="headCta" href="#staff">スタッフ募集</a>
+    <a class="btn" href="https://tochigisc-official.github.io/homegame_lp/20261021/"><span class="arrow" aria-hidden="true">‹</span> 試合ページへ戻る</a>
   </div>
 </header>
 
@@ -1097,9 +1097,8 @@ function ftdMotion(stage, G) {
   /* サポートスタッフ募集は締切（10/14 23:59 日本時間）を過ぎたら自動で「終了」表示にする */
   if (Date.now() > Date.parse('2026-10-14T23:59:59+09:00')) {
     document.getElementById('staffBox').classList.add('is-closed');
-    /* 締切後は、上部と下部の固定ボタンをチケットに戻す */
-    const head = document.getElementById('headCta'), mbar = document.getElementById('mbarCta');
-    head.textContent = 'チケット'; head.href = 'https://tochigisc-official.github.io/homegame_lp/20261021/#ticket';
+    /* 締切後は、スマホ下部の固定ボタンをチケットに戻す */
+    const mbar = document.getElementById('mbarCta');
     mbar.textContent = 'チケット'; mbar.href = 'https://tochigisc-official.github.io/homegame_lp/20261021/#ticket';
     document.getElementById('mbarText').innerHTML = '<b>10.21（水）13:00 KICK OFF</b><br>vs レイラック滋賀ＦＣ';
   }
