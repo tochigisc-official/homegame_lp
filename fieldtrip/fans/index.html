@@ -624,10 +624,29 @@ p { margin: 0; }
 .staff .perk p { font-size: 14.5px; line-height: 1.8; margin-top: 4px; }
 .staff .apply { margin-top: 0; }
 .staff .closed { display: none; background: #eef1ee; border: 2px solid var(--line); border-radius: 14px; padding: 20px; text-align: center; font-weight: 900; color: var(--ink-2); }
-.staff.is-closed .apply { display: none; }
-.staff.is-closed .closed { display: block; }
 @media (max-width: 880px) { .staff { grid-template-columns: minmax(0, 1fr); } }
 
+/* 大募集：黄色の帯＋上下に黄と紺の斜めストライプ */
+.staff-band { position: relative; margin-block: 56px 24px; padding-block: 64px 60px; background: var(--bang); }
+.staff-band::before, .staff-band::after { content: ""; position: absolute; left: 0; right: 0; height: 12px; background: repeating-linear-gradient(-45deg, var(--navy) 0 14px, var(--bang) 14px 28px); }
+.staff-band::before { top: 0; } .staff-band::after { bottom: 0; }
+.staff-hero { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 32px; }
+.staff-kicker { margin: 0; }
+.countdown { display: inline-block; background: var(--navy); color: #fff; font-weight: 900; font-size: 15px; letter-spacing: .04em; border-radius: 999px; padding: 6px 18px; }
+.countdown b { font-family: var(--font-num); font-weight: 400; font-size: 1.6em; color: var(--bang); margin-inline: .12em; vertical-align: -.08em; }
+.staff-title { font-size: clamp(26px, 4.6vw, 44px); font-weight: 900; line-height: 1.25; color: var(--navy); }
+.staff-title .big { display: inline-block; font-size: 1.55em; letter-spacing: .06em; background: linear-gradient(transparent 62%, #fff 62%); padding-inline: .08em; }
+.staff-title .bang-i { font-size: 1.4em; vertical-align: -.02em; }
+.staff-title .bang-i::before, .staff-title .bang-i::after { background: var(--navy); }
+.staff-sub { font-size: clamp(16px, 2vw, 19px); font-weight: 700; color: var(--navy); }
+.nb { display: inline-block; }
+.staff-points { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.staff-points li { background: #fff; color: var(--navy); border: 2px solid var(--navy); border-radius: 999px; padding: 6px 16px; font-size: 14.5px; font-weight: 900; }
+.staff-band .staff { box-shadow: 6px 6px 0 var(--navy); }
+.staff-band .staff h3 { font-size: 19px; }
+.staff-band .apply { background: var(--paper); border-color: var(--navy); }
+/* 締切後は大募集の帯ごと隠す（ナビの「スタッフ募集」も） */
+.staff-band.is-closed, .gnav a.nav-staff.is-closed { display: none; }
 .cta-band { background: var(--navy); color: #fff; border-radius: 18px; padding: clamp(26px, 5vw, 44px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; }
 .cta-band h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 900; }
 .cta-band p { margin-top: 6px; color: rgba(255,255,255,.8); font-size: 15px; }
@@ -691,7 +710,7 @@ p { margin: 0; }
       <a href="#learn">子どもたちの学び</a>
       <a href="#join">いっしょに楽しむ</a>
       <a href="#notice">観戦のお知らせ</a>
-      <a href="#staff">スタッフ募集</a>
+      <a href="#staff" class="nav-staff" id="navStaff">スタッフ募集</a>
     </nav>
     <a class="btn" href="https://tochigisc-official.github.io/homegame_lp/20261021/" aria-label="試合ページへ戻る"><span class="arrow" aria-hidden="true">‹</span> 試合ページ<span class="hide-sm">へ戻る</span></a>
   </div>
@@ -902,15 +921,22 @@ p { margin: 0; }
     </div>
   </section>
 
-  <section class="sec" id="staff" style="padding-top: 24px;">
+  <section class="staff-band" id="staff">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="tag">運営サポートスタッフ募集</p>
-        <h2>子どもたちの一日を、いっしょに支えませんか。</h2>
+      <div class="staff-hero">
+        <p class="staff-kicker" id="staffKicker"><span class="countdown" id="countdown">締切 10/14（水）23:59</span></p>
+        <h2 class="staff-title">運営サポートスタッフ<br><span class="big">大募集</span><span class="bang-i" aria-hidden="true"></span></h2>
+        <p class="staff-sub"><span class="nb">子どもたちの一日を、</span><span class="nb">いっしょに支えませんか。</span></p>
+        <ul class="staff-points">
+          <li>18歳以上</li>
+          <li>資格・経験は不要</li>
+          <li>お弁当つき</li>
+          <li>活動後は試合を無料で観戦</li>
+        </ul>
       </div>
       <div class="staff" id="staffBox">
         <div>
-          <h3>運営サポートスタッフ</h3>
+          <h3>お願いしたいこと</h3>
           <p class="intro-p">児童や学校の受付・誘導、体験プログラムの運営補助、会場内外の移動のサポートをお願いします。特別な資格やスポーツ指導の経験は必要ありません。</p>
           <dl>
             <dt>活動時間</dt><dd>9:30〜12:30（予定）<br><small>担当により集合・解散時間が異なる場合があります。</small></dd>
@@ -947,7 +973,7 @@ p { margin: 0; }
   </section>
 
   <section class="sec" style="padding-top: 24px; padding-bottom: 0;">
-    <div class="wrap closing">
+    <div class="wrap">
       <div class="box">
         <h2>開催協賛</h2>
         <dl class="spons">
@@ -955,11 +981,6 @@ p { margin: 0; }
           <dt>モビリティサポーター協賛</dt><dd>藤井産業</dd>
           <dt>協賛</dt><dd>岩村建設、レーベル</dd>
         </dl>
-      </div>
-      <div class="box">
-        <h2>主催</h2>
-        <p class="org" style="font-weight: 900;">株式会社栃木サッカークラブ</p>
-        <p style="font-size: 14.5px; color: var(--ink-2); margin-top: 6px;">最新のお知らせは<a href="https://www.tochigisc.jp/news/1961" target="_blank" rel="noopener">公式サイトのニュース</a>もご覧ください。</p>
       </div>
     </div>
   </section>
@@ -1106,9 +1127,16 @@ function ftdMotion(stage, G) {
   }));
   document.getElementById('lbClose').addEventListener('click', () => lb.close());
   lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+  /* 大募集の残り日数：日本時間の日付で数え、当日は「本日締切」 */
+  const jstDay = (ms) => Math.floor((ms + 9 * 3600e3) / 86400e3);
+  const left = jstDay(Date.parse('2026-10-14T12:00:00+09:00')) - jstDay(Date.now());
+  const cd = document.getElementById('countdown');
+  if (left > 0) cd.innerHTML = `締切まであと<b>${left}</b>日 ｜ 10/14（水）23:59`;
+  else if (left === 0) cd.innerHTML = '<b>本日</b>締切 ｜ 23:59まで';
   /* サポートスタッフ募集は締切（10/14 23:59 日本時間）を過ぎたら自動で「終了」表示にする */
   if (Date.now() > Date.parse('2026-10-14T23:59:59+09:00')) {
-    document.getElementById('staffBox').classList.add('is-closed');
+    document.getElementById('staff').classList.add('is-closed');
+    document.getElementById('navStaff').classList.add('is-closed');
     /* 締切後は、スマホ下部の固定ボタンをチケットに戻す */
     const mbar = document.getElementById('mbarCta');
     mbar.textContent = 'チケット'; mbar.href = 'https://tochigisc-official.github.io/homegame_lp/20261021/#ticket';
