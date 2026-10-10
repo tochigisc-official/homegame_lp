@@ -139,7 +139,7 @@ p { margin: 0; }
 .stadium .A { stroke-width: 1.4; animation-name: drawA; }
 .stadium .B { animation-name: drawB; }
 .stadium .C { stroke-width: .95; animation-name: drawC; }
-.stadium .ball { fill: var(--chalk-y); stroke: none; transform-origin: 100px 70px; animation-name: ball; }
+.stadium .ball { fill: var(--chalk-y); stroke: none; opacity: 1; transform-origin: 100px 70px; animation-name: ball; }
 @keyframes drawA { 0%, 1.5% { stroke-dashoffset: 1.01; opacity: 0; animation-timing-function: cubic-bezier(.45,.05,.4,1); } 1.51% { opacity: 1; } 12% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 1; } }
 @keyframes drawB { 0%, 7% { stroke-dashoffset: 1.01; opacity: 0; animation-timing-function: cubic-bezier(.45,.05,.4,1); } 7.01% { opacity: 1; } 16.5% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 1; } }
 @keyframes drawC { 0%, 12% { stroke-dashoffset: 1.01; opacity: 0; animation-timing-function: cubic-bezier(.45,.05,.4,1); } 12.01% { opacity: 1; } 20.5% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 1; } }
