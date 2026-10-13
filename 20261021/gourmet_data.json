@@ -25,21 +25,6 @@
  ],
  "items": [
   {
-   "id": "form_shop_1_0",
-   "name": "トッキーの勝ちボール",
-   "price": "¥500",
-   "desc": "ダネイデ特製チーズボール！もっちり生地にこだわった4種のチーズを包みました！",
-   "shop": "ブラジル料理ダネイデ",
-   "zone": "場外",
-   "area": "⑩",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_1_0.webp",
-   "section": "limited",
-   "_カテゴリ": "フード",
-   "_税率": "8",
-   "_商品番号": "1"
-  },
-  {
    "id": "form_shop_2_1",
    "name": "ブリガデイロ",
    "price": "¥400",
@@ -154,21 +139,6 @@
    "area": "⑮",
    "e": "🍴",
    "img": "assets/img/gourmet/shop_1_10.webp",
-   "section": "limited",
-   "_カテゴリ": "フード",
-   "_税率": "8",
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_shop_1_11",
-   "name": "スモークレッグ",
-   "price": "¥900",
-   "desc": "みんな大好きスモークレッグ！肉汁じゅわ〜っ！香ばしさとジューシーさがたまらない一品です♪",
-   "shop": "Mogu Rico",
-   "zone": "場外",
-   "area": "⑦",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_1_11.webp",
    "section": "limited",
    "_カテゴリ": "フード",
    "_税率": "8",
@@ -374,6 +344,19 @@
    "_カテゴリ": "フード"
   },
   {
+   "id": "teiban_tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD",
+   "name": "スモークレッグ",
+   "price": "¥850",
+   "desc": "リンゴチップでじっくり燻製！紅茶鴨肉使用\nスモークレッグ！！香ばしさとジューシーさがたまらない一品",
+   "shop": "Mogu Rico",
+   "zone": "場外",
+   "area": "⑦",
+   "e": "🍴",
+   "img": "assets/img/gourmet/tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD.webp",
+   "section": "standard",
+   "_カテゴリ": "フード"
+  },
+  {
    "id": "teiban_tb_1NAYrNuGzjhpdvqpirLAApQNMypUDX2Ek",
    "name": "チョコ＆バナナクレープ",
    "price": "¥600",
@@ -422,6 +405,19 @@
    "area": "⑩",
    "e": "🍴",
    "img": "assets/img/gourmet/tb_1seb828TdqMbQ5ysIfIQCnAd984Al6oUr.webp",
+   "section": "standard",
+   "_カテゴリ": "フード"
+  },
+  {
+   "id": "teiban_tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs",
+   "name": "トッキーの勝ちボール",
+   "price": "¥500",
+   "desc": "月に6000個売れる大人気の自家製チーズボール！チーズがのびーーーるようにこだわって作ってます！",
+   "shop": "ブラジル料理ダネイデ",
+   "zone": "場外",
+   "area": "⑩",
+   "e": "🍴",
+   "img": "assets/img/gourmet/tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs.webp",
    "section": "standard",
    "_カテゴリ": "フード"
   },
