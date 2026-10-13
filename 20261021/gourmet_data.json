@@ -374,19 +374,6 @@
    "_カテゴリ": "フード"
   },
   {
-   "id": "teiban_tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD",
-   "name": "スモークレッグ",
-   "price": "¥850",
-   "desc": "リンゴチップでじっくり燻製！紅茶鴨肉使用\nスモークレッグ！！香ばしさとジューシーさがたまらない一品",
-   "shop": "Mogu Rico",
-   "zone": "場外",
-   "area": "⑦",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
    "id": "teiban_tb_1NAYrNuGzjhpdvqpirLAApQNMypUDX2Ek",
    "name": "チョコ＆バナナクレープ",
    "price": "¥600",
@@ -435,19 +422,6 @@
    "area": "⑩",
    "e": "🍴",
    "img": "assets/img/gourmet/tb_1seb828TdqMbQ5ysIfIQCnAd984Al6oUr.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs",
-   "name": "トッキーの勝ちボール",
-   "price": "¥500",
-   "desc": "月に6000個売れる大人気の自家製チーズボール！チーズがのびーーーるようにこだわって作ってます！",
-   "shop": "ブラジル料理ダネイデ",
-   "zone": "場外",
-   "area": "⑩",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs.webp",
    "section": "standard",
    "_カテゴリ": "フード"
   },
