@@ -598,8 +598,8 @@
    "zone": "場外",
    "shop": "SMILE KITCHEN",
    "menu": [
-    "CellImage",
-    "CellImage"
+    "汁なし担々麺",
+    "唐揚げ香味だれ"
    ],
    "drinks": [
     "soft",
@@ -651,8 +651,8 @@
    "zone": "場外",
    "shop": "大谷石窯ピッツァ",
    "menu": [
-    "CellImage",
-    "CellImage"
+    "マルゲリータ",
+    "ハニーゴルゴンゾーラ"
    ],
    "drinks": [
     "ice",
@@ -721,8 +721,8 @@
    "zone": "場外",
    "shop": "BANANA APE",
    "menu": [
-    "CellImage",
-    "CellImage"
+    "チョコ＆バナナクレープ",
+    "いちご＆チョコクレープ"
    ],
    "drinks": [],
    "x": 0.7771,
@@ -807,8 +807,8 @@
    "zone": "場内",
    "shop": "木鶏珈琲",
    "menu": [
-    "CellImage",
-    "CellImage"
+    "自家焙煎スペシャルティコーヒー",
+    "薄皮たい焼き"
    ],
    "drinks": [
     "soft",
