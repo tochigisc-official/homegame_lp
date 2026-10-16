@@ -2,6 +2,19 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<!-- Google アナリティクス（GA4: G-LEQRZNTS0L＝試合LPと同じ）。公開ページ（github.io）でのみ計測し、プレビュー・ローカル確認はカウントしない -->
+<script>
+if(location.hostname.endsWith('github.io')){
+  var _ga=document.createElement('script');_ga.async=true;_ga.src='https://www.googletagmanager.com/gtag/js?id=G-LEQRZNTS0L';
+  document.head.appendChild(_ga);
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-LEQRZNTS0L');
+  /* 主なボタンのクリックを「cta_click」として記録（どのボタンかは data-ga の名前） */
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ga]');if(a)gtag('event','cta_click',{cta_name:a.getAttribute('data-ga'),link_url:a.href||''});},true);
+}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>フィールドトリップデー｜10/21 栃木SC vs レイラック滋賀FC</title>
 <meta name="description" content="スタジアムを、生きた教科書に。10月21日（水）、カンセキスタジアムとちぎに約1,500人（予定）の小学生がやってきます。午前は学年ごとの体験プログラム、午後はみんなで栃木SCを応援。一般の方も楽しめるイベントや、観戦の前に知っておきたいお知らせをまとめました。">
@@ -707,7 +720,7 @@ p { margin: 0; }
       <a href="#notice">観戦のお知らせ</a>
       <a href="#staff" class="nav-staff" id="navStaff">スタッフ募集</a>
     </nav>
-    <a class="btn" href="https://tochigisc-official.github.io/homegame_lp/20261021/" aria-label="試合ページへ戻る"><span class="arrow" aria-hidden="true">‹</span> 試合ページ<span class="hide-sm">へ戻る</span></a>
+    <a class="btn" href="https://tochigisc-official.github.io/homegame_lp/20261021/" aria-label="試合ページへ戻る" data-ga="back_to_match_header"><span class="arrow" aria-hidden="true">‹</span> 試合ページ<span class="hide-sm">へ戻る</span></a>
   </div>
 </header>
 
@@ -770,8 +783,8 @@ p { margin: 0; }
         <p class="vs">栃木SC<i>VS</i>レイラック滋賀FC</p>
         <p class="venue">カンセキスタジアムとちぎ</p>
         <div class="links">
-          <a class="btn" href="https://tochigisc-official.github.io/homegame_lp/20261021/#ticket">チケットを見る <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn alt" href="https://tochigisc-official.github.io/homegame_lp/20261021/">試合の情報（アクセス・グルメ・イベント）</a>
+          <a class="btn" href="https://tochigisc-official.github.io/homegame_lp/20261021/#ticket" data-ga="ticket_matchcard">チケットを見る <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn alt" href="https://tochigisc-official.github.io/homegame_lp/20261021/" data-ga="match_info_matchcard">試合の情報（アクセス・グルメ・イベント）</a>
         </div>
       </aside>
     </div>
@@ -888,7 +901,7 @@ p { margin: 0; }
       </div>
       <div class="more-events">
         <p>ほかにも、宇都宮大学の採れたてマルシェ、選手のサインボール投げ入れなど、当日のイベントがあります。</p>
-        <a class="btn ghost" href="https://tochigisc-official.github.io/homegame_lp/20261021/#event">当日のイベントを見る <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="https://tochigisc-official.github.io/homegame_lp/20261021/#event" data-ga="events_link">当日のイベントを見る <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -943,7 +956,7 @@ p { margin: 0; }
           <div class="perk"><p class="hand">うれしい特典</p><p>昼食のお弁当をご用意します。活動のあとは、当日の試合を無料で観戦いただけます。</p></div>
           <div class="apply">
             <p class="deadline">お申し込み締切<b>10.14</b>（水）23:59</p>
-            <a class="btn" href="https://form.run/@fieldtripday1021-support" target="_blank" rel="noopener">サポートスタッフに申し込む <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn" href="https://form.run/@fieldtripday1021-support" target="_blank" rel="noopener" data-ga="staff_apply">サポートスタッフに申し込む <span class="arrow" aria-hidden="true">→</span></a>
             <small>外部サイト（formrun）が開きます</small>
           </div>
           <p class="closed">サポートスタッフの募集は終了しました。<br>たくさんのお申し込みありがとうございました。</p>
@@ -985,7 +998,7 @@ p { margin: 0; }
 
 <div class="mbar">
   <p id="mbarText"><b>運営サポートスタッフ募集中</b><br>締切 10/14（水）23:59</p>
-  <a class="btn" id="mbarCta" href="#staff">詳しく見る</a>
+  <a class="btn" id="mbarCta" href="#staff" data-ga="mobilebar">詳しく見る</a>
 </div>
 
 <a href="#top" class="fab" id="fab" aria-label="ページ上部へ戻る"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.6" width="14" height="2.2" rx="1.1"/><path d="M12 8.2 5.6 15h4v5.4h4.8V15h4z"/></svg></a>
