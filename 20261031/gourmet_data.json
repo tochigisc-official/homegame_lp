@@ -1,1024 +1,1024 @@
 {
- "match": {
-  "date": "2026-10-31",
-  "kickoff": "14:00",
-  "opponent": "愛媛FC",
-  "venue": "カンセキスタジアムとちぎ",
-  "short": "愛媛FC"
- },
- "hasGoods": true,
- "hours": {
-  "outside": "10:30〜試合終了",
-  "inside": "11:30〜試合終了",
-  "cashless": true
- },
- "note": "販売エリアは完全キャッシュレス（現金不可）。",
- "sections": [
-  {
-   "key": "t1",
-   "name": "チーズ・ワインまつり"
+  "match": {
+    "date": "2026-10-31",
+    "kickoff": "14:00",
+    "opponent": "愛媛FC",
+    "venue": "カンセキスタジアムとちぎ",
+    "short": "愛媛FC"
   },
-  {
-   "key": "limited",
-   "name": "限定メニュー"
+  "hasGoods": true,
+  "hours": {
+    "outside": "10:30〜試合終了",
+    "inside": "11:30〜試合終了",
+    "cashless": true
   },
-  {
-   "key": "standard",
-   "name": "定番メニュー"
+  "note": "販売エリアは完全キャッシュレス（現金不可）。",
+  "sections": [
+    {
+      "key": "t1",
+      "name": "チーズ・ワインまつり"
+    },
+    {
+      "key": "limited",
+      "name": "限定メニュー"
+    },
+    {
+      "key": "standard",
+      "name": "定番メニュー"
+    }
+  ],
+  "items": [
+    {
+      "id": "form_fgt_1_0",
+      "name": "ダブルチーズナチョス",
+      "price": "¥980",
+      "desc": "トルティーヤチップスとサルサソースの上に\nチェダーチーズ&パルメザンチーズをたっぷりかけた、食べ出したら止まらなくなるダブルチーズナチョス‼︎",
+      "shop": "Feel Good Tacos",
+      "zone": "場外",
+      "area": "③",
+      "e": "🍴",
+      "img": "assets/img/gourmet/fgt_1_0.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "1"
+    },
+    {
+      "id": "form_shop_1_1",
+      "name": "炙りチーズトルティーヤドッグ",
+      "price": "¥700",
+      "desc": "炙りたて、とろ〜りチーズがたまらない！\nとろ〜りチーズとパリッと香ばしいトルティーヤ、ジューシーなソーセージが相性抜群‼︎",
+      "shop": "O.N.Y(オンニ)",
+      "zone": "場外",
+      "area": "⑫",
+      "e": "🍴",
+      "img": "assets/img/gourmet/shop_1_1.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "1"
+    },
+    {
+      "id": "form_mens__2",
+      "name": "スパークリングワイン",
+      "price": "¥700",
+      "desc": "シュワっと爽やか♪\nすっきり飲みやすいスパークリングワイン",
+      "shop": "M's kitchen NEWS",
+      "zone": "場内",
+      "area": "⑲",
+      "e": "🍺",
+      "img": "assets/img/gourmet/mens__2.webp",
+      "section": "t1",
+      "_カテゴリ": "アルコール",
+      "_税率": 10,
+      "_商品番号": ""
+    },
+    {
+      "id": "form_kazu_1_3",
+      "name": "チーズオニオンから揚げ",
+      "price": "¥810",
+      "desc": "人気のかずちゃんちのから揚げにチーズオニオンのフレーバーをプラスした限定商品です！",
+      "shop": "かずちゃんち",
+      "zone": "場外",
+      "area": "④",
+      "e": "🍴",
+      "img": "assets/img/gourmet/kazu_1_3.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "1"
+    },
+    {
+      "id": "form_shop__4",
+      "name": "炙り黒糖ミルクティーM",
+      "price": "¥850",
+      "desc": "濃厚で甘じょっぱいチーズフォームに黒糖をのせ、香ばしく炙った\n炙り黒糖ミルクティー。\n\nコクがあるのに重すぎない、クセになる一杯です。",
+      "shop": "会茶 aiaicha",
+      "zone": "場外",
+      "area": "⑨",
+      "e": "🥤",
+      "img": "assets/img/gourmet/shop__4.webp",
+      "section": "standard",
+      "_カテゴリ": "ソフトドリンク",
+      "_税率": 8,
+      "_商品番号": ""
+    },
+    {
+      "id": "form_shop_1_5",
+      "name": "フィリーチーズサンド",
+      "price": "¥800",
+      "desc": "昨年も人気だった、とろ〜り濃厚チーズとたっぷり牛肉の旨みが楽しめる、ボリューム満点の贅沢ホットドッグ！観戦のお供にもぴったり！",
+      "shop": "ドードコーヒー",
+      "zone": "場内",
+      "area": "⑮",
+      "e": "🍴",
+      "img": "assets/img/gourmet/shop_1_5.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "1"
+    },
+    {
+      "id": "form_shop_1_6",
+      "name": "おつまみチーズ＆ワインセット",
+      "price": "¥1,000",
+      "desc": "熱いピッチに、冷えたワインとおいしいチーズはいかがですか？！ご来店お待ちしています",
+      "shop": "日光・乙女チーズ",
+      "zone": "場外",
+      "area": "⑦",
+      "e": "🍴",
+      "img": "assets/img/gourmet/shop_1_6.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "1"
+    },
+    {
+      "id": "form_bonta_1_7",
+      "name": "がぶ飲み　勝ちわりワイン",
+      "price": "¥600",
+      "desc": "まだまだ暑い！カップにたっぷりの氷とたっぷりのワインを注いでがぶがぶ飲んじゃいましょう！赤ワイン、白ワイン選べますので気分に合わせてどうぞ！",
+      "shop": "とちぎのぼんた",
+      "zone": "場内",
+      "area": "⑯",
+      "e": "🍺",
+      "img": "assets/img/gourmet/bonta_1_7.webp",
+      "section": "t1",
+      "_カテゴリ": "アルコール",
+      "_税率": 10,
+      "_商品番号": "1"
+    },
+    {
+      "id": "form_shop__8",
+      "name": "辛味噌唐揚げ",
+      "price": "¥750",
+      "desc": "辛い唐揚げが好きな方は絶対に好きです！\n味噌とコチュジャンのハーモニーをお楽しみください！",
+      "shop": "FROZEN FRUIT けずりん",
+      "zone": "場外",
+      "area": "⑧",
+      "e": "🍴",
+      "img": "assets/img/gourmet/shop__8.webp",
+      "section": "limited",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": ""
+    },
+    {
+      "id": "form_shop_1_10",
+      "name": "かぼちゃのミートソースグラタン",
+      "price": "¥750",
+      "desc": "10/31はハロウィンということで、国産かぼちゃに自家製本格ミートソース、とろ〜りチーズをかけバーナーで炙りました！",
+      "shop": "Sports Cafe 92",
+      "zone": "場外",
+      "area": "①",
+      "e": "🍴",
+      "img": "assets/img/gourmet/shop_1_10.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "1"
+    },
+    {
+      "id": "form_shop_2_11",
+      "name": "なすとチーズのトマトソースパスタ",
+      "price": "¥750",
+      "desc": "旬の秋なす、ベーコンを自家製トマトソースで！仕上げにとろ〜りチーズとバジリコソースを！",
+      "shop": "Sports Cafe 92",
+      "zone": "場外",
+      "area": "①",
+      "e": "🍴",
+      "img": "assets/img/gourmet/shop_2_11.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "2"
+    },
+    {
+      "id": "form_shop_1_12",
+      "name": "炙りチーズ玉子串",
+      "price": "¥600",
+      "desc": "玉子焼きにチーズをのせ炙りました！",
+      "shop": "玉子屋てっちゃん。",
+      "zone": "場外",
+      "area": "⑥",
+      "e": "🍴",
+      "img": "assets/img/gourmet/shop_1_12.webp",
+      "section": "t1",
+      "_カテゴリ": "フード",
+      "_税率": 8,
+      "_商品番号": "1"
+    },
+    {
+      "id": "teiban_tb_16Q0tbLl5RD3HRtK9YamiGj85-unAvuDJ",
+      "name": "トッキーミートソースパスタ",
+      "price": "¥750",
+      "desc": "じっくり炒めた合挽き肉を、たっぷりの赤ワインと自家製トマトソースで煮込んだ本格ボロネーゼです！トッキーチーズ付き！",
+      "shop": "Sports Cafe 92",
+      "zone": "場外",
+      "area": "①",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_16Q0tbLl5RD3HRtK9YamiGj85-unAvuDJ.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1dZgkrwo_g2_ux9W4exLN58-mxQNpTM3M",
+      "name": "勝つミートソースパスタ",
+      "price": "¥1,111",
+      "desc": "勝つしかない！自家製本格ボロネーゼに、豚肉を薄く叩いてチーズ入りパン粉を付けソテーしたミラノ風カツレツを！10食限定！",
+      "shop": "Sports Cafe 92",
+      "zone": "場外",
+      "area": "①",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1dZgkrwo_g2_ux9W4exLN58-mxQNpTM3M.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1OXg83GpcOor-k_Pe62ld5cUpaRWPWHmF",
+      "name": "栃木・ご当地　佐野ラーメン",
+      "price": "¥890",
+      "desc": "栃木県のご当地ラーメン【佐野ラーメン】はあっさり醤油のスープに手打ち風麺の相性が抜群のお子様から大人まで食べやすいラーメンです。",
+      "shop": "菊ちゃんラーメン",
+      "zone": "場外",
+      "area": "②",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1OXg83GpcOor-k_Pe62ld5cUpaRWPWHmF.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1QeNyBlMBEiYDkB3eas2faAu7nX-_O3bn",
+      "name": "炙りチャーシュー丼",
+      "price": "¥990",
+      "desc": "当店自慢のホロホロのチャーシューを使用した炙りチャーシュー丼です。",
+      "shop": "菊ちゃんラーメン",
+      "zone": "場外",
+      "area": "②",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1QeNyBlMBEiYDkB3eas2faAu7nX-_O3bn.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1nnHiNwu64flhUp8v7XWvrTY85uMmGQzL",
+      "name": "チキンオーバーライス",
+      "price": "¥1,000",
+      "desc": "ニューヨークの定番ベンダーフード(屋台料理)ホットソースとホワイトソースが作り出すスパイシーだけどマイルドな味で、チキンたっぷりご飯が病みつきになること間違いなし！",
+      "shop": "Feel Good Tacos",
+      "zone": "場外",
+      "area": "③",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1nnHiNwu64flhUp8v7XWvrTY85uMmGQzL.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1k5qIOmAl_J9UE11OngT7Vm4sECVdDjd7",
+      "name": "チーズナチョス",
+      "price": "¥950",
+      "desc": "サクサクナチョスチップスの上に、旨辛サルサソースと濃厚チェダーチーズをたっぷりかけた、食べごたえのあるチーズナチョス。おつまみにもオススメです！",
+      "shop": "Feel Good Tacos",
+      "zone": "場外",
+      "area": "③",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1k5qIOmAl_J9UE11OngT7Vm4sECVdDjd7.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_104_bfSOTM_2eDVBm0bUpWTdcxLvg7QFH",
+      "name": "国産鶏のから揚げ",
+      "price": "¥648",
+      "desc": "お母さんの味を大切に、国産鶏と保存料不使用のオリジナル漬けダレで仕上げた自慢のから揚げ。北海道産片栗粉で外はカリッと、中はジューシー！お子様から大人まで楽しめる、かずちゃんちの定番です。",
+      "shop": "かずちゃんち",
+      "zone": "場外",
+      "area": "④",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_104_bfSOTM_2eDVBm0bUpWTdcxLvg7QFH.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1EsR0PKIstc4KMlzrUdm6_Wvv9qqMACLW",
+      "name": "トッキーチキン勝",
+      "price": "¥972",
+      "desc": "国産鶏を薄くのばし、ごま油と塩でシンプルに味付けしたチキンかつ。サクッと軽い食感と、ごま油の香ばしい風味がクセになる、ソースいらずでそのまま美味しい一品です！",
+      "shop": "かずちゃんち",
+      "zone": "場外",
+      "area": "④",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1EsR0PKIstc4KMlzrUdm6_Wvv9qqMACLW.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_13Eu1ciOoVqjK3BolGsqZzXAjSuBw-Cf9",
+      "name": "味噌豚あいもり丼",
+      "price": "¥1,200",
+      "desc": "野木町産コシヒカリ・栃木の星に、焼きたての味噌豚バラ＆カルビを豪快に！2つの味わいを楽しめるpighip自慢のあいもり丼です。",
+      "shop": "pighip",
+      "zone": "場外",
+      "area": "⑤",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_13Eu1ciOoVqjK3BolGsqZzXAjSuBw-Cf9.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_152MK9UPnnPe-KAm4HmR78hYvDjIORqlb",
+      "name": "味噌豚カルビ串",
+      "price": "¥700",
+      "desc": "豚カルビを串に刺し、特製味噌ダレを絡めて焼き上げた商品。食べ歩きにも適した豚串です。",
+      "shop": "pighip",
+      "zone": "場外",
+      "area": "⑤",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_152MK9UPnnPe-KAm4HmR78hYvDjIORqlb.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_18H_x0DS6Kt0fZxzzB5XyxGBDb0IxdDND",
+      "name": "玉子焼き（ダシ醤油）",
+      "price": "¥700",
+      "desc": "グリスタグルメグランプリ2連覇の玉子焼き。大正生まれの祖母の味の昔ながらの玉子焼きです。",
+      "shop": "玉子屋てっちゃん。",
+      "zone": "場外",
+      "area": "⑥",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_18H_x0DS6Kt0fZxzzB5XyxGBDb0IxdDND.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1JQ0iWL8Q61yHUFS_D3f3Qf6ZCSWesBN2",
+      "name": "オムライス（完熟トマトのミートソース）",
+      "price": "¥1,000",
+      "desc": "新鮮卵と栃木県産こしひかりのオムライスです。",
+      "shop": "玉子屋てっちゃん。",
+      "zone": "場外",
+      "area": "⑥",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1JQ0iWL8Q61yHUFS_D3f3Qf6ZCSWesBN2.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1fFsX-2HU5vHubHSDyywcusDOFe9sR8-1",
+      "name": "乙女ジェラート",
+      "price": "¥500",
+      "desc": "オリジナルジェラートや季節限定ジェラートなど通常７種類。おすすめはクリームチーズをたっぷり使った「濃厚チーズ」。香ばしいコーンとの相性抜群です。そのほか、栃木県産とちおとめ苺が入った「いちごミルク」は当店の一番人気。",
+      "shop": "日光・乙女チーズ",
+      "zone": "場外",
+      "area": "⑦",
+      "e": "🍧",
+      "img": "assets/img/gourmet/tb_1fFsX-2HU5vHubHSDyywcusDOFe9sR8-1.webp",
+      "section": "standard",
+      "_カテゴリ": "アイス・氷"
+    },
+    {
+      "id": "teiban_tb_1wJaK5Lqp_E2EVRRbR2uF0eHKjWJGEG-o",
+      "name": "チーズ小町",
+      "price": "¥450",
+      "desc": "栃木県産のチーズと相性抜群の食材を、米粉の皮で包んだ長さ22cmのロング春巻き。おすすめは、モッツアレラ・ゴーダ・チェダー・ゴルゴンゾーラが入った４種のチーズ「小町（こまち）」。揚げたてとろ～り熱々のチーズをご用意します！",
+      "shop": "日光・乙女チーズ",
+      "zone": "場外",
+      "area": "⑦",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1wJaK5Lqp_E2EVRRbR2uF0eHKjWJGEG-o.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1Oe1WGyIcN_5xTg6JTTfNXARbL-wdppmJ",
+      "name": "唐揚げ",
+      "price": "¥650",
+      "desc": "和膳処くぼ多監修の秘伝のタレに漬け込んだ絶品唐揚げです。数々のイベントでお客様に喜んでいただきました！一度食べたらやみつきの当店の唐揚げ、ぜひご紹介ください！",
+      "shop": "FROZEN FRUIT けずりん",
+      "zone": "場外",
+      "area": "⑧",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1Oe1WGyIcN_5xTg6JTTfNXARbL-wdppmJ.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1JLVrwHeewjJNMmtBugzWXGnV6f2QqRO1",
+      "name": "けずりん",
+      "price": "¥700",
+      "desc": "当店の定番メインメニューのもう一つはけずりん！\n100%フルーツのみを使用し、熱くなった身体を一瞬で冷やしてくれるひんやりスイーツで、ビタミンも豊富な身体にも良い商品です！\nぜひご賞味ください！",
+      "shop": "FROZEN FRUIT けずりん",
+      "zone": "場外",
+      "area": "⑧",
+      "e": "🍧",
+      "img": "assets/img/gourmet/tb_1JLVrwHeewjJNMmtBugzWXGnV6f2QqRO1.webp",
+      "section": "standard",
+      "_カテゴリ": "アイス・氷"
+    },
+    {
+      "id": "teiban_tb_1SgX1CTOXjIxnshAHugo4uSuN5-VvpeUO",
+      "name": "台湾ポップコーンチキン",
+      "price": "¥650",
+      "desc": "自家製スパイスが香る、サクサク＆ジューシーなひと口チキン。\nみんなでシェアするのはもちろん、おつまみにもぴったり！",
+      "shop": "会茶 aiaicha",
+      "zone": "場外",
+      "area": "⑨",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1SgX1CTOXjIxnshAHugo4uSuN5-VvpeUO.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1TV2atcivwZyiqBP2uJU_yqcL2tCUymnX",
+      "name": "ケバブサンド",
+      "price": "¥700",
+      "desc": "オリジナルスパイスで味付けしたジューシーなチキンケバブと新鮮な野菜を、香ばしいパンでサンド。本格的な味わいと食べ応えを楽しめる人気のケバブサンドです。",
+      "shop": "ケバブキッチン",
+      "zone": "場外",
+      "area": "⑩",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1TV2atcivwZyiqBP2uJU_yqcL2tCUymnX.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1rdfpkvtbZqNR5mXWRj36yBdWPZVkqbSf",
+      "name": "ブラジル丼",
+      "price": "¥1,100",
+      "desc": "第1回グリスタグルメグランプリ受賞！にんにく風味のごはんに牛ステーキ、ブラジリアンソーセージ、チキンピカタの3種盛り！",
+      "shop": "ブラジル料理ダネイデ",
+      "zone": "場外",
+      "area": "⑪",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1rdfpkvtbZqNR5mXWRj36yBdWPZVkqbSf.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs",
+      "name": "トッキーの勝ちボール",
+      "price": "¥500",
+      "desc": "月に6000個売れる大人気の自家製チーズボール！チーズがのびーーーるようにこだわって作ってます！",
+      "shop": "ブラジル料理ダネイデ",
+      "zone": "場外",
+      "area": "⑪",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_18vP763Idte5sJ8ZkFzjREibNS1syxBtc",
+      "name": "台湾からあげダージーパイ",
+      "price": "¥800",
+      "desc": "顔より大きい！？台湾からあげダージーパイは、熱々揚げたてをご提供してます！\n観戦のお供にぜひ！！",
+      "shop": "O.N.Y(オンニ)",
+      "zone": "場外",
+      "area": "⑫",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_18vP763Idte5sJ8ZkFzjREibNS1syxBtc.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_18vP763Idte5sJ8ZkFzjREibNS1syxBtc",
+      "name": "トルティーヤドッグ",
+      "price": "¥600",
+      "desc": "食べ応えある太くジューシーなソーセージをトルティーヤで巻いたトルティーヤドッグ！\n",
+      "shop": "O.N.Y(オンニ)",
+      "zone": "場外",
+      "area": "⑫",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tortilla_dog_20261031.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1mVsiqhCwvOanLcEDaYRMl-f5tcxMaI5B",
+      "name": "ピンクグレープフルーツソーダ",
+      "price": "¥540",
+      "desc": "濃厚なピンクグレープフルーツの味わいを楽しめる果肉入りソーダ🍊✨ジューシーな果肉がたっぷり入った、フルーティーで贅沢な一杯！ゴクゴク飲みたくなる美味しさです！",
+      "shop": "LUANA",
+      "zone": "場内",
+      "area": "⑬",
+      "e": "🥤",
+      "img": "assets/img/gourmet/tb_1mVsiqhCwvOanLcEDaYRMl-f5tcxMaI5B.webp",
+      "section": "standard",
+      "_カテゴリ": "ソフトドリンク"
+    },
+    {
+      "id": "teiban_tb_1RmI5B6NfNEzFjyo8TJZ4zs_IKlqyVjbT",
+      "name": "カフェモカ",
+      "price": "¥702",
+      "desc": "当店オリジナルのブレンド豆を使用した本格エスプレッソとチョコレートソースを合わせますスイーツドリンク\n見た目の可愛さもバッチリです。",
+      "shop": "ドードコーヒー",
+      "zone": "場内",
+      "area": "⑮",
+      "e": "🥤",
+      "img": "assets/img/gourmet/tb_1RmI5B6NfNEzFjyo8TJZ4zs_IKlqyVjbT.webp",
+      "section": "standard",
+      "_カテゴリ": "ソフトドリンク"
+    },
+    {
+      "id": "teiban_tb_1nP7RcVaGu3Hkccu1gnEM7JFwg3OARD88",
+      "name": "カフェラテ",
+      "price": "¥648",
+      "desc": "苦味とコクがしっかりとあるエスプレッソを使用したカフェラテ\nこれからの寒い季節はホットもオススメです。",
+      "shop": "ドードコーヒー",
+      "zone": "場内",
+      "area": "⑮",
+      "e": "🥤",
+      "img": "assets/img/gourmet/tb_1nP7RcVaGu3Hkccu1gnEM7JFwg3OARD88.webp",
+      "section": "standard",
+      "_カテゴリ": "ソフトドリンク"
+    },
+    {
+      "id": "teiban_tb_1xnJ70cfAM1kKG6LL6v5fCS7BgHE9QJUt",
+      "name": "もつ煮込み",
+      "price": "¥600",
+      "desc": "丁寧に下処理を施した豚モツをたっぷりの野菜と一緒にじっくり煮込んだモツはとろとろコリコリのダブル食感が楽しめます。少し濃いめの味付けですが、野菜が溶け込んだ汁まで飲み干してください。",
+      "shop": "とちぎのぼんた",
+      "zone": "場内",
+      "area": "⑯",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1xnJ70cfAM1kKG6LL6v5fCS7BgHE9QJUt.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1NcFoqnak6nsi2xYlac7uFfCoFvodRETP",
+      "name": "山田のローストポーク丼",
+      "price": "¥1,050",
+      "desc": "塊肉のまま秘伝のタレを回しかけて、5時間ゆっくりと低温調理したお肉は、しっとり驚くほどの柔らかさ。\nスライスしたお肉をご飯とキャベツの上にのせるとご飯の熱でお肉はさらにトロリ。秘伝の特製生だれをたっぷりかけた自慢の一品です。",
+      "shop": "とちぎのぼんた",
+      "zone": "場内",
+      "area": "⑯",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1NcFoqnak6nsi2xYlac7uFfCoFvodRETP.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_11E0K5Oe7IJMLxFfJxuXOMgDZHp5LLbRZ",
+      "name": "魯肉飯",
+      "price": "¥800",
+      "desc": "台湾の名物料理ルーローハンです。台湾に足繁く通って習得した本場の味です。",
+      "shop": "Season1",
+      "zone": "場内",
+      "area": "⑰",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_11E0K5Oe7IJMLxFfJxuXOMgDZHp5LLbRZ.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1X74P4kd4X1rN5cN4mleuDAgvhlx0wm81",
+      "name": "角煮パオ",
+      "price": "¥500",
+      "desc": "台湾屋台でお馴染みの「割包（グアバオ）」角煮を中華まんの皮で挟んだワンハンドグルメ。",
+      "shop": "Season1",
+      "zone": "場内",
+      "area": "⑰",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1X74P4kd4X1rN5cN4mleuDAgvhlx0wm81.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1hhipB71J--gvNXRMpCZNu4lRFMQhs2yC",
+      "name": "米粉チュロス",
+      "price": "¥600",
+      "desc": "たまご・小麦粉不使用グルテンフリー100%の米粉チュロス！中はモチッと外はカリッと新食感♪",
+      "shop": "Mogu Rico",
+      "zone": "場内",
+      "area": "⑱",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1hhipB71J--gvNXRMpCZNu4lRFMQhs2yC.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD",
+      "name": "スモークレッグ",
+      "price": "¥850",
+      "desc": "リンゴチップでじっくり燻製！紅茶鴨肉使用\nスモークレッグ！！香ばしさとジューシーさがたまらない一品",
+      "shop": "Mogu Rico",
+      "zone": "場内",
+      "area": "⑱",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1e0b2aW7shnOuGBKgLGcp2XqC_WiRFZbR",
+      "name": "キューバサンド",
+      "price": "¥1,050",
+      "desc": "カリッと香ばしいパン×とろ〜りチーズ！食欲そそるキューバサンド",
+      "shop": "M's kitchen NEWS",
+      "zone": "場内",
+      "area": "⑲",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1e0b2aW7shnOuGBKgLGcp2XqC_WiRFZbR.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1V7aJZus1258-fZlaVYuF31sK7F_i3f0A",
+      "name": "鯖サンド",
+      "price": "¥1,100",
+      "desc": "ボリューム満点！鯖サンド\n具材たっぷり特製タルタルソースと塩焼きサバの相性抜群⭐︎",
+      "shop": "M's kitchen NEWS",
+      "zone": "場内",
+      "area": "⑲",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1V7aJZus1258-fZlaVYuF31sK7F_i3f0A.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    },
+    {
+      "id": "teiban_tb_1yVbeRRuG697oHfxWnJp1vIh9_QtXl6no",
+      "name": "自家焙煎スペシャルティコーヒー",
+      "price": "¥550",
+      "desc": "自家焙煎のスペシャルティコーヒーを使用したエスプレッソベースのホットコーヒー。\n使用コーヒー豆は【本日のコーヒー】をご覧ください。※カフェラテ等のアレンジドリンクもございますので是非ご利用ください。",
+      "shop": "木鶏珈琲",
+      "zone": "場内",
+      "area": "⑳",
+      "e": "🥤",
+      "img": "assets/img/gourmet/tb_1yVbeRRuG697oHfxWnJp1vIh9_QtXl6no.webp",
+      "section": "standard",
+      "_カテゴリ": "ソフトドリンク"
+    },
+    {
+      "id": "teiban_tb_1qWhKbqA2cEfGMDmZymH-5YyBTvTAvGEf",
+      "name": "薄皮たい焼き",
+      "price": "¥390",
+      "desc": "【フードトラック限定】パリッとした薄めの生地に風味豊かな粒あんを包みました。\nスッペシャルティコーヒーとあわせて逸品。こだわりのたい焼きです。",
+      "shop": "木鶏珈琲",
+      "zone": "場内",
+      "area": "⑳",
+      "e": "🍴",
+      "img": "assets/img/gourmet/tb_1qWhKbqA2cEfGMDmZymH-5YyBTvTAvGEf.webp",
+      "section": "standard",
+      "_カテゴリ": "フード"
+    }
+  ],
+  "areas": [
+    {
+      "no": "①",
+      "_場所番号": "②",
+      "zone": "場外",
+      "shop": "Sports Cafe 92",
+      "menu": [
+        "トッキーミートソースパスタ",
+        "勝つミートソースパスタ"
+      ],
+      "drinks": [],
+      "x": 0.364,
+      "y": 0.9244,
+      "_目印": "Aゲート前"
+    },
+    {
+      "no": "②",
+      "_場所番号": "③",
+      "zone": "場外",
+      "shop": "菊ちゃんラーメン",
+      "menu": [
+        "佐野ラーメン",
+        "チャーシュー丼",
+        "イモフライ"
+      ],
+      "drinks": [],
+      "x": 0.412,
+      "y": 0.9281,
+      "_目印": "Aゲート前（階段の手前）"
+    },
+    {
+      "no": "③",
+      "_場所番号": "④",
+      "zone": "場外",
+      "shop": "Feel Good Tacos",
+      "menu": [
+        "チキンオーバーライス",
+        "チーズナチョス"
+      ],
+      "drinks": [],
+      "x": 0.478,
+      "y": 0.9194,
+      "_目印": "Aゲート前（階段の先）"
+    },
+    {
+      "no": "④",
+      "_場所番号": "⑤",
+      "zone": "場外",
+      "shop": "かずちゃんち",
+      "menu": [
+        "から揚げ",
+        "トッキーチキン勝"
+      ],
+      "drinks": [],
+      "x": 0.518,
+      "y": 0.9126,
+      "_目印": "Aゲート前"
+    },
+    {
+      "no": "⑤",
+      "_場所番号": "⑥",
+      "zone": "場外",
+      "shop": "pighip",
+      "menu": [
+        "味噌豚あいもり丼",
+        "味噌豚カルビ串"
+      ],
+      "drinks": [],
+      "x": 0.556,
+      "y": 0.9032,
+      "_目印": "Aゲート前"
+    },
+    {
+      "no": "⑥",
+      "_場所番号": "⑦",
+      "zone": "場外",
+      "shop": "玉子屋てっちゃん。",
+      "menu": [
+        "玉子焼き",
+        "オムライス"
+      ],
+      "drinks": [],
+      "x": 0.593,
+      "y": 0.8902,
+      "_目印": "Aゲート前"
+    },
+    {
+      "no": "⑦",
+      "_場所番号": "⑧",
+      "zone": "場外",
+      "shop": "日光・乙女チーズ",
+      "menu": [
+        "乙女ジェラート",
+        "チーズ小町"
+      ],
+      "drinks": [],
+      "x": 0.63,
+      "y": 0.8691,
+      "_目印": "Aゲート前"
+    },
+    {
+      "no": "⑧",
+      "_場所番号": "⑨",
+      "zone": "場外",
+      "shop": "FROZEN FRUIT けずりん",
+      "menu": [
+        "からあげ",
+        "肉巻きおにぎり",
+        "ハラミステーキ串"
+      ],
+      "drinks": [],
+      "x": 0.7423,
+      "y": 0.7545,
+      "_目印": "Bゲート外側"
+    },
+    {
+      "no": "⑨",
+      "_場所番号": "⑩",
+      "zone": "場外",
+      "shop": "会茶 aiaicha",
+      "menu": [
+        "タピオカ黒糖ミルクティー",
+        "小籠包",
+        "台湾ポップコーンチキン"
+      ],
+      "drinks": [],
+      "x": 0.7771,
+      "y": 0.6933,
+      "_目印": "Bゲート外側"
+    },
+    {
+      "no": "⑩",
+      "_場所番号": "⑪",
+      "zone": "場外",
+      "shop": "ケバブキッチン",
+      "menu": [
+        "ケバブサンド",
+        "ケバブラップ",
+        "おつまみケバブ"
+      ],
+      "drinks": [],
+      "x": 0.8036,
+      "y": 0.647,
+      "_目印": "Cゲート外側"
+    },
+    {
+      "no": "⑪",
+      "_場所番号": "⑫",
+      "zone": "場外",
+      "shop": "ブラジル料理ダネイデ",
+      "menu": [
+        "ブラジル丼",
+        "ピカーニャ",
+        "サウガドス"
+      ],
+      "drinks": [],
+      "x": 0.833,
+      "y": 0.505,
+      "_目印": "アプローチデッキ入口"
+    },
+    {
+      "no": "⑫",
+      "_場所番号": "⑬",
+      "zone": "場外",
+      "shop": "O.N.Y(オンニ)",
+      "menu": [
+        "台湾からあげ ダージーパイ",
+        "トルティーヤドッグ"
+      ],
+      "drinks": [],
+      "x": 0.849,
+      "y": 0.4387,
+      "_目印": "アプローチデッキ"
+    },
+    {
+      "no": "⑬",
+      "_場所番号": "⑰",
+      "zone": "場内",
+      "shop": "LUANA",
+      "menu": [
+        "フランクフルト",
+        "唐揚げ棒",
+        "スティックコロッケ"
+      ],
+      "drinks": [],
+      "x": 0.6234,
+      "y": 0.7888,
+      "_目印": "B1コンコース"
+    },
+    {
+      "no": "⑭",
+      "_場所番号": "⑱",
+      "zone": "場内",
+      "shop": "亰極",
+      "menu": [
+        "宇都宮ハムカツ",
+        "ジャンボ唐揚げ串",
+        "鶏白湯カレー"
+      ],
+      "drinks": [],
+      "x": 0.6555,
+      "y": 0.757,
+      "_目印": "B1コンコース"
+    },
+    {
+      "no": "⑮",
+      "_場所番号": "⑲",
+      "zone": "場内",
+      "shop": "ドードコーヒー",
+      "menu": [
+        "カフェモカ",
+        "カフェラテ"
+      ],
+      "drinks": [],
+      "x": 0.768,
+      "y": 0.572,
+      "_目印": "C1コンコース"
+    },
+    {
+      "no": "⑯",
+      "_場所番号": "⑳",
+      "zone": "場内",
+      "shop": "とちぎのぼんた",
+      "menu": [
+        "ローストポーク",
+        "もつ煮込み"
+      ],
+      "drinks": [],
+      "x": 0.7797,
+      "y": 0.5081,
+      "_目印": "C1コンコース"
+    },
+    {
+      "no": "⑰",
+      "_場所番号": "㉒",
+      "zone": "場内",
+      "shop": "Season1",
+      "menu": [
+        "魯肉飯",
+        "台湾まぜそば",
+        "角煮パオ"
+      ],
+      "drinks": [],
+      "x": 0.6219,
+      "y": 0.1417,
+      "_目印": "D2コンコース"
+    },
+    {
+      "no": "⑱",
+      "_場所番号": "㉓",
+      "zone": "場内",
+      "shop": "Mogu Rico",
+      "menu": [
+        "スモークレッグ",
+        "米粉チュロス",
+        "チュロスシュガー"
+      ],
+      "drinks": [],
+      "x": 0.4845,
+      "y": 0.1083,
+      "_目印": "E1コンコース"
+    },
+    {
+      "no": "⑲",
+      "_場所番号": "㉔",
+      "zone": "場内",
+      "shop": "M's kitchen NEWS",
+      "menu": [
+        "鯖サンド",
+        "キューバサンド"
+      ],
+      "drinks": [],
+      "x": 0.3951,
+      "y": 0.1079,
+      "_目印": "E2コンコース"
+    },
+    {
+      "no": "⑳",
+      "_場所番号": "㉗",
+      "zone": "場内",
+      "shop": "木鶏珈琲",
+      "menu": [
+        "自家焙煎スペシャルティコーヒー",
+        "薄皮たい焼き"
+      ],
+      "drinks": [],
+      "x": 0.2442,
+      "y": 0.7698,
+      "_目印": "H2コンコース"
+    }
+  ],
+  "maps": [
+    {
+      "img": "assets/img/g_map_gourmet_0804.webp",
+      "caption": "会場図（番号は販売エリア）",
+      "fit": "whole",
+      "role": "primary",
+      "onimage": "ホームゲームの開放ゲートは A・C・G"
+    }
+  ],
+  "gates": [
+    {
+      "name": "A",
+      "x": 0.4658,
+      "y": 0.8757
+    },
+    {
+      "name": "B",
+      "x": 0.7,
+      "y": 0.7693
+    },
+    {
+      "name": "C",
+      "x": 0.8155,
+      "y": 0.4648
+    },
+    {
+      "name": "D",
+      "x": 0.7002,
+      "y": 0.2075
+    },
+    {
+      "name": "E",
+      "x": 0.4661,
+      "y": 0.0928
+    },
+    {
+      "name": "F",
+      "x": 0.1928,
+      "y": 0.2066
+    },
+    {
+      "name": "G",
+      "x": 0.087,
+      "y": 0.4639
+    },
+    {
+      "name": "H",
+      "x": 0.1824,
+      "y": 0.7674
+    }
+  ],
+  "brand": {
+    "name": "BISTRO TOCKEY",
+    "sub": "栃木SC フードエリア",
+    "logo": "assets/img/bistro_tockey.svg",
+    "bg": "#F4D14D",
+    "logoW": "124px",
+    "logoMax": "38%"
+  },
+  "payment": {
+    "lead": "キャッシュレスでお会計もスムーズ",
+    "short": "お支払いはキャッシュレスのみです。",
+    "body": "クレジットカード・スマホ決済・電子マネーがそのまま使えます。現金はご利用いただけません。",
+    "note": "現金をお持ちの方は、当日場内の専用ブースでプリペイドカードをご用意しています。",
+    "guideUrl": "#"
   }
- ],
- "items": [
-  {
-   "id": "form_fgt_1_0",
-   "name": "ダブルチーズナチョス",
-   "price": "¥980",
-   "desc": "トルティーヤチップスとサルサソースの上に\nチェダーチーズ&パルメザンチーズをたっぷりかけた、食べ出したら止まらなくなるダブルチーズナチョス‼︎",
-   "shop": "Feel Good Tacos",
-   "zone": "場外",
-   "area": "③",
-   "e": "🍴",
-   "img": "assets/img/gourmet/fgt_1_0.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_shop_1_1",
-   "name": "炙りチーズトルティーヤドッグ",
-   "price": "¥700",
-   "desc": "炙りたて、とろ〜りチーズがたまらない！\nとろ〜りチーズとパリッと香ばしいトルティーヤ、ジューシーなソーセージが相性抜群‼︎",
-   "shop": "O.N.Y(オンニ)",
-   "zone": "場外",
-   "area": "⑫",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_1_1.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_mens__2",
-   "name": "スパークリングワイン",
-   "price": "¥700",
-   "desc": "シュワっと爽やか♪\nすっきり飲みやすいスパークリングワイン",
-   "shop": "M's kitchen NEWS",
-   "zone": "場内",
-   "area": "⑲",
-   "e": "🍺",
-   "img": "assets/img/gourmet/mens__2.webp",
-   "section": "t1",
-   "_カテゴリ": "アルコール",
-   "_税率": 10,
-   "_商品番号": ""
-  },
-  {
-   "id": "form_kazu_1_3",
-   "name": "チーズオニオンから揚げ",
-   "price": "¥810",
-   "desc": "人気のかずちゃんちのから揚げにチーズオニオンのフレーバーをプラスした限定商品です！",
-   "shop": "かずちゃんち",
-   "zone": "場外",
-   "area": "④",
-   "e": "🍴",
-   "img": "assets/img/gourmet/kazu_1_3.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_shop__4",
-   "name": "炙り黒糖ミルクティーM",
-   "price": "¥850",
-   "desc": "濃厚で甘じょっぱいチーズフォームに黒糖をのせ、香ばしく炙った\n炙り黒糖ミルクティー。\n\nコクがあるのに重すぎない、クセになる一杯です。",
-   "shop": "会茶 aiaicha",
-   "zone": "場外",
-   "area": "⑨",
-   "e": "🥤",
-   "img": "assets/img/gourmet/shop__4.webp",
-   "section": "standard",
-   "_カテゴリ": "ソフトドリンク",
-   "_税率": 8,
-   "_商品番号": ""
-  },
-  {
-   "id": "form_shop_1_5",
-   "name": "フィリーチーズサンド",
-   "price": "¥800",
-   "desc": "昨年も人気だった、とろ〜り濃厚チーズとたっぷり牛肉の旨みが楽しめる、ボリューム満点の贅沢ホットドッグ！観戦のお供にもぴったり！",
-   "shop": "ドードコーヒー",
-   "zone": "場内",
-   "area": "⑮",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_1_5.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_shop_1_6",
-   "name": "おつまみチーズ＆ワインセット",
-   "price": "¥1,000",
-   "desc": "熱いピッチに、冷えたワインとおいしいチーズはいかがですか？！ご来店お待ちしています",
-   "shop": "日光・乙女チーズ",
-   "zone": "場外",
-   "area": "⑦",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_1_6.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_bonta_1_7",
-   "name": "がぶ飲み　勝ちわりワイン",
-   "price": "¥600",
-   "desc": "まだまだ暑い！カップにたっぷりの氷とたっぷりのワインを注いでがぶがぶ飲んじゃいましょう！赤ワイン、白ワイン選べますので気分に合わせてどうぞ！",
-   "shop": "とちぎのぼんた",
-   "zone": "場内",
-   "area": "⑯",
-   "e": "🍺",
-   "img": "assets/img/gourmet/bonta_1_7.webp",
-   "section": "t1",
-   "_カテゴリ": "アルコール",
-   "_税率": 10,
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_shop__8",
-   "name": "辛味噌唐揚げ",
-   "price": "¥750",
-   "desc": "辛い唐揚げが好きな方は絶対に好きです！\n味噌とコチュジャンのハーモニーをお楽しみください！",
-   "shop": "FROZEN FRUIT けずりん",
-   "zone": "場外",
-   "area": "⑧",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop__8.webp",
-   "section": "limited",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": ""
-  },
-  {
-   "id": "form_shop_1_10",
-   "name": "かぼちゃのミートソースグラタン",
-   "price": "¥750",
-   "desc": "10/31はハロウィンということで、国産かぼちゃに自家製本格ミートソース、とろ〜りチーズをかけバーナーで炙りました！",
-   "shop": "Sports Cafe 92",
-   "zone": "場外",
-   "area": "①",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_1_10.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "1"
-  },
-  {
-   "id": "form_shop_2_11",
-   "name": "なすとチーズのトマトソースパスタ",
-   "price": "¥750",
-   "desc": "旬の秋なす、ベーコンを自家製トマトソースで！仕上げにとろ〜りチーズとバジリコソースを！",
-   "shop": "Sports Cafe 92",
-   "zone": "場外",
-   "area": "①",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_2_11.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "2"
-  },
-  {
-   "id": "form_shop_1_12",
-   "name": "炙りチーズ玉子串",
-   "price": "¥600",
-   "desc": "玉子焼きにチーズをのせ炙りました！",
-   "shop": "玉子屋てっちゃん。",
-   "zone": "場外",
-   "area": "⑥",
-   "e": "🍴",
-   "img": "assets/img/gourmet/shop_1_12.webp",
-   "section": "t1",
-   "_カテゴリ": "フード",
-   "_税率": 8,
-   "_商品番号": "1"
-  },
-  {
-   "id": "teiban_tb_16Q0tbLl5RD3HRtK9YamiGj85-unAvuDJ",
-   "name": "トッキーミートソースパスタ",
-   "price": "¥750",
-   "desc": "じっくり炒めた合挽き肉を、たっぷりの赤ワインと自家製トマトソースで煮込んだ本格ボロネーゼです！トッキーチーズ付き！",
-   "shop": "Sports Cafe 92",
-   "zone": "場外",
-   "area": "①",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_16Q0tbLl5RD3HRtK9YamiGj85-unAvuDJ.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1dZgkrwo_g2_ux9W4exLN58-mxQNpTM3M",
-   "name": "勝つミートソースパスタ",
-   "price": "¥1,111",
-   "desc": "勝つしかない！自家製本格ボロネーゼに、豚肉を薄く叩いてチーズ入りパン粉を付けソテーしたミラノ風カツレツを！10食限定！",
-   "shop": "Sports Cafe 92",
-   "zone": "場外",
-   "area": "①",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1dZgkrwo_g2_ux9W4exLN58-mxQNpTM3M.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1OXg83GpcOor-k_Pe62ld5cUpaRWPWHmF",
-   "name": "栃木・ご当地　佐野ラーメン",
-   "price": "¥890",
-   "desc": "栃木県のご当地ラーメン【佐野ラーメン】はあっさり醤油のスープに手打ち風麺の相性が抜群のお子様から大人まで食べやすいラーメンです。",
-   "shop": "菊ちゃんラーメン",
-   "zone": "場外",
-   "area": "②",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1OXg83GpcOor-k_Pe62ld5cUpaRWPWHmF.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1QeNyBlMBEiYDkB3eas2faAu7nX-_O3bn",
-   "name": "炙りチャーシュー丼",
-   "price": "¥990",
-   "desc": "当店自慢のホロホロのチャーシューを使用した炙りチャーシュー丼です。",
-   "shop": "菊ちゃんラーメン",
-   "zone": "場外",
-   "area": "②",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1QeNyBlMBEiYDkB3eas2faAu7nX-_O3bn.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1nnHiNwu64flhUp8v7XWvrTY85uMmGQzL",
-   "name": "チキンオーバーライス",
-   "price": "¥1,000",
-   "desc": "ニューヨークの定番ベンダーフード(屋台料理)ホットソースとホワイトソースが作り出すスパイシーだけどマイルドな味で、チキンたっぷりご飯が病みつきになること間違いなし！",
-   "shop": "Feel Good Tacos",
-   "zone": "場外",
-   "area": "③",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1nnHiNwu64flhUp8v7XWvrTY85uMmGQzL.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1k5qIOmAl_J9UE11OngT7Vm4sECVdDjd7",
-   "name": "チーズナチョス",
-   "price": "¥950",
-   "desc": "サクサクナチョスチップスの上に、旨辛サルサソースと濃厚チェダーチーズをたっぷりかけた、食べごたえのあるチーズナチョス。おつまみにもオススメです！",
-   "shop": "Feel Good Tacos",
-   "zone": "場外",
-   "area": "③",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1k5qIOmAl_J9UE11OngT7Vm4sECVdDjd7.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_104_bfSOTM_2eDVBm0bUpWTdcxLvg7QFH",
-   "name": "国産鶏のから揚げ",
-   "price": "¥648",
-   "desc": "お母さんの味を大切に、国産鶏と保存料不使用のオリジナル漬けダレで仕上げた自慢のから揚げ。北海道産片栗粉で外はカリッと、中はジューシー！お子様から大人まで楽しめる、かずちゃんちの定番です。",
-   "shop": "かずちゃんち",
-   "zone": "場外",
-   "area": "④",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_104_bfSOTM_2eDVBm0bUpWTdcxLvg7QFH.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1EsR0PKIstc4KMlzrUdm6_Wvv9qqMACLW",
-   "name": "トッキーチキン勝",
-   "price": "¥972",
-   "desc": "国産鶏を薄くのばし、ごま油と塩でシンプルに味付けしたチキンかつ。サクッと軽い食感と、ごま油の香ばしい風味がクセになる、ソースいらずでそのまま美味しい一品です！",
-   "shop": "かずちゃんち",
-   "zone": "場外",
-   "area": "④",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1EsR0PKIstc4KMlzrUdm6_Wvv9qqMACLW.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_13Eu1ciOoVqjK3BolGsqZzXAjSuBw-Cf9",
-   "name": "味噌豚あいもり丼",
-   "price": "¥1,200",
-   "desc": "野木町産コシヒカリ・栃木の星に、焼きたての味噌豚バラ＆カルビを豪快に！2つの味わいを楽しめるpighip自慢のあいもり丼です。",
-   "shop": "pighip",
-   "zone": "場外",
-   "area": "⑤",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_13Eu1ciOoVqjK3BolGsqZzXAjSuBw-Cf9.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_152MK9UPnnPe-KAm4HmR78hYvDjIORqlb",
-   "name": "味噌豚カルビ串",
-   "price": "¥700",
-   "desc": "豚カルビを串に刺し、特製味噌ダレを絡めて焼き上げた商品。食べ歩きにも適した豚串です。",
-   "shop": "pighip",
-   "zone": "場外",
-   "area": "⑤",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_152MK9UPnnPe-KAm4HmR78hYvDjIORqlb.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_18H_x0DS6Kt0fZxzzB5XyxGBDb0IxdDND",
-   "name": "玉子焼き（ダシ醤油）",
-   "price": "¥700",
-   "desc": "グリスタグルメグランプリ2連覇の玉子焼き。大正生まれの祖母の味の昔ながらの玉子焼きです。",
-   "shop": "玉子屋てっちゃん。",
-   "zone": "場外",
-   "area": "⑥",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_18H_x0DS6Kt0fZxzzB5XyxGBDb0IxdDND.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1JQ0iWL8Q61yHUFS_D3f3Qf6ZCSWesBN2",
-   "name": "オムライス（完熟トマトのミートソース）",
-   "price": "¥1,000",
-   "desc": "新鮮卵と栃木県産こしひかりのオムライスです。",
-   "shop": "玉子屋てっちゃん。",
-   "zone": "場外",
-   "area": "⑥",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1JQ0iWL8Q61yHUFS_D3f3Qf6ZCSWesBN2.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1fFsX-2HU5vHubHSDyywcusDOFe9sR8-1",
-   "name": "乙女ジェラート",
-   "price": "¥500",
-   "desc": "オリジナルジェラートや季節限定ジェラートなど通常７種類。おすすめはクリームチーズをたっぷり使った「濃厚チーズ」。香ばしいコーンとの相性抜群です。そのほか、栃木県産とちおとめ苺が入った「いちごミルク」は当店の一番人気。",
-   "shop": "日光・乙女チーズ",
-   "zone": "場外",
-   "area": "⑦",
-   "e": "🍧",
-   "img": "assets/img/gourmet/tb_1fFsX-2HU5vHubHSDyywcusDOFe9sR8-1.webp",
-   "section": "standard",
-   "_カテゴリ": "アイス・氷"
-  },
-  {
-   "id": "teiban_tb_1wJaK5Lqp_E2EVRRbR2uF0eHKjWJGEG-o",
-   "name": "チーズ小町",
-   "price": "¥450",
-   "desc": "栃木県産のチーズと相性抜群の食材を、米粉の皮で包んだ長さ22cmのロング春巻き。おすすめは、モッツアレラ・ゴーダ・チェダー・ゴルゴンゾーラが入った４種のチーズ「小町（こまち）」。揚げたてとろ～り熱々のチーズをご用意します！",
-   "shop": "日光・乙女チーズ",
-   "zone": "場外",
-   "area": "⑦",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1wJaK5Lqp_E2EVRRbR2uF0eHKjWJGEG-o.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1Oe1WGyIcN_5xTg6JTTfNXARbL-wdppmJ",
-   "name": "唐揚げ",
-   "price": "¥650",
-   "desc": "和膳処くぼ多監修の秘伝のタレに漬け込んだ絶品唐揚げです。数々のイベントでお客様に喜んでいただきました！一度食べたらやみつきの当店の唐揚げ、ぜひご紹介ください！",
-   "shop": "FROZEN FRUIT けずりん",
-   "zone": "場外",
-   "area": "⑧",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1Oe1WGyIcN_5xTg6JTTfNXARbL-wdppmJ.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1JLVrwHeewjJNMmtBugzWXGnV6f2QqRO1",
-   "name": "けずりん",
-   "price": "¥700",
-   "desc": "当店の定番メインメニューのもう一つはけずりん！\n100%フルーツのみを使用し、熱くなった身体を一瞬で冷やしてくれるひんやりスイーツで、ビタミンも豊富な身体にも良い商品です！\nぜひご賞味ください！",
-   "shop": "FROZEN FRUIT けずりん",
-   "zone": "場外",
-   "area": "⑧",
-   "e": "🍧",
-   "img": "assets/img/gourmet/tb_1JLVrwHeewjJNMmtBugzWXGnV6f2QqRO1.webp",
-   "section": "standard",
-   "_カテゴリ": "アイス・氷"
-  },
-  {
-   "id": "teiban_tb_1SgX1CTOXjIxnshAHugo4uSuN5-VvpeUO",
-   "name": "台湾ポップコーンチキン",
-   "price": "¥650",
-   "desc": "自家製スパイスが香る、サクサク＆ジューシーなひと口チキン。\nみんなでシェアするのはもちろん、おつまみにもぴったり！",
-   "shop": "会茶 aiaicha",
-   "zone": "場外",
-   "area": "⑨",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1SgX1CTOXjIxnshAHugo4uSuN5-VvpeUO.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1TV2atcivwZyiqBP2uJU_yqcL2tCUymnX",
-   "name": "ケバブサンド",
-   "price": "¥700",
-   "desc": "オリジナルスパイスで味付けしたジューシーなチキンケバブと新鮮な野菜を、香ばしいパンでサンド。本格的な味わいと食べ応えを楽しめる人気のケバブサンドです。",
-   "shop": "ケバブキッチン",
-   "zone": "場外",
-   "area": "⑩",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1TV2atcivwZyiqBP2uJU_yqcL2tCUymnX.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1rdfpkvtbZqNR5mXWRj36yBdWPZVkqbSf",
-   "name": "ブラジル丼",
-   "price": "¥1,100",
-   "desc": "第1回グリスタグルメグランプリ受賞！にんにく風味のごはんに牛ステーキ、ブラジリアンソーセージ、チキンピカタの3種盛り！",
-   "shop": "ブラジル料理ダネイデ",
-   "zone": "場外",
-   "area": "⑪",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1rdfpkvtbZqNR5mXWRj36yBdWPZVkqbSf.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs",
-   "name": "トッキーの勝ちボール",
-   "price": "¥500",
-   "desc": "月に6000個売れる大人気の自家製チーズボール！チーズがのびーーーるようにこだわって作ってます！",
-   "shop": "ブラジル料理ダネイデ",
-   "zone": "場外",
-   "area": "⑪",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1pkabSzwwyT15mYV4UkJqP3J_Yx2IcjPs.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_18vP763Idte5sJ8ZkFzjREibNS1syxBtc",
-   "name": "台湾からあげダージーパイ",
-   "price": "¥800",
-   "desc": "顔より大きい！？台湾からあげダージーパイは、熱々揚げたてをご提供してます！\n観戦のお供にぜひ！！",
-   "shop": "O.N.Y(オンニ)",
-   "zone": "場外",
-   "area": "⑫",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_18vP763Idte5sJ8ZkFzjREibNS1syxBtc.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_18vP763Idte5sJ8ZkFzjREibNS1syxBtc",
-   "name": "トルティーヤドッグ",
-   "price": "¥600",
-   "desc": "食べ応えある太くジューシーなソーセージをトルティーヤで巻いたトルティーヤドッグ！\n",
-   "shop": "O.N.Y(オンニ)",
-   "zone": "場外",
-   "area": "⑫",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_18vP763Idte5sJ8ZkFzjREibNS1syxBtc.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1mVsiqhCwvOanLcEDaYRMl-f5tcxMaI5B",
-   "name": "ピンクグレープフルーツソーダ",
-   "price": "¥540",
-   "desc": "濃厚なピンクグレープフルーツの味わいを楽しめる果肉入りソーダ🍊✨ジューシーな果肉がたっぷり入った、フルーティーで贅沢な一杯！ゴクゴク飲みたくなる美味しさです！",
-   "shop": "LUANA",
-   "zone": "場内",
-   "area": "⑬",
-   "e": "🥤",
-   "img": "assets/img/gourmet/tb_1mVsiqhCwvOanLcEDaYRMl-f5tcxMaI5B.webp",
-   "section": "standard",
-   "_カテゴリ": "ソフトドリンク"
-  },
-  {
-   "id": "teiban_tb_1RmI5B6NfNEzFjyo8TJZ4zs_IKlqyVjbT",
-   "name": "カフェモカ",
-   "price": "¥702",
-   "desc": "当店オリジナルのブレンド豆を使用した本格エスプレッソとチョコレートソースを合わせますスイーツドリンク\n見た目の可愛さもバッチリです。",
-   "shop": "ドードコーヒー",
-   "zone": "場内",
-   "area": "⑮",
-   "e": "🥤",
-   "img": "assets/img/gourmet/tb_1RmI5B6NfNEzFjyo8TJZ4zs_IKlqyVjbT.webp",
-   "section": "standard",
-   "_カテゴリ": "ソフトドリンク"
-  },
-  {
-   "id": "teiban_tb_1nP7RcVaGu3Hkccu1gnEM7JFwg3OARD88",
-   "name": "カフェラテ",
-   "price": "¥648",
-   "desc": "苦味とコクがしっかりとあるエスプレッソを使用したカフェラテ\nこれからの寒い季節はホットもオススメです。",
-   "shop": "ドードコーヒー",
-   "zone": "場内",
-   "area": "⑮",
-   "e": "🥤",
-   "img": "assets/img/gourmet/tb_1nP7RcVaGu3Hkccu1gnEM7JFwg3OARD88.webp",
-   "section": "standard",
-   "_カテゴリ": "ソフトドリンク"
-  },
-  {
-   "id": "teiban_tb_1xnJ70cfAM1kKG6LL6v5fCS7BgHE9QJUt",
-   "name": "もつ煮込み",
-   "price": "¥600",
-   "desc": "丁寧に下処理を施した豚モツをたっぷりの野菜と一緒にじっくり煮込んだモツはとろとろコリコリのダブル食感が楽しめます。少し濃いめの味付けですが、野菜が溶け込んだ汁まで飲み干してください。",
-   "shop": "とちぎのぼんた",
-   "zone": "場内",
-   "area": "⑯",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1xnJ70cfAM1kKG6LL6v5fCS7BgHE9QJUt.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1NcFoqnak6nsi2xYlac7uFfCoFvodRETP",
-   "name": "山田のローストポーク丼",
-   "price": "¥1,050",
-   "desc": "塊肉のまま秘伝のタレを回しかけて、5時間ゆっくりと低温調理したお肉は、しっとり驚くほどの柔らかさ。\nスライスしたお肉をご飯とキャベツの上にのせるとご飯の熱でお肉はさらにトロリ。秘伝の特製生だれをたっぷりかけた自慢の一品です。",
-   "shop": "とちぎのぼんた",
-   "zone": "場内",
-   "area": "⑯",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1NcFoqnak6nsi2xYlac7uFfCoFvodRETP.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_11E0K5Oe7IJMLxFfJxuXOMgDZHp5LLbRZ",
-   "name": "魯肉飯",
-   "price": "¥800",
-   "desc": "台湾の名物料理ルーローハンです。台湾に足繁く通って習得した本場の味です。",
-   "shop": "Season1",
-   "zone": "場内",
-   "area": "⑰",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_11E0K5Oe7IJMLxFfJxuXOMgDZHp5LLbRZ.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1X74P4kd4X1rN5cN4mleuDAgvhlx0wm81",
-   "name": "角煮パオ",
-   "price": "¥500",
-   "desc": "台湾屋台でお馴染みの「割包（グアバオ）」角煮を中華まんの皮で挟んだワンハンドグルメ。",
-   "shop": "Season1",
-   "zone": "場内",
-   "area": "⑰",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1X74P4kd4X1rN5cN4mleuDAgvhlx0wm81.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1hhipB71J--gvNXRMpCZNu4lRFMQhs2yC",
-   "name": "米粉チュロス",
-   "price": "¥600",
-   "desc": "たまご・小麦粉不使用グルテンフリー100%の米粉チュロス！中はモチッと外はカリッと新食感♪",
-   "shop": "Mogu Rico",
-   "zone": "場内",
-   "area": "⑱",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1hhipB71J--gvNXRMpCZNu4lRFMQhs2yC.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD",
-   "name": "スモークレッグ",
-   "price": "¥850",
-   "desc": "リンゴチップでじっくり燻製！紅茶鴨肉使用\nスモークレッグ！！香ばしさとジューシーさがたまらない一品",
-   "shop": "Mogu Rico",
-   "zone": "場内",
-   "area": "⑱",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1FV7j7Cq1yeeId0wglidUN2yAnUbhH9HD.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1e0b2aW7shnOuGBKgLGcp2XqC_WiRFZbR",
-   "name": "キューバサンド",
-   "price": "¥1,050",
-   "desc": "カリッと香ばしいパン×とろ〜りチーズ！食欲そそるキューバサンド",
-   "shop": "M's kitchen NEWS",
-   "zone": "場内",
-   "area": "⑲",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1e0b2aW7shnOuGBKgLGcp2XqC_WiRFZbR.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1V7aJZus1258-fZlaVYuF31sK7F_i3f0A",
-   "name": "鯖サンド",
-   "price": "¥1,100",
-   "desc": "ボリューム満点！鯖サンド\n具材たっぷり特製タルタルソースと塩焼きサバの相性抜群⭐︎",
-   "shop": "M's kitchen NEWS",
-   "zone": "場内",
-   "area": "⑲",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1V7aJZus1258-fZlaVYuF31sK7F_i3f0A.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  },
-  {
-   "id": "teiban_tb_1yVbeRRuG697oHfxWnJp1vIh9_QtXl6no",
-   "name": "自家焙煎スペシャルティコーヒー",
-   "price": "¥550",
-   "desc": "自家焙煎のスペシャルティコーヒーを使用したエスプレッソベースのホットコーヒー。\n使用コーヒー豆は【本日のコーヒー】をご覧ください。※カフェラテ等のアレンジドリンクもございますので是非ご利用ください。",
-   "shop": "木鶏珈琲",
-   "zone": "場内",
-   "area": "⑳",
-   "e": "🥤",
-   "img": "assets/img/gourmet/tb_1yVbeRRuG697oHfxWnJp1vIh9_QtXl6no.webp",
-   "section": "standard",
-   "_カテゴリ": "ソフトドリンク"
-  },
-  {
-   "id": "teiban_tb_1qWhKbqA2cEfGMDmZymH-5YyBTvTAvGEf",
-   "name": "薄皮たい焼き",
-   "price": "¥390",
-   "desc": "【フードトラック限定】パリッとした薄めの生地に風味豊かな粒あんを包みました。\nスッペシャルティコーヒーとあわせて逸品。こだわりのたい焼きです。",
-   "shop": "木鶏珈琲",
-   "zone": "場内",
-   "area": "⑳",
-   "e": "🍴",
-   "img": "assets/img/gourmet/tb_1qWhKbqA2cEfGMDmZymH-5YyBTvTAvGEf.webp",
-   "section": "standard",
-   "_カテゴリ": "フード"
-  }
- ],
- "areas": [
-  {
-   "no": "①",
-   "_場所番号": "②",
-   "zone": "場外",
-   "shop": "Sports Cafe 92",
-   "menu": [
-    "トッキーミートソースパスタ",
-    "勝つミートソースパスタ"
-   ],
-   "drinks": [],
-   "x": 0.364,
-   "y": 0.9244,
-   "_目印": "Aゲート前"
-  },
-  {
-   "no": "②",
-   "_場所番号": "③",
-   "zone": "場外",
-   "shop": "菊ちゃんラーメン",
-   "menu": [
-    "佐野ラーメン",
-    "チャーシュー丼",
-    "イモフライ"
-   ],
-   "drinks": [],
-   "x": 0.412,
-   "y": 0.9281,
-   "_目印": "Aゲート前（階段の手前）"
-  },
-  {
-   "no": "③",
-   "_場所番号": "④",
-   "zone": "場外",
-   "shop": "Feel Good Tacos",
-   "menu": [
-    "チキンオーバーライス",
-    "チーズナチョス"
-   ],
-   "drinks": [],
-   "x": 0.478,
-   "y": 0.9194,
-   "_目印": "Aゲート前（階段の先）"
-  },
-  {
-   "no": "④",
-   "_場所番号": "⑤",
-   "zone": "場外",
-   "shop": "かずちゃんち",
-   "menu": [
-    "から揚げ",
-    "トッキーチキン勝"
-   ],
-   "drinks": [],
-   "x": 0.518,
-   "y": 0.9126,
-   "_目印": "Aゲート前"
-  },
-  {
-   "no": "⑤",
-   "_場所番号": "⑥",
-   "zone": "場外",
-   "shop": "pighip",
-   "menu": [
-    "味噌豚あいもり丼",
-    "味噌豚カルビ串"
-   ],
-   "drinks": [],
-   "x": 0.556,
-   "y": 0.9032,
-   "_目印": "Aゲート前"
-  },
-  {
-   "no": "⑥",
-   "_場所番号": "⑦",
-   "zone": "場外",
-   "shop": "玉子屋てっちゃん。",
-   "menu": [
-    "玉子焼き",
-    "オムライス"
-   ],
-   "drinks": [],
-   "x": 0.593,
-   "y": 0.8902,
-   "_目印": "Aゲート前"
-  },
-  {
-   "no": "⑦",
-   "_場所番号": "⑧",
-   "zone": "場外",
-   "shop": "日光・乙女チーズ",
-   "menu": [
-    "乙女ジェラート",
-    "チーズ小町"
-   ],
-   "drinks": [],
-   "x": 0.63,
-   "y": 0.8691,
-   "_目印": "Aゲート前"
-  },
-  {
-   "no": "⑧",
-   "_場所番号": "⑨",
-   "zone": "場外",
-   "shop": "FROZEN FRUIT けずりん",
-   "menu": [
-    "からあげ",
-    "肉巻きおにぎり",
-    "ハラミステーキ串"
-   ],
-   "drinks": [],
-   "x": 0.7423,
-   "y": 0.7545,
-   "_目印": "Bゲート外側"
-  },
-  {
-   "no": "⑨",
-   "_場所番号": "⑩",
-   "zone": "場外",
-   "shop": "会茶 aiaicha",
-   "menu": [
-    "タピオカ黒糖ミルクティー",
-    "小籠包",
-    "台湾ポップコーンチキン"
-   ],
-   "drinks": [],
-   "x": 0.7771,
-   "y": 0.6933,
-   "_目印": "Bゲート外側"
-  },
-  {
-   "no": "⑩",
-   "_場所番号": "⑪",
-   "zone": "場外",
-   "shop": "ケバブキッチン",
-   "menu": [
-    "ケバブサンド",
-    "ケバブラップ",
-    "おつまみケバブ"
-   ],
-   "drinks": [],
-   "x": 0.8036,
-   "y": 0.647,
-   "_目印": "Cゲート外側"
-  },
-  {
-   "no": "⑪",
-   "_場所番号": "⑫",
-   "zone": "場外",
-   "shop": "ブラジル料理ダネイデ",
-   "menu": [
-    "ブラジル丼",
-    "ピカーニャ",
-    "サウガドス"
-   ],
-   "drinks": [],
-   "x": 0.833,
-   "y": 0.505,
-   "_目印": "アプローチデッキ入口"
-  },
-  {
-   "no": "⑫",
-   "_場所番号": "⑬",
-   "zone": "場外",
-   "shop": "O.N.Y(オンニ)",
-   "menu": [
-    "台湾からあげ ダージーパイ",
-    "トルティーヤドッグ"
-   ],
-   "drinks": [],
-   "x": 0.849,
-   "y": 0.4387,
-   "_目印": "アプローチデッキ"
-  },
-  {
-   "no": "⑬",
-   "_場所番号": "⑰",
-   "zone": "場内",
-   "shop": "LUANA",
-   "menu": [
-    "フランクフルト",
-    "唐揚げ棒",
-    "スティックコロッケ"
-   ],
-   "drinks": [],
-   "x": 0.6234,
-   "y": 0.7888,
-   "_目印": "B1コンコース"
-  },
-  {
-   "no": "⑭",
-   "_場所番号": "⑱",
-   "zone": "場内",
-   "shop": "亰極",
-   "menu": [
-    "宇都宮ハムカツ",
-    "ジャンボ唐揚げ串",
-    "鶏白湯カレー"
-   ],
-   "drinks": [],
-   "x": 0.6555,
-   "y": 0.757,
-   "_目印": "B1コンコース"
-  },
-  {
-   "no": "⑮",
-   "_場所番号": "⑲",
-   "zone": "場内",
-   "shop": "ドードコーヒー",
-   "menu": [
-    "カフェモカ",
-    "カフェラテ"
-   ],
-   "drinks": [],
-   "x": 0.768,
-   "y": 0.572,
-   "_目印": "C1コンコース"
-  },
-  {
-   "no": "⑯",
-   "_場所番号": "⑳",
-   "zone": "場内",
-   "shop": "とちぎのぼんた",
-   "menu": [
-    "ローストポーク",
-    "もつ煮込み"
-   ],
-   "drinks": [],
-   "x": 0.7797,
-   "y": 0.5081,
-   "_目印": "C1コンコース"
-  },
-  {
-   "no": "⑰",
-   "_場所番号": "㉒",
-   "zone": "場内",
-   "shop": "Season1",
-   "menu": [
-    "魯肉飯",
-    "台湾まぜそば",
-    "角煮パオ"
-   ],
-   "drinks": [],
-   "x": 0.6219,
-   "y": 0.1417,
-   "_目印": "D2コンコース"
-  },
-  {
-   "no": "⑱",
-   "_場所番号": "㉓",
-   "zone": "場内",
-   "shop": "Mogu Rico",
-   "menu": [
-    "スモークレッグ",
-    "米粉チュロス",
-    "チュロスシュガー"
-   ],
-   "drinks": [],
-   "x": 0.4845,
-   "y": 0.1083,
-   "_目印": "E1コンコース"
-  },
-  {
-   "no": "⑲",
-   "_場所番号": "㉔",
-   "zone": "場内",
-   "shop": "M's kitchen NEWS",
-   "menu": [
-    "鯖サンド",
-    "キューバサンド"
-   ],
-   "drinks": [],
-   "x": 0.3951,
-   "y": 0.1079,
-   "_目印": "E2コンコース"
-  },
-  {
-   "no": "⑳",
-   "_場所番号": "㉗",
-   "zone": "場内",
-   "shop": "木鶏珈琲",
-   "menu": [
-    "自家焙煎スペシャルティコーヒー",
-    "薄皮たい焼き"
-   ],
-   "drinks": [],
-   "x": 0.2442,
-   "y": 0.7698,
-   "_目印": "H2コンコース"
-  }
- ],
- "maps": [
-  {
-   "img": "assets/img/g_map_gourmet_0804.webp",
-   "caption": "会場図（番号は販売エリア）",
-   "fit": "whole",
-   "role": "primary",
-   "onimage": "ホームゲームの開放ゲートは A・C・G"
-  }
- ],
- "gates": [
-  {
-   "name": "A",
-   "x": 0.4658,
-   "y": 0.8757
-  },
-  {
-   "name": "B",
-   "x": 0.7,
-   "y": 0.7693
-  },
-  {
-   "name": "C",
-   "x": 0.8155,
-   "y": 0.4648
-  },
-  {
-   "name": "D",
-   "x": 0.7002,
-   "y": 0.2075
-  },
-  {
-   "name": "E",
-   "x": 0.4661,
-   "y": 0.0928
-  },
-  {
-   "name": "F",
-   "x": 0.1928,
-   "y": 0.2066
-  },
-  {
-   "name": "G",
-   "x": 0.087,
-   "y": 0.4639
-  },
-  {
-   "name": "H",
-   "x": 0.1824,
-   "y": 0.7674
-  }
- ],
- "brand": {
-  "name": "BISTRO TOCKEY",
-  "sub": "栃木SC フードエリア",
-  "logo": "assets/img/bistro_tockey.svg",
-  "bg": "#F4D14D",
-  "logoW": "124px",
-  "logoMax": "38%"
- },
- "payment": {
-  "lead": "キャッシュレスでお会計もスムーズ",
-  "short": "お支払いはキャッシュレスのみです。",
-  "body": "クレジットカード・スマホ決済・電子マネーがそのまま使えます。現金はご利用いただけません。",
-  "note": "現金をお持ちの方は、当日場内の専用ブースでプリペイドカードをご用意しています。",
-  "guideUrl": "#"
- }
 }
