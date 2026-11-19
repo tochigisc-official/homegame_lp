@@ -70,12 +70,12 @@
    },
    "images": [
     {
-     "src": "assets/img/goods/g1129_02_2.webp",
-     "role": "detail"
-    },
-    {
      "src": "assets/img/goods/g1129_02.webp",
      "role": "main"
+    },
+    {
+     "src": "assets/img/goods/g1129_02_2.webp",
+     "role": "detail"
     }
    ]
   },
@@ -95,8 +95,7 @@
      "src": "assets/img/goods/g1129_05.webp",
      "role": "main"
     }
-   ],
-   "allPlayers": true
+   ]
   },
   {
    "id": "acrylic_keyholder",
@@ -214,7 +213,7 @@
    "gacha": true,
    "desc": "アクリル素材で、全選手展開のキーホルダーが登場。",
    "spec": {
-    "size": "mm"
+    "material": "アクリル"
    },
    "images": [
     {
@@ -227,7 +226,7 @@
    "id": "g1129_10",
    "name": "ATHLETA×栃木SC マルチボックス",
    "price": 3850,
-   "desc": "折りためる省スペースの蓋付きマルチBOX。持ち手もあるのでカゴとして使用したり、重ねて収納も可能です。お部屋で収納ボックスとして、外ではアウトドアやレジャーなど様々なシーンで活躍する！折り畳みコンテナBOXです。",
+   "desc": "折りたためる省スペースの蓋付きマルチBOX。持ち手もあるのでカゴとして使用したり、重ねて収納も可能です。お部屋で収納ボックスとして、外ではアウトドアやレジャーなど様々なシーンで活躍する！折り畳みコンテナBOXです。",
    "spec": {
     "material": "ポリプロピレン",
     "size": "W44.5cm・H24cm・D31cm（折り畳み時はW44.5cm・H8cm・D31cm）"
@@ -482,15 +481,15 @@
   },
   {
    "src": "assets/img/goods_hero3.webp",
-   "alt": "アクリルトレカ"
+   "alt": "Tシャツ"
   },
   {
    "src": "assets/img/goods_hero4.webp",
-   "alt": "ポルトガル製リーガマフラー"
+   "alt": "リーガマフラー"
   },
   {
    "src": "assets/img/goods_hero5.webp",
-   "alt": "ロンT"
+   "alt": "マルチボックス"
   }
  ],
  "onlineStore": {
